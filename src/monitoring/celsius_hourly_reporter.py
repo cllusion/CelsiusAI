@@ -357,15 +357,29 @@ class CelsiusHourlyReporter:
         except Exception as e:
             logger.error(f"Failed to save report file: {e}")
 
-    async def save_report_file(self, report_str: str):
-        """Save a plain-text copy of the report into the logs directory."""
+    async def save_report_log(self, report_str: str):
+        """Save a plain-text copy of the report into the logs directory.
+
+        Kept as a separate method (rename) to avoid overriding
+        save_report_file which stores reports under the configured data_dir.
+        """
         try:
             logs_dir = PROJECT_ROOT / "logs"
             logs_dir.mkdir(parents=True, exist_ok=True)
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             filename = logs_dir / f"celsius_report_{timestamp}.txt"
-            with open(filename, "w", encoding="utf-8") as f:
-                f.write(report_str)
+            # Use a small thread-offload to avoid blocking the async loop for long writes
+            def _write():
+                with open(filename, "w", encoding="utf-8") as f:
+                    f.write(report_str)
+
+            try:
+                import asyncio
+
+                await asyncio.to_thread(_write)
+            except Exception:
+                # Fallback to direct write if to_thread isn't available
+                _write()
 
             # Keep only the most recent 48 reports (48 hours)
             files = sorted(logs_dir.glob("celsius_report_*.txt"), key=lambda p: p.stat().st_mtime, reverse=True)
