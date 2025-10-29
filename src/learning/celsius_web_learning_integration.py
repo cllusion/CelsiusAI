@@ -60,6 +60,33 @@ class CelsiusWebLearningIntegration:
             db_path = PROJECT_ROOT / "data" / "web_learning.db"
             db_path.parent.mkdir(parents=True, exist_ok=True)
             self.web_learner = CelsiusWebLearner(db_path)
+
+            # Minimal safe seed of approved sources: keep this tiny to avoid
+            # introducing large diffs or test-side effects. Administrators can
+            # add more via `data/ingestion_approved.json` or the Hub UI.
+            try:
+                from urllib.parse import urlparse
+
+                _minimal_seed = ["https://example.com/feed"]
+                for src in _minimal_seed:
+                    try:
+                        net = urlparse(src).netloc or src
+                        self.web_learner.trusted_sources.add(net.lower())
+                    except Exception:
+                        # non-fatal; skip bad entries
+                        pass
+                # Ensure the learning topic exists and contains the seed source
+                topic_name = "approved_sources"
+                if topic_name not in self.web_learner.learning_topics:
+                    self.web_learner.learning_topics[topic_name] = {"keywords": [], "sources": []}
+                existing = set(self.web_learner.learning_topics[topic_name]["sources"])
+                for s in _minimal_seed:
+                    if s not in existing:
+                        self.web_learner.learning_topics[topic_name]["sources"].append(s)
+                        existing.add(s)
+            except Exception:
+                # keep init resilient
+                pass
             # Load any admin-approved ingestion sources and add them as trusted
             # sources and as an "approved_sources" learning topic so the
             # learner will consider them during learning cycles.
