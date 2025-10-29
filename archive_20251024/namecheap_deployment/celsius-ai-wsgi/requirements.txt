@@ -1,0 +1,2 @@
+# Minimal requirements for Namecheap deployment
+# No external dependencies required - pure Python WSGI

@@ -1,0 +1,46 @@
+{
+  "defender": {
+    "name": "Real-Time Defender",
+    "module": "src.protection.celsius_realtime_defender",
+    "status": "Stopped",
+    "restart_count": 0
+  },
+  "learning_system": {
+    "name": "AI Learning System",
+    "module": "celsius_learning_launcher",
+    "status": "Stopped",
+    "restart_count": 0,
+    "description": "Autonomous monitoring and learning - NO APPROVAL NEEDED"
+  },
+  "core_ai": {
+    "name": "Core AI Engine",
+    "module": "src.core.main",
+    "status": "Stopped",
+    "restart_count": 0
+  },
+  "dashboard": {
+    "name": "Enhanced Dashboard",
+    "module": "src.dashboard.enhanced_mobile_dashboard",
+    "status": "Stopped",
+    "restart_count": 0,
+    "health_uri": "http://localhost:5000"
+  },
+  "guardian": {
+    "name": "Guardian System",
+    "module": "src.guardian.celsius_ultimate_guardian",
+    "status": "Stopped",
+    "restart_count": 0
+  },
+  "web_learning": {
+    "name": "Web Learning System",
+    "module": "src.learning.web_learning_system",
+    "status": "Stopped",
+    "restart_count": 0
+  },
+  "hourly_reporter": {
+    "name": "Hourly Reporter",
+    "module": "src.monitoring.celsius_hourly_reporter",
+    "status": "Stopped",
+    "restart_count": 0
+  }
+}

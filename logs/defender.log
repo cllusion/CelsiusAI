@@ -1,0 +1,925 @@
+2025-10-24 23:35:48,721 - __main__ - INFO - Defender database initialized
+2025-10-24 23:37:38,460 - __main__ - INFO - Defender database initialized
+2025-10-24 23:37:38,460 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-24 23:37:38,460 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-24 23:37:38,460 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-24 23:37:38,465 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-24 23:37:38,465 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-24 23:37:38,465 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-24 23:37:57,269 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 169, in is_suspicious_process
+    cpu_percent = proc.cpu_percent(interval=0.1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\psutil\__init__.py", line 1073, in cpu_percent
+    time.sleep(interval)
+KeyboardInterrupt
+2025-10-24 23:37:57,271 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-24 23:38:12,833 - __main__ - INFO - Defender database initialized
+2025-10-24 23:38:12,833 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-24 23:38:12,833 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-24 23:38:12,833 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-24 23:38:12,833 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-24 23:38:12,833 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-24 23:38:12,833 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-24 23:39:33,291 - __main__ - INFO - Defender database initialized
+2025-10-24 23:39:33,291 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-24 23:39:33,291 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-24 23:39:33,291 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-24 23:39:33,291 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-24 23:39:33,291 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-24 23:39:33,291 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-24 23:40:44,027 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 169, in is_suspicious_process
+    cpu_percent = proc.cpu_percent(interval=0.1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\psutil\__init__.py", line 1073, in cpu_percent
+    time.sleep(interval)
+KeyboardInterrupt
+2025-10-24 23:40:44,029 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-24 23:43:35,063 - __main__ - INFO - Defender database initialized
+2025-10-24 23:43:35,063 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-24 23:43:35,063 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-24 23:43:35,063 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-24 23:43:35,063 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-24 23:43:35,063 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-24 23:43:35,063 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-24 23:44:24,980 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 176, in is_suspicious_process
+    connections = proc.net_connections()
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\psutil\__init__.py", line 1252, in net_connections
+    return self._proc.net_connections(kind)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\psutil\_pswindows.py", line 693, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\psutil\_pswindows.py", line 1015, in net_connections
+    return net_connections(kind, _pid=self.pid)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\psutil\_pswindows.py", line 371, in net_connections
+    rawlist = cext.net_connections(_pid, families, types)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+2025-10-24 23:44:24,984 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-25 00:18:47,033 - __main__ - INFO - Defender database initialized
+2025-10-25 00:18:47,033 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 00:18:47,033 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 00:18:47,033 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 00:18:47,033 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 00:18:47,033 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 00:18:47,033 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 00:19:34,868 - __main__ - INFO - Defender database initialized
+2025-10-25 00:19:34,868 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 00:19:34,883 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 00:19:34,883 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 00:19:34,883 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 00:19:34,883 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 00:19:34,883 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 00:19:44,862 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 169, in is_suspicious_process
+    cpu_percent = proc.cpu_percent(interval=0.1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\psutil\__init__.py", line 1073, in cpu_percent
+    time.sleep(interval)
+KeyboardInterrupt
+2025-10-25 00:19:44,866 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-25 00:25:50,740 - __main__ - INFO - Defender database initialized
+2025-10-25 00:25:50,740 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 00:25:50,740 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 00:25:50,740 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 00:25:50,740 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 00:25:50,740 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 00:25:50,740 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 00:29:38,558 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 169, in is_suspicious_process
+    cpu_percent = proc.cpu_percent(interval=0.1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\psutil\__init__.py", line 1073, in cpu_percent
+    time.sleep(interval)
+KeyboardInterrupt
+2025-10-25 00:29:38,561 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-25 00:30:15,363 - __main__ - INFO - Defender database initialized
+2025-10-25 00:30:15,363 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 00:30:15,363 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 00:30:15,363 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 00:30:15,363 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 00:30:15,363 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 00:30:15,363 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 00:46:04,779 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() running at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:436> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-10-25 00:49:44,743 - __main__ - INFO - Defender database initialized
+2025-10-25 00:49:44,743 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 00:49:44,743 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 00:49:44,743 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 00:49:44,746 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 00:49:44,746 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 00:49:44,746 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 01:03:31,278 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 169, in is_suspicious_process
+    cpu_percent = proc.cpu_percent(interval=0.1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\psutil\__init__.py", line 1073, in cpu_percent
+    time.sleep(interval)
+KeyboardInterrupt
+2025-10-25 01:03:31,301 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+ERROR: Traceback (most recent call last):
+ERROR:   File "<frozen runpy>", line 198, in _run_module_as_main
+ERROR:   File "<frozen runpy>", line 88, in _run_code
+ERROR:   File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 34, in <module>
+ERROR:     from watchdog.observers import Observer
+ERROR: ModuleNotFoundError: No module named 'watchdog'
+ERROR: Traceback (most recent call last):
+ERROR:   File "<frozen runpy>", line 198, in _run_module_as_main
+ERROR:   File "<frozen runpy>", line 88, in _run_code
+ERROR:   File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 34, in <module>
+ERROR:     from watchdog.observers import Observer
+ERROR: ModuleNotFoundError: No module named 'watchdog'
+ERROR: Traceback (most recent call last):
+ERROR:   File "<frozen runpy>", line 198, in _run_module_as_main
+ERROR:   File "<frozen runpy>", line 88, in _run_code
+ERROR:   File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 34, in <module>
+ERROR:     from watchdog.observers import Observer
+ERROR: ModuleNotFoundError: No module named 'watchdog'
+ERROR: Traceback (most recent call last):
+ERROR:   File "<frozen runpy>", line 198, in _run_module_as_main
+ERROR:   File "<frozen runpy>", line 88, in _run_code
+ERROR:   File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 34, in <module>
+ERROR:     from watchdog.observers import Observer
+ERROR: ModuleNotFoundError: No module named 'watchdog'
+ERROR: Traceback (most recent call last):
+ERROR:   File "<frozen runpy>", line 198, in _run_module_as_main
+ERROR:   File "<frozen runpy>", line 88, in _run_code
+ERROR:   File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 34, in <module>
+ERROR:     from watchdog.observers import Observer
+ERROR: ModuleNotFoundError: No module named 'watchdog'
+ERROR: Traceback (most recent call last):
+ERROR:   File "<frozen runpy>", line 198, in _run_module_as_main
+ERROR:   File "<frozen runpy>", line 88, in _run_code
+ERROR:   File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 34, in <module>
+ERROR:     from watchdog.observers import Observer
+ERROR: ModuleNotFoundError: No module named 'watchdog'
+ERROR: Traceback (most recent call last):
+ERROR:   File "<frozen runpy>", line 198, in _run_module_as_main
+ERROR:   File "<frozen runpy>", line 88, in _run_code
+ERROR:   File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 34, in <module>
+ERROR:     from watchdog.observers import Observer
+ERROR: ModuleNotFoundError: No module named 'watchdog'
+ERROR: Traceback (most recent call last):
+ERROR:   File "<frozen runpy>", line 198, in _run_module_as_main
+ERROR:   File "<frozen runpy>", line 88, in _run_code
+ERROR:   File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 34, in <module>
+ERROR:     from watchdog.observers import Observer
+ERROR: ModuleNotFoundError: No module named 'watchdog'
+2025-10-25 01:46:34,939 - __main__ - INFO - Defender database initialized
+2025-10-25 01:46:34,939 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 01:46:34,939 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 01:46:34,939 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 01:46:34,939 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 01:46:34,939 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 01:46:34,939 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 01:46:35,026 - __main__ - INFO - Defender database initialized
+2025-10-25 01:46:35,026 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 01:46:35,026 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 01:46:35,026 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 01:46:35,026 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 01:46:35,026 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 01:46:35,026 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 01:48:33,446 - __main__ - INFO - Defender database initialized
+2025-10-25 01:48:33,446 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 01:48:33,446 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 01:48:33,446 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 01:48:33,461 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 01:48:33,461 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 01:48:33,461 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 01:48:51,567 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 169, in is_suspicious_process
+    cpu_percent = proc.cpu_percent(interval=0.1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\.venv\Lib\site-packages\psutil\__init__.py", line 1073, in cpu_percent
+    time.sleep(interval)
+KeyboardInterrupt
+2025-10-25 01:48:51,569 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-25 01:50:03,952 - __main__ - INFO - Defender database initialized
+2025-10-25 01:50:03,952 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 01:50:03,952 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 01:50:03,952 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 01:50:03,952 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 01:50:03,952 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 01:50:03,952 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 01:50:20,274 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 169, in is_suspicious_process
+    cpu_percent = proc.cpu_percent(interval=0.1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\.venv\Lib\site-packages\psutil\__init__.py", line 1073, in cpu_percent
+    time.sleep(interval)
+KeyboardInterrupt
+2025-10-25 01:50:20,276 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-25 01:51:57,635 - __main__ - INFO - Defender database initialized
+2025-10-25 01:51:57,635 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 01:51:57,635 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 01:51:57,635 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 01:51:57,635 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 01:51:57,635 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 01:51:57,635 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 01:52:14,257 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 169, in is_suspicious_process
+    cpu_percent = proc.cpu_percent(interval=0.1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\.venv\Lib\site-packages\psutil\__init__.py", line 1073, in cpu_percent
+    time.sleep(interval)
+KeyboardInterrupt
+2025-10-25 01:52:14,259 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-25 01:52:40,496 - __main__ - INFO - Defender database initialized
+2025-10-25 01:52:40,512 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 01:52:40,512 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 01:52:40,512 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 01:52:40,513 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 01:52:40,513 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 01:52:40,513 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 01:54:26,692 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 169, in is_suspicious_process
+    cpu_percent = proc.cpu_percent(interval=0.1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\.venv\Lib\site-packages\psutil\__init__.py", line 1073, in cpu_percent
+    time.sleep(interval)
+KeyboardInterrupt
+2025-10-25 01:54:26,694 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-25 01:55:53,626 - __main__ - INFO - Defender database initialized
+2025-10-25 01:55:53,626 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 01:55:53,626 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 01:55:53,626 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 01:55:53,641 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 01:55:53,641 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 01:55:53,641 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 01:56:03,552 - __main__ - INFO - Defender database initialized
+2025-10-25 01:56:03,552 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 01:56:03,567 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 01:56:03,567 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 01:56:03,567 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 01:56:03,567 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 01:56:03,567 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 01:56:24,390 - __main__ - INFO - Defender database initialized
+2025-10-25 01:56:24,390 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 01:56:24,390 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 01:56:24,390 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 01:56:24,390 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 01:56:24,390 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 01:56:24,390 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 01:57:13,977 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 169, in is_suspicious_process
+    cpu_percent = proc.cpu_percent(interval=0.1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\.venv\Lib\site-packages\psutil\__init__.py", line 1073, in cpu_percent
+    time.sleep(interval)
+KeyboardInterrupt
+2025-10-25 01:57:13,977 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-25 02:01:19,541 - __main__ - INFO - Defender database initialized
+2025-10-25 02:01:19,541 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 02:01:19,541 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 02:01:19,541 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 02:01:19,541 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 02:01:19,541 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 02:01:19,541 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 02:02:40,422 - __main__ - INFO - Defender database initialized
+2025-10-25 02:02:40,422 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 02:02:40,422 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 02:02:40,422 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 02:02:40,437 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 02:02:40,437 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 02:02:40,437 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 02:26:59,654 - __main__ - INFO - Defender database initialized
+2025-10-25 02:26:59,654 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 02:26:59,654 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 02:26:59,654 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 02:26:59,654 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 02:26:59,654 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 02:26:59,654 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 02:38:29,129 - __main__ - ERROR - Error calculating hash for C:\Users\micro\Downloads\EQUuDSQP.msi: [Errno 2] No such file or directory: 'C:\\Users\\micro\\Downloads\\EQUuDSQP.msi'
+2025-10-25 03:28:27,001 - __main__ - INFO - Defender database initialized
+2025-10-25 03:28:27,001 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 03:28:27,003 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 03:28:27,003 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 03:28:27,004 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 03:28:27,004 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 03:28:27,004 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 03:28:27,264 - __main__ - INFO - Defender database initialized
+2025-10-25 03:28:27,264 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 03:28:27,265 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 03:28:27,265 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 03:28:27,266 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 03:28:27,266 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 03:28:27,266 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+
+================================================================================
+CELSIUS AI - REAL-TIME SYSTEM DEFENDER
+================================================================================
+
+Starting comprehensive system protection...
+
+2025-10-25 03:28:27,001 - __main__ - INFO - Defender database initialized
+2025-10-25 03:28:27,001 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 03:28:27,003 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 03:28:27,003 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 03:28:27,004 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 03:28:27,004 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 03:28:27,004 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+
+[DEFENDER] Defender stopped by user
+2025-10-25 03:28:46,033 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 169, in is_suspicious_process
+    cpu_percent = proc.cpu_percent(interval=0.1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\psutil\__init__.py", line 1073, in cpu_percent
+    time.sleep(interval)
+KeyboardInterrupt
+2025-10-25 03:28:46,032 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 169, in is_suspicious_process
+    cpu_percent = proc.cpu_percent(interval=0.1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\psutil\__init__.py", line 1073, in cpu_percent
+    time.sleep(interval)
+KeyboardInterrupt
+2025-10-25 03:28:46,035 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-25 03:28:46,035 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-25 03:28:46,035 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-25 03:30:31,439 - __main__ - INFO - Defender database initialized
+2025-10-25 03:30:31,439 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 03:30:31,439 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 03:30:31,439 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 03:30:31,439 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 03:30:31,439 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 03:30:31,439 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-25 12:23:13,461 - __main__ - INFO - Defender database initialized
+2025-10-25 12:23:13,461 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-25 12:23:13,461 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-25 12:23:13,461 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-25 12:23:13,461 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-25 12:23:13,461 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-25 12:23:13,461 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-26 02:21:11,693 - __main__ - ERROR - Error analyzing process: process no longer exists (pid=27528, name='WmiPrvSE.exe')
+2025-10-26 20:55:15,169 - __main__ - ERROR - Error analyzing process: process no longer exists (pid=28508, name='svchost.exe')
+2025-10-26 22:18:28,633 - __main__ - INFO - Defender database initialized
+2025-10-26 22:18:28,634 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-26 22:18:28,635 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-26 22:18:28,635 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-26 22:18:28,636 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-26 22:18:28,636 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-26 22:18:28,636 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-26 22:29:47,506 - __main__ - ERROR - Error analyzing process: process no longer exists (pid=16236, name='RuntimeBroker.exe')
+2025-10-27 03:08:30,064 - __main__ - ERROR - Error analyzing process: process no longer exists (pid=15120, name='svchost.exe')
+2025-10-27 13:08:26,943 - __main__ - ERROR - Error analyzing process: process no longer exists (pid=25668, name='svchost.exe')
+2025-10-27 14:15:41,137 - __main__ - INFO - Defender database initialized
+2025-10-27 14:15:41,137 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 14:15:41,137 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 14:15:41,137 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 14:15:41,137 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 14:15:41,137 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 14:15:41,137 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 14:24:52,740 - __main__ - INFO - Defender database initialized
+2025-10-27 14:24:52,740 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 14:24:52,755 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 14:24:52,755 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 14:24:52,755 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 14:24:52,755 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 14:24:52,755 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 14:25:21,704 - __main__ - ERROR - Error analyzing process: process no longer exists (pid=21492, name='RuntimeBroker.exe')
+2025-10-27 14:43:00,394 - __main__ - INFO - Defender database initialized
+2025-10-27 14:43:00,394 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 14:43:00,396 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 14:43:00,396 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 14:43:00,397 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 14:43:00,397 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 14:43:00,397 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 14:43:00,646 - __main__ - INFO - Defender database initialized
+2025-10-27 14:43:00,646 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 14:43:00,651 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 14:43:00,651 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 14:43:00,651 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 14:43:00,651 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 14:43:00,651 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+
+================================================================================
+CELSIUS AI - REAL-TIME SYSTEM DEFENDER
+================================================================================
+
+Starting comprehensive system protection...
+
+2025-10-27 14:43:00,394 - __main__ - INFO - Defender database initialized
+2025-10-27 14:43:00,394 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 14:43:00,396 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 14:43:00,396 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 14:43:00,397 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 14:43:00,397 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 14:43:00,397 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 14:49:11,418 - __main__ - INFO - Defender database initialized
+2025-10-27 14:49:11,418 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 14:49:11,418 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 14:49:11,418 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 14:49:11,418 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 14:49:11,418 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 14:49:11,418 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 15:06:55,488 - __main__ - INFO - Defender database initialized
+2025-10-27 15:06:55,488 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 15:06:55,503 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 15:06:55,503 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 15:06:55,503 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 15:06:55,503 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 15:06:55,503 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 15:12:06,317 - __main__ - INFO - Defender database initialized
+2025-10-27 15:12:06,317 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 15:12:06,317 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 15:12:06,317 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 15:12:06,317 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 15:12:06,333 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 15:12:06,333 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 15:32:09,679 - __main__ - INFO - Defender database initialized
+2025-10-27 15:32:09,679 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 15:32:09,679 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 15:32:09,679 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 15:32:09,679 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 15:32:09,679 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 15:32:09,679 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 15:39:23,859 - __main__ - INFO - Defender database initialized
+2025-10-27 15:39:23,859 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 15:39:23,859 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 15:39:23,859 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 15:39:23,864 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 15:39:23,864 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 15:39:23,864 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 15:41:33,996 - __main__ - INFO - Defender database initialized
+2025-10-27 15:41:33,996 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 15:41:33,996 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 15:41:33,996 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 15:41:33,996 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 15:41:33,996 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 15:41:33,996 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 15:42:28,103 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 169, in is_suspicious_process
+    cpu_percent = proc.cpu_percent(interval=0.1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\.venv\Lib\site-packages\psutil\__init__.py", line 1073, in cpu_percent
+    time.sleep(interval)
+KeyboardInterrupt
+2025-10-27 15:42:28,103 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-27 15:42:29,771 - __main__ - INFO - Defender database initialized
+2025-10-27 15:42:29,771 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 15:42:29,780 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 15:42:29,780 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 15:42:29,780 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 15:42:29,780 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 15:42:29,780 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 15:43:13,718 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() running at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:436> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-10-27 15:43:20,256 - __main__ - INFO - Defender database initialized
+2025-10-27 15:43:20,256 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 15:43:20,256 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 15:43:20,256 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 15:43:20,256 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 15:43:20,256 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 15:43:20,256 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 15:43:52,759 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() done, defined at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:402> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 569, in main
+    loop.run_until_complete(defender.run())
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 408, in monitor_processes
+    is_suspicious, reason, threat_score = self.threat_engine.is_suspicious_process(proc)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py", line 169, in is_suspicious_process
+    cpu_percent = proc.cpu_percent(interval=0.1)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\micro\Celsius AI\.venv\Lib\site-packages\psutil\__init__.py", line 1073, in cpu_percent
+    time.sleep(interval)
+KeyboardInterrupt
+2025-10-27 15:43:52,761 - __main__ - INFO - [DEFENDER] Celsius Defender stopped
+2025-10-27 15:45:03,662 - __main__ - INFO - Defender database initialized
+2025-10-27 15:45:03,662 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 15:45:03,662 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 15:45:03,662 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 15:45:03,662 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 15:45:03,662 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 15:45:03,662 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 15:45:54,164 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<CelsiusRealtimeDefender.monitor_processes() running at C:\Users\micro\Celsius AI\src\protection\celsius_realtime_defender.py:436> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-10-27 15:53:02,513 - __main__ - INFO - Defender database initialized
+2025-10-27 15:53:02,513 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 15:53:02,518 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 15:53:02,518 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 15:53:02,518 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 15:53:02,518 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 15:53:02,518 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 17:58:15,585 - __main__ - INFO - Defender database initialized
+2025-10-27 17:58:15,585 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 17:58:15,585 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 17:58:15,585 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 17:58:15,585 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 17:58:15,585 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 17:58:15,585 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 18:00:54,098 - __main__ - INFO - Defender database initialized
+2025-10-27 18:00:54,098 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 18:00:54,098 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 18:00:54,098 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 18:00:54,098 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 18:00:54,098 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 18:00:54,098 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 18:05:00,400 - __main__ - INFO - Defender database initialized
+2025-10-27 18:05:00,400 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 18:05:00,401 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 18:05:00,402 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 18:05:00,402 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 18:05:00,402 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 18:05:00,402 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 18:16:21,527 - __main__ - INFO - Defender database initialized
+2025-10-27 18:16:21,527 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 18:16:21,527 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 18:16:21,527 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 18:16:21,527 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 18:16:21,527 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 18:16:21,527 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 19:57:02,744 - __main__ - ERROR - Error analyzing process: process no longer exists (pid=28900, name='svchost.exe')
+2025-10-27 20:02:30,225 - __main__ - ERROR - Error calculating hash for C:\Users\micro\Downloads\Lnyc9S3q.json: [Errno 2] No such file or directory: 'C:\\Users\\micro\\Downloads\\Lnyc9S3q.json'
+2025-10-27 20:02:30,225 - __main__ - ERROR - Error calculating hash for C:\Users\micro\Downloads\Lnyc9S3q.json.part: [Errno 2] No such file or directory: 'C:\\Users\\micro\\Downloads\\Lnyc9S3q.json.part'
+2025-10-27 21:18:24,677 - __main__ - ERROR - Error analyzing process: process no longer exists (pid=4072, name='svchost.exe')
+2025-10-27 22:05:07,544 - __main__ - INFO - Defender database initialized
+2025-10-27 22:05:07,544 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 22:05:07,544 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 22:05:07,544 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 22:05:07,544 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 22:05:07,544 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 22:05:07,544 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-27 22:21:22,089 - __main__ - INFO - Defender database initialized
+2025-10-27 22:21:22,089 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-27 22:21:22,089 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-27 22:21:22,089 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-27 22:21:22,089 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-27 22:21:22,089 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-27 22:21:22,089 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 04:09:52,883 - __main__ - INFO - Defender database initialized
+2025-10-28 04:09:52,883 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 04:09:52,883 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 04:09:52,883 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 04:09:52,883 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 04:09:52,883 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 04:09:52,883 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 04:23:16,514 - __main__ - INFO - Defender database initialized
+2025-10-28 04:23:16,514 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 04:23:16,530 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 04:23:16,530 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 04:23:16,530 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 04:23:16,530 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 04:23:16,530 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 19:42:05,995 - __main__ - INFO - Defender database initialized
+2025-10-28 19:42:05,995 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 19:42:05,995 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 19:42:05,995 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 19:42:05,995 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 19:42:05,995 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 19:42:05,995 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 19:46:54,861 - __main__ - INFO - Defender database initialized
+2025-10-28 19:46:54,861 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 19:46:54,861 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 19:46:54,861 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 19:46:54,861 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 19:46:54,861 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 19:46:54,861 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 19:50:52,996 - __main__ - INFO - Defender database initialized
+2025-10-28 19:50:52,996 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 19:50:52,996 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 19:50:52,996 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 19:50:52,996 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 19:50:52,996 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 19:50:52,996 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 19:54:15,231 - __main__ - INFO - Defender database initialized
+2025-10-28 19:54:15,231 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 19:54:15,231 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 19:54:15,231 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 19:54:15,231 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 19:54:15,231 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 19:54:15,231 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 20:01:52,673 - __main__ - INFO - Defender database initialized
+2025-10-28 20:01:52,673 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 20:01:52,673 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 20:01:52,673 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 20:01:52,673 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 20:01:52,673 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 20:01:52,673 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 20:12:57,660 - __main__ - INFO - Defender database initialized
+2025-10-28 20:12:57,660 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 20:12:57,660 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 20:12:57,666 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 20:12:57,666 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 20:12:57,666 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 20:12:57,666 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 20:44:37,356 - __main__ - INFO - Defender database initialized
+2025-10-28 20:44:37,356 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 20:44:37,356 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 20:44:37,356 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 20:44:37,356 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 20:44:37,356 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 20:44:37,356 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 20:49:06,003 - __main__ - INFO - Defender database initialized
+2025-10-28 20:49:06,003 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 20:49:06,003 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 20:49:06,003 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 20:49:06,003 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 20:49:06,003 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 20:49:06,003 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 20:54:32,240 - __main__ - INFO - Defender database initialized
+2025-10-28 20:54:32,240 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 20:54:32,256 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 20:54:32,256 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 20:54:32,256 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 20:54:32,256 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 20:54:32,256 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 21:12:38,385 - __main__ - INFO - Defender database initialized
+2025-10-28 21:12:38,385 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 21:12:38,385 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 21:12:38,385 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 21:12:38,385 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 21:12:38,385 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 21:12:38,385 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 21:15:54,684 - __main__ - ERROR - Error calculating hash for C:\Users\micro\Downloads\celsius_authorization_form_20251028.txt: [Errno 2] No such file or directory: 'C:\\Users\\micro\\Downloads\\celsius_authorization_form_20251028.txt'
+2025-10-28 21:18:47,966 - __main__ - INFO - Defender database initialized
+2025-10-28 21:18:47,966 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 21:18:47,966 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 21:18:47,966 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 21:18:47,966 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 21:18:47,966 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 21:18:47,966 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 21:22:36,311 - __main__ - INFO - Defender database initialized
+2025-10-28 21:22:36,311 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 21:22:36,311 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 21:22:36,311 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 21:22:36,311 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 21:22:36,311 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 21:22:36,311 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 21:27:39,982 - __main__ - INFO - Defender database initialized
+2025-10-28 21:27:39,982 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 21:27:39,982 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 21:27:39,982 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 21:27:39,982 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 21:27:39,982 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 21:27:39,982 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 21:29:48,276 - __main__ - INFO - Defender database initialized
+2025-10-28 21:29:48,276 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 21:29:48,276 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 21:29:48,276 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 21:29:48,276 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 21:29:48,276 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 21:29:48,276 - __main__ - INFO - [DEFENDER] Statistics available in system tray
+2025-10-28 21:52:08,789 - __main__ - ERROR - Error analyzing process: process no longer exists (pid=33740, name='svchost.exe')
+2025-10-28 23:41:27,548 - __main__ - INFO - Defender database initialized
+2025-10-28 23:41:27,548 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender initialized
+2025-10-28 23:41:27,548 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Downloads
+2025-10-28 23:41:27,548 - __main__ - INFO - [MONITOR] Monitoring: C:\Users\micro\Documents
+2025-10-28 23:41:27,548 - __main__ - INFO - [MONITOR] File system monitoring started
+2025-10-28 23:41:27,548 - __main__ - INFO - [DEFENDER] Celsius Real-Time Defender is now protecting your system
+2025-10-28 23:41:27,548 - __main__ - INFO - [DEFENDER] Statistics available in system tray

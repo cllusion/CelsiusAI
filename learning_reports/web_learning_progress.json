@@ -1,0 +1,43 @@
+{
+  "last_updated": "2025-10-25T12:21:57.133819",
+  "knowledge_base_size": 319,
+  "sources_learned": 4,
+  "learning_active": true,
+  "recent_items": [
+    {
+      "type": "defense",
+      "strategy": "Behavioral analysis",
+      "learned_at": "2025-10-25T12:20:57.123695",
+      "effectiveness": "high",
+      "implementation": "Implementation guide for Behavioral analysis"
+    },
+    {
+      "type": "vulnerability",
+      "name": "Unpatched software",
+      "learned_at": "2025-10-25T12:20:57.123695",
+      "risk_level": "medium",
+      "mitigation": "Mitigation strategies for Unpatched software"
+    },
+    {
+      "type": "threat",
+      "name": "Zero-day vulnerabilities",
+      "learned_at": "2025-10-25T12:21:57.133317",
+      "severity": "high",
+      "countermeasures": "Defense strategies for Zero-day vulnerabilities"
+    },
+    {
+      "type": "defense",
+      "strategy": "Zero-trust architecture",
+      "learned_at": "2025-10-25T12:21:57.133317",
+      "effectiveness": "high",
+      "implementation": "Implementation guide for Zero-trust architecture"
+    },
+    {
+      "type": "vulnerability",
+      "name": "Insufficient logging",
+      "learned_at": "2025-10-25T12:21:57.133317",
+      "risk_level": "medium",
+      "mitigation": "Mitigation strategies for Insufficient logging"
+    }
+  ]
+}

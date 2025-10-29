@@ -1,0 +1,721 @@
+2025-10-23 22:38:04,813 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 22:38:04,816 - CelsiusCodeApproval - INFO - Code change request submitted: d51c7af10d7b - Improve error handling in web learning
+2025-10-23 22:39:19,247 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 22:39:19,247 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 22:39:19,254 - CelsiusCodeApproval - INFO - Code change request submitted: 52150754b4a2 - Add error handling to network requests
+2025-10-23 22:39:19,258 - CelsiusCodeApproval - INFO - Code change request submitted: 9a027148d9e7 - Optimize memory usage in data processing
+2025-10-23 22:39:19,260 - CelsiusCodeApproval - INFO - Code change request submitted: 0abc896a5886 - Security improvement for file access
+2025-10-23 22:39:19,268 - CelsiusCodeApproval - INFO - Code change request approved: 52150754b4a2 by demo_admin
+2025-10-23 22:39:19,271 - CelsiusCodeApproval - INFO - Code change request denied: 9a027148d9e7 by demo_admin
+2025-10-23 22:58:45,828 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 22:59:49,138 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 23:00:13,751 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-23 23:00:13,751 - CelsiusWebLearner - INFO - Starting web learning for topic: cybersecurity
+2025-10-23 23:00:14,030 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.cisa.gov
+2025-10-23 23:00:14,323 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://krebsonsecurity.com
+2025-10-23 23:00:14,329 - CelsiusWebLearner - INFO - Completed learning for cybersecurity: 0 pieces of content from 0 sources
+2025-10-23 23:00:19,330 - CelsiusWebLearner - INFO - Starting web learning for topic: technology
+2025-10-23 23:00:19,614 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://techcrunch.com
+2025-10-23 23:00:20,023 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://arstechnica.com
+2025-10-23 23:00:20,023 - CelsiusWebLearner - INFO - Completed learning for technology: 0 pieces of content from 0 sources
+2025-10-23 23:00:25,029 - CelsiusWebLearner - INFO - Starting web learning for topic: system_optimization
+2025-10-23 23:00:25,338 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.tomshardware.com
+2025-10-23 23:00:27,405 - CelsiusWebLearner - WARNING - Failed to extract content from https://www.anandtech.com: 500 Server Error: Internal Server Error for url: https://forums.anandtech.com/
+2025-10-23 23:00:29,419 - CelsiusWebLearner - INFO - Completed learning for system_optimization: 0 pieces of content from 1 sources
+2025-10-23 23:00:34,420 - CelsiusWebLearner - INFO - Starting web learning for topic: programming
+2025-10-23 23:00:35,056 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://realpython.com
+2025-10-23 23:00:36,107 - CelsiusWebLearner - INFO - Stored learned content: Newest Questions - Stack Overflow (Quality: 0.60)
+2025-10-23 23:00:38,117 - CelsiusWebLearner - INFO - Completed learning for programming: 1 pieces of content from 1 sources
+2025-10-23 23:00:43,119 - CelsiusWebLearner - INFO - Starting web learning for topic: fitness_health
+2025-10-23 23:00:43,532 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.mayoclinic.org
+2025-10-23 23:00:44,332 - CelsiusWebLearner - INFO - Stored learned content: WebMD - Better information. Better health. (Quality: 1.00)
+2025-10-23 23:00:46,342 - CelsiusWebLearner - INFO - Completed learning for fitness_health: 1 pieces of content from 1 sources
+2025-10-23 23:00:51,353 - CelsiusWebLearner - INFO - Stored learning report for period: daily
+2025-10-23 23:02:22,530 - CelsiusCodeApproval - INFO - Code change request denied: 0abc896a5886 by cllusion001
+2025-10-23 23:02:49,283 - CelsiusCodeApproval - INFO - Code change request approved: d51c7af10d7b by cllusion001
+2025-10-23 23:06:17,772 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 23:08:02,195 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 23:09:04,132 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-23 23:09:04,132 - CelsiusWebLearner - INFO - Starting web learning for topic: cybersecurity
+2025-10-23 23:09:04,429 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.cisa.gov
+2025-10-23 23:09:05,130 - CelsiusWebLearner - INFO - Stored learned content: Krebs on Security – In-depth security news and investigation (Quality: 0.60)
+2025-10-23 23:09:07,138 - CelsiusWebLearner - INFO - Completed learning for cybersecurity: 1 pieces of content from 1 sources
+2025-10-23 23:09:12,140 - CelsiusWebLearner - INFO - Starting web learning for topic: technology
+2025-10-23 23:09:12,417 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://techcrunch.com
+2025-10-23 23:09:12,814 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://arstechnica.com
+2025-10-23 23:09:12,814 - CelsiusWebLearner - INFO - Completed learning for technology: 0 pieces of content from 0 sources
+2025-10-23 23:09:17,823 - CelsiusWebLearner - INFO - Starting web learning for topic: system_optimization
+2025-10-23 23:09:18,163 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.tomshardware.com
+2025-10-23 23:09:20,117 - CelsiusWebLearner - WARNING - Failed to extract content from https://www.anandtech.com: 500 Server Error: Internal Server Error for url: https://forums.anandtech.com/
+2025-10-23 23:09:22,125 - CelsiusWebLearner - INFO - Completed learning for system_optimization: 0 pieces of content from 1 sources
+2025-10-23 23:09:27,127 - CelsiusWebLearner - INFO - Starting web learning for topic: programming
+2025-10-23 23:09:27,715 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://realpython.com
+2025-10-23 23:09:28,560 - CelsiusWebLearner - ERROR - Error storing learned content: UNIQUE constraint failed: learned_content.url
+2025-10-23 23:09:30,566 - CelsiusWebLearner - INFO - Completed learning for programming: 0 pieces of content from 1 sources
+2025-10-23 23:09:35,567 - CelsiusWebLearner - INFO - Starting web learning for topic: fitness_health
+2025-10-23 23:09:35,895 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.mayoclinic.org
+2025-10-23 23:09:36,684 - CelsiusWebLearner - ERROR - Error storing learned content: UNIQUE constraint failed: learned_content.url
+2025-10-23 23:09:38,698 - CelsiusWebLearner - INFO - Completed learning for fitness_health: 0 pieces of content from 1 sources
+2025-10-23 23:09:44,314 - CelsiusWebLearner - ERROR - Error storing insight: database is locked
+2025-10-23 23:09:49,923 - CelsiusWebLearner - ERROR - Error storing insight: database is locked
+2025-10-23 23:09:59,114 - CelsiusWebLearner - INFO - Stored learning report for period: daily
+2025-10-23 23:11:12,523 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 23:11:43,930 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-23 23:11:43,930 - CelsiusWebLearner - INFO - Starting web learning for topic: cybersecurity
+2025-10-23 23:11:44,309 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.cisa.gov
+2025-10-23 23:11:45,039 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403 Client Error: Forbidden for url: https://krebsonsecurity.com/
+2025-10-23 23:11:47,052 - CelsiusWebLearner - INFO - Completed learning for cybersecurity: 0 pieces of content from 1 sources
+2025-10-23 23:11:52,053 - CelsiusWebLearner - INFO - Starting web learning for topic: technology
+2025-10-23 23:11:52,329 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://techcrunch.com
+2025-10-23 23:11:52,746 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://arstechnica.com
+2025-10-23 23:11:52,746 - CelsiusWebLearner - INFO - Completed learning for technology: 0 pieces of content from 0 sources
+2025-10-23 23:11:57,765 - CelsiusWebLearner - INFO - Starting web learning for topic: system_optimization
+2025-10-23 23:11:58,142 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.tomshardware.com
+2025-10-23 23:11:59,979 - CelsiusWebLearner - WARNING - Failed to extract content from https://www.anandtech.com: 500 Server Error: Internal Server Error for url: https://forums.anandtech.com/
+2025-10-23 23:12:01,991 - CelsiusWebLearner - INFO - Completed learning for system_optimization: 0 pieces of content from 1 sources
+2025-10-23 23:12:06,992 - CelsiusWebLearner - INFO - Starting web learning for topic: programming
+2025-10-23 23:12:07,580 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://realpython.com
+2025-10-23 23:12:08,430 - CelsiusWebLearner - ERROR - Error storing learned content: UNIQUE constraint failed: learned_content.url
+2025-10-23 23:12:10,435 - CelsiusWebLearner - INFO - Completed learning for programming: 0 pieces of content from 1 sources
+2025-10-23 23:12:15,436 - CelsiusWebLearner - INFO - Starting web learning for topic: fitness_health
+2025-10-23 23:12:15,779 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.mayoclinic.org
+2025-10-23 23:12:17,562 - CelsiusWebLearner - ERROR - Error storing learned content: UNIQUE constraint failed: learned_content.url
+2025-10-23 23:12:19,569 - CelsiusWebLearner - INFO - Completed learning for fitness_health: 0 pieces of content from 1 sources
+2025-10-23 23:12:25,053 - CelsiusWebLearner - ERROR - Error storing insight: database is locked
+2025-10-23 23:12:35,299 - CelsiusWebLearner - INFO - Stored learning report for period: daily
+2025-10-23 23:21:04,252 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 23:21:05,145 - celsius_system_integration - INFO - System integration database initialized
+2025-10-23 23:21:05,146 - celsius_system_integration - INFO - Celsius System Integration Manager initialized
+2025-10-23 23:21:05,147 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 23:21:05,147 - celsius_system_integration - INFO - Starting Celsius AI System Integration
+2025-10-23 23:21:05,147 - celsius_system_integration - INFO - Auto-startup configured successfully
+2025-10-23 23:21:05,148 - celsius_system_integration - INFO - System integration started successfully
+2025-10-23 23:21:05,148 - celsius_power_manager - INFO - Starting Celsius AI Power Management
+2025-10-23 23:21:05,148 - celsius_power_manager - INFO - Power management started successfully
+2025-10-23 23:21:05,148 - celsius_process_trainer - INFO - Starting Celsius AI Process Training System
+2025-10-23 23:21:05,153 - celsius_process_trainer - INFO - Process training started successfully
+2025-10-23 23:21:05,153 - celsius_process_trainer - INFO - Protected processes: 7
+2025-10-23 23:21:05,153 - celsius_process_trainer - INFO - Celsius AI cannot approve its own code changes
+2025-10-23 23:21:05,153 - celsius_collaborative_engine - INFO - Starting Celsius AI Collaborative Improvement Engine
+2025-10-23 23:21:05,153 - celsius_collaborative_engine - WARNING - SAFETY: Celsius AI cannot approve its own code changes
+2025-10-23 23:21:05,153 - celsius_collaborative_engine - INFO - Protected files: 5
+2025-10-23 23:21:05,154 - celsius_collaborative_engine - INFO - Collaborative improvement system started
+2025-10-23 23:21:05,176 - celsius_system_integration - INFO - System integration database initialized
+2025-10-23 23:21:05,176 - celsius_system_integration - INFO - Celsius System Integration Manager initialized
+2025-10-23 23:21:05,178 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 23:21:05,179 - celsius_system_integration - INFO - Starting Celsius AI System Integration
+2025-10-23 23:21:05,179 - celsius_system_integration - INFO - Auto-startup configured successfully
+2025-10-23 23:21:05,179 - celsius_system_integration - INFO - System integration started successfully
+2025-10-23 23:21:05,179 - celsius_power_manager - INFO - Starting Celsius AI Power Management
+2025-10-23 23:21:05,179 - celsius_power_manager - INFO - Power management started successfully
+2025-10-23 23:21:05,179 - celsius_process_trainer - INFO - Starting Celsius AI Process Training System
+2025-10-23 23:21:05,183 - celsius_process_trainer - INFO - Process training started successfully
+2025-10-23 23:21:05,183 - celsius_process_trainer - INFO - Protected processes: 7
+2025-10-23 23:21:05,183 - celsius_process_trainer - INFO - Celsius AI cannot approve its own code changes
+2025-10-23 23:21:05,183 - celsius_collaborative_engine - INFO - Starting Celsius AI Collaborative Improvement Engine
+2025-10-23 23:21:05,183 - celsius_collaborative_engine - WARNING - SAFETY: Celsius AI cannot approve its own code changes
+2025-10-23 23:21:05,183 - celsius_collaborative_engine - INFO - Protected files: 5
+2025-10-23 23:21:05,183 - celsius_collaborative_engine - INFO - Collaborative improvement system started
+2025-10-23 23:21:06,180 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:21:06,215 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:21:06,309 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:21:06,324 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:21:37,532 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:21:37,594 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:21:37,650 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:21:37,697 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:21:46,845 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-23 23:21:46,845 - CelsiusWebLearner - INFO - Starting web learning for topic: cybersecurity
+2025-10-23 23:21:47,179 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.cisa.gov
+2025-10-23 23:21:47,930 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403 Client Error: Forbidden for url: https://krebsonsecurity.com/
+2025-10-23 23:21:49,934 - CelsiusWebLearner - INFO - Completed learning for cybersecurity: 0 pieces of content from 1 sources
+2025-10-23 23:21:54,935 - CelsiusWebLearner - INFO - Starting web learning for topic: technology
+2025-10-23 23:21:55,204 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://techcrunch.com
+2025-10-23 23:21:55,611 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://arstechnica.com
+2025-10-23 23:21:55,611 - CelsiusWebLearner - INFO - Completed learning for technology: 0 pieces of content from 0 sources
+2025-10-23 23:21:56,802 - celsius_process_trainer - INFO - Graded 236 processes, 0 need attention
+2025-10-23 23:21:57,002 - celsius_process_trainer - INFO - Graded 236 processes, 0 need attention
+2025-10-23 23:22:00,621 - CelsiusWebLearner - INFO - Starting web learning for topic: system_optimization
+2025-10-23 23:22:00,979 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.tomshardware.com
+2025-10-23 23:22:02,987 - CelsiusWebLearner - WARNING - Failed to extract content from https://www.anandtech.com: 500 Server Error: Internal Server Error for url: https://forums.anandtech.com/
+2025-10-23 23:22:05,001 - CelsiusWebLearner - INFO - Completed learning for system_optimization: 0 pieces of content from 1 sources
+2025-10-23 23:22:08,730 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:22:08,791 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:22:08,849 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:22:08,892 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:22:10,002 - CelsiusWebLearner - INFO - Starting web learning for topic: programming
+2025-10-23 23:22:10,620 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://realpython.com
+2025-10-23 23:22:11,429 - CelsiusWebLearner - ERROR - Error storing learned content: UNIQUE constraint failed: learned_content.url
+2025-10-23 23:22:13,432 - CelsiusWebLearner - INFO - Completed learning for programming: 0 pieces of content from 1 sources
+2025-10-23 23:22:18,436 - CelsiusWebLearner - INFO - Starting web learning for topic: fitness_health
+2025-10-23 23:22:18,835 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.mayoclinic.org
+2025-10-23 23:22:19,582 - CelsiusWebLearner - ERROR - Error storing learned content: UNIQUE constraint failed: learned_content.url
+2025-10-23 23:22:21,596 - CelsiusWebLearner - INFO - Completed learning for fitness_health: 0 pieces of content from 1 sources
+2025-10-23 23:22:27,067 - CelsiusWebLearner - ERROR - Error storing insight: database is locked
+2025-10-23 23:22:32,481 - CelsiusWebLearner - ERROR - Error storing insight: database is locked
+2025-10-23 23:22:39,909 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:22:39,979 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:22:40,040 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:22:40,091 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:22:42,892 - CelsiusWebLearner - ERROR - Error storing learning report: database is locked
+2025-10-23 23:23:11,109 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:23:11,172 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:23:11,229 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:23:11,280 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:23:42,316 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:23:42,401 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:23:42,430 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:23:42,529 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:23:47,653 - celsius_process_trainer - INFO - Graded 236 processes, 0 need attention
+2025-10-23 23:23:47,663 - celsius_process_trainer - INFO - Graded 236 processes, 0 need attention
+2025-10-23 23:24:13,535 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:24:13,589 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:24:13,645 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:24:13,724 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:24:44,727 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:24:44,807 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:24:44,839 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:24:44,927 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:25:15,910 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:25:15,999 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:25:16,028 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:25:16,126 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:40:12,376 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 23:40:12,506 - celsius_system_integration - INFO - System integration database initialized
+2025-10-23 23:40:12,506 - celsius_system_integration - INFO - Celsius System Integration Manager initialized
+2025-10-23 23:40:12,506 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 23:40:12,506 - celsius_system_integration - INFO - Starting Celsius AI System Integration
+2025-10-23 23:40:12,506 - celsius_system_integration - INFO - Auto-startup configured successfully
+2025-10-23 23:40:12,506 - celsius_system_integration - INFO - System integration started successfully
+2025-10-23 23:40:12,506 - celsius_power_manager - INFO - Starting Celsius AI Power Management
+2025-10-23 23:40:12,506 - celsius_power_manager - INFO - Power management started successfully
+2025-10-23 23:40:12,506 - celsius_process_trainer - INFO - Starting Celsius AI Process Training System
+2025-10-23 23:40:12,506 - celsius_process_trainer - INFO - Process training started successfully
+2025-10-23 23:40:12,506 - celsius_process_trainer - INFO - Protected processes: 7
+2025-10-23 23:40:12,506 - celsius_process_trainer - INFO - Celsius AI cannot approve its own code changes
+2025-10-23 23:40:12,506 - celsius_collaborative_engine - INFO - Starting Celsius AI Collaborative Improvement Engine
+2025-10-23 23:40:12,506 - celsius_collaborative_engine - WARNING - SAFETY: Celsius AI cannot approve its own code changes
+2025-10-23 23:40:12,506 - celsius_collaborative_engine - INFO - Protected files: 5
+2025-10-23 23:40:12,506 - celsius_collaborative_engine - INFO - Collaborative improvement system started
+2025-10-23 23:40:12,538 - celsius_system_integration - INFO - System integration database initialized
+2025-10-23 23:40:12,539 - celsius_system_integration - INFO - Celsius System Integration Manager initialized
+2025-10-23 23:40:12,539 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 23:40:12,539 - celsius_system_integration - INFO - Starting Celsius AI System Integration
+2025-10-23 23:40:12,539 - celsius_system_integration - INFO - Auto-startup configured successfully
+2025-10-23 23:40:12,539 - celsius_system_integration - INFO - System integration started successfully
+2025-10-23 23:40:12,539 - celsius_power_manager - INFO - Starting Celsius AI Power Management
+2025-10-23 23:40:12,539 - celsius_power_manager - INFO - Power management started successfully
+2025-10-23 23:40:12,539 - celsius_process_trainer - INFO - Starting Celsius AI Process Training System
+2025-10-23 23:40:12,539 - celsius_process_trainer - INFO - Process training started successfully
+2025-10-23 23:40:12,539 - celsius_process_trainer - INFO - Protected processes: 7
+2025-10-23 23:40:12,539 - celsius_process_trainer - INFO - Celsius AI cannot approve its own code changes
+2025-10-23 23:40:12,539 - celsius_collaborative_engine - INFO - Starting Celsius AI Collaborative Improvement Engine
+2025-10-23 23:40:12,539 - celsius_collaborative_engine - WARNING - SAFETY: Celsius AI cannot approve its own code changes
+2025-10-23 23:40:12,539 - celsius_collaborative_engine - INFO - Protected files: 5
+2025-10-23 23:40:12,539 - celsius_collaborative_engine - INFO - Collaborative improvement system started
+2025-10-23 23:40:13,542 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:40:13,580 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:40:13,695 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:40:13,695 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:40:44,792 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:40:44,813 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:40:44,897 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:40:44,925 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:41:05,451 - celsius_process_trainer - INFO - Graded 237 processes, 0 need attention
+2025-10-23 23:41:05,463 - celsius_process_trainer - INFO - Graded 237 processes, 0 need attention
+2025-10-23 23:41:15,955 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:41:16,002 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:41:16,067 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:41:16,130 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:41:47,129 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:41:47,187 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:41:47,234 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:41:47,313 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:42:18,308 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:42:18,380 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:42:18,411 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:42:18,475 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:42:49,479 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:42:49,542 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:42:49,594 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:42:49,676 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:42:56,648 - celsius_process_trainer - INFO - Graded 237 processes, 0 need attention
+2025-10-23 23:42:56,853 - celsius_process_trainer - INFO - Graded 237 processes, 0 need attention
+2025-10-23 23:43:20,668 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:43:20,740 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:43:20,790 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:43:20,879 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:43:51,884 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:43:51,962 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:43:51,990 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:43:52,074 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:44:23,055 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:44:23,135 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:44:23,169 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:44:23,235 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:44:49,118 - celsius_process_trainer - INFO - Graded 240 processes, 0 need attention
+2025-10-23 23:44:49,405 - celsius_process_trainer - INFO - Graded 240 processes, 0 need attention
+2025-10-23 23:44:54,237 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:44:54,300 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:44:54,367 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:44:54,399 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:45:25,435 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:45:25,449 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:45:25,532 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:45:25,565 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:45:56,618 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:45:56,648 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:45:56,735 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:45:56,764 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:46:27,802 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:46:27,896 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:46:27,916 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:46:27,996 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:46:41,554 - celsius_process_trainer - INFO - Graded 239 processes, 0 need attention
+2025-10-23 23:46:41,971 - celsius_process_trainer - INFO - Graded 239 processes, 0 need attention
+2025-10-23 23:46:58,980 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:46:59,061 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:46:59,080 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:46:59,161 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:47:30,149 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:47:30,229 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:47:30,245 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:47:30,330 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:48:01,308 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:48:01,394 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:48:01,427 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:48:01,491 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:48:32,489 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:48:32,557 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:48:32,605 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:48:32,679 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:48:33,262 - celsius_process_trainer - INFO - Graded 239 processes, 0 need attention
+2025-10-23 23:48:33,487 - celsius_process_trainer - INFO - Graded 239 processes, 0 need attention
+2025-10-23 23:49:03,671 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:49:03,755 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:49:03,771 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:49:03,855 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:49:34,843 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:49:34,921 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:49:34,980 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:49:35,020 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:50:06,056 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:50:06,092 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:50:06,174 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:50:06,187 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:50:24,352 - celsius_process_trainer - INFO - Graded 237 processes, 0 need attention
+2025-10-23 23:50:24,591 - celsius_process_trainer - INFO - Graded 237 processes, 0 need attention
+2025-10-23 23:50:37,262 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:50:37,281 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:50:37,388 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:50:37,388 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:51:08,466 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:51:08,491 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:51:08,563 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:51:08,583 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:51:39,637 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:51:39,660 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:51:39,745 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:51:39,776 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:51:58,151 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 23:51:58,289 - celsius_system_integration - INFO - System integration database initialized
+2025-10-23 23:51:58,290 - celsius_system_integration - INFO - Celsius System Integration Manager initialized
+2025-10-23 23:51:58,290 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 23:51:58,291 - celsius_system_integration - INFO - Starting Celsius AI System Integration
+2025-10-23 23:51:58,291 - celsius_system_integration - INFO - Auto-startup configured successfully
+2025-10-23 23:51:58,291 - celsius_system_integration - INFO - System integration started successfully
+2025-10-23 23:51:58,292 - celsius_power_manager - INFO - Starting Celsius AI Power Management
+2025-10-23 23:51:58,292 - celsius_power_manager - INFO - Power management started successfully
+2025-10-23 23:51:58,292 - celsius_process_trainer - INFO - Starting Celsius AI Process Training System
+2025-10-23 23:51:58,295 - celsius_process_trainer - INFO - Process training started successfully
+2025-10-23 23:51:58,295 - celsius_process_trainer - INFO - Protected processes: 7
+2025-10-23 23:51:58,295 - celsius_process_trainer - INFO - Celsius AI cannot approve its own code changes
+2025-10-23 23:51:58,295 - celsius_collaborative_engine - INFO - Starting Celsius AI Collaborative Improvement Engine
+2025-10-23 23:51:58,296 - celsius_collaborative_engine - WARNING - SAFETY: Celsius AI cannot approve its own code changes
+2025-10-23 23:51:58,296 - celsius_collaborative_engine - INFO - Protected files: 5
+2025-10-23 23:51:58,296 - celsius_collaborative_engine - INFO - Collaborative improvement system started
+2025-10-23 23:51:58,299 - celsius_system_integration - INFO - System integration database initialized
+2025-10-23 23:51:58,299 - celsius_system_integration - INFO - Celsius System Integration Manager initialized
+2025-10-23 23:51:58,299 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-23 23:51:58,299 - celsius_system_integration - INFO - Starting Celsius AI System Integration
+2025-10-23 23:51:58,299 - celsius_system_integration - INFO - Auto-startup configured successfully
+2025-10-23 23:51:58,299 - celsius_system_integration - INFO - System integration started successfully
+2025-10-23 23:51:58,299 - celsius_power_manager - INFO - Starting Celsius AI Power Management
+2025-10-23 23:51:58,299 - celsius_power_manager - INFO - Power management started successfully
+2025-10-23 23:51:58,299 - celsius_process_trainer - INFO - Starting Celsius AI Process Training System
+2025-10-23 23:51:58,315 - celsius_process_trainer - INFO - Process training started successfully
+2025-10-23 23:51:58,315 - celsius_process_trainer - INFO - Protected processes: 7
+2025-10-23 23:51:58,315 - celsius_process_trainer - INFO - Celsius AI cannot approve its own code changes
+2025-10-23 23:51:58,315 - celsius_collaborative_engine - INFO - Starting Celsius AI Collaborative Improvement Engine
+2025-10-23 23:51:58,315 - celsius_collaborative_engine - WARNING - SAFETY: Celsius AI cannot approve its own code changes
+2025-10-23 23:51:58,315 - celsius_collaborative_engine - INFO - Protected files: 5
+2025-10-23 23:51:58,315 - celsius_collaborative_engine - INFO - Collaborative improvement system started
+2025-10-23 23:51:59,321 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:51:59,358 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:51:59,470 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:51:59,509 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:52:10,822 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:52:10,853 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:52:10,930 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:52:10,963 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:52:22,068 - celsius_process_trainer - INFO - Graded 256 processes, 0 need attention
+2025-10-23 23:52:22,919 - celsius_process_trainer - INFO - Graded 256 processes, 0 need attention
+2025-10-23 23:52:30,541 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:52:30,644 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:52:30,644 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:52:30,759 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:52:42,023 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:52:42,043 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:52:42,138 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:52:42,158 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:52:55,216 - celsius_process_trainer - INFO - Graded 257 processes, 0 need attention
+2025-10-23 23:52:55,639 - celsius_process_trainer - INFO - Graded 257 processes, 0 need attention
+2025-10-23 23:53:01,722 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:53:01,831 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:53:01,831 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:53:01,942 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:53:13,243 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:53:13,308 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:53:13,360 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:53:13,421 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:53:32,915 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:53:33,012 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:53:33,029 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:53:33,137 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:53:44,454 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:53:44,503 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:53:44,575 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:53:44,630 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:54:04,116 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:54:04,197 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:54:04,226 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:54:04,315 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:54:15,645 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:54:15,708 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:54:15,751 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:54:15,829 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:54:17,989 - celsius_process_trainer - INFO - Graded 256 processes, 0 need attention
+2025-10-23 23:54:19,208 - celsius_process_trainer - INFO - Graded 256 processes, 0 need attention
+2025-10-23 23:54:35,291 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:54:35,386 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:54:35,386 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:54:35,510 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:54:46,840 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:54:46,935 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:54:46,951 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:54:47,070 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:54:50,702 - celsius_process_trainer - INFO - Graded 256 processes, 0 need attention
+2025-10-23 23:54:51,857 - celsius_process_trainer - INFO - Graded 256 processes, 0 need attention
+2025-10-23 23:55:06,474 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:55:06,579 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:55:06,586 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:55:06,695 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:55:18,014 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:55:18,138 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:55:18,145 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:55:18,237 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:55:37,661 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:55:37,764 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:55:37,766 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:55:37,888 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:55:49,209 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:55:49,311 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:55:49,319 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:55:49,419 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:56:08,848 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:56:08,957 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:56:08,980 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:56:09,080 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:56:16,212 - celsius_process_trainer - INFO - Graded 256 processes, 0 need attention
+2025-10-23 23:56:17,049 - celsius_process_trainer - INFO - Graded 256 processes, 0 need attention
+2025-10-23 23:56:20,383 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:56:20,500 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:56:20,500 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:56:20,600 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:56:40,053 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:56:40,153 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:56:40,179 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:56:40,254 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:56:48,378 - celsius_process_trainer - INFO - Graded 256 processes, 0 need attention
+2025-10-23 23:56:48,784 - celsius_process_trainer - INFO - Graded 256 processes, 0 need attention
+2025-10-23 23:56:51,565 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:56:51,665 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:56:51,665 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:56:51,765 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:57:11,252 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:57:11,335 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:57:11,380 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:57:11,464 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:57:22,732 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:57:22,830 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:57:22,847 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:57:22,930 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:57:42,451 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:57:42,530 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:57:42,579 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:57:42,679 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:57:53,913 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:57:53,992 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:57:54,029 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:57:54,117 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:58:12,298 - celsius_process_trainer - INFO - Graded 254 processes, 0 need attention
+2025-10-23 23:58:12,660 - celsius_process_trainer - INFO - Graded 254 processes, 0 need attention
+2025-10-23 23:58:13,682 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:58:13,760 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:58:13,792 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:58:13,949 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:58:25,167 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:58:25,179 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:58:25,280 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:58:25,293 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:58:43,745 - celsius_process_trainer - INFO - Graded 254 processes, 0 need attention
+2025-10-23 23:58:44,013 - celsius_process_trainer - INFO - Graded 254 processes, 0 need attention
+2025-10-23 23:58:45,168 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:58:45,276 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:58:45,282 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:58:45,389 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:58:56,342 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:58:56,376 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:58:56,460 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:58:56,476 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:59:16,446 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:59:16,463 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:59:16,563 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:59:16,602 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:59:27,530 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:59:27,563 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:59:27,659 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:59:27,680 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:59:47,631 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:59:47,694 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:59:47,750 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:59:47,820 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:59:58,730 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:59:58,754 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-23 23:59:58,857 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-23 23:59:58,892 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:00:09,960 - celsius_process_trainer - INFO - Graded 254 processes, 0 need attention
+2025-10-24 00:00:10,374 - celsius_process_trainer - INFO - Graded 254 processes, 0 need attention
+2025-10-24 00:00:18,818 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:00:18,882 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:00:18,941 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:00:19,029 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:00:29,935 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:00:29,951 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:00:30,072 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:00:30,100 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:00:40,170 - celsius_process_trainer - INFO - Graded 254 processes, 0 need attention
+2025-10-24 00:00:40,379 - celsius_process_trainer - INFO - Graded 254 processes, 0 need attention
+2025-10-24 00:00:50,014 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:00:50,107 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:00:50,136 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:00:50,230 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:01:01,170 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:01:01,192 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:01:01,283 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:01:01,303 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:01:21,207 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:01:21,307 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:01:21,329 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:01:21,407 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:01:32,361 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:01:32,386 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:01:32,479 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:01:32,488 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:01:52,414 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:01:52,492 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:01:52,530 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:01:52,627 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:09:15,242 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 00:09:15,373 - celsius_system_integration - INFO - System integration database initialized
+2025-10-24 00:09:15,373 - celsius_system_integration - INFO - Celsius System Integration Manager initialized
+2025-10-24 00:09:15,374 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 00:09:15,374 - celsius_system_integration - INFO - Starting Celsius AI System Integration
+2025-10-24 00:09:15,375 - celsius_system_integration - INFO - Auto-startup configured successfully
+2025-10-24 00:09:15,375 - celsius_system_integration - INFO - System integration started successfully
+2025-10-24 00:09:15,375 - celsius_power_manager - INFO - Starting Celsius AI Power Management
+2025-10-24 00:09:15,375 - celsius_power_manager - INFO - Power management started successfully
+2025-10-24 00:09:15,375 - celsius_process_trainer - INFO - Starting Celsius AI Process Training System
+2025-10-24 00:09:15,382 - celsius_process_trainer - INFO - Process training started successfully
+2025-10-24 00:09:15,382 - celsius_process_trainer - INFO - Protected processes: 7
+2025-10-24 00:09:15,382 - celsius_process_trainer - INFO - Celsius AI cannot approve its own code changes
+2025-10-24 00:09:15,382 - celsius_collaborative_engine - INFO - Starting Celsius AI Collaborative Improvement Engine
+2025-10-24 00:09:15,382 - celsius_collaborative_engine - WARNING - SAFETY: Celsius AI cannot approve its own code changes
+2025-10-24 00:09:15,383 - celsius_collaborative_engine - INFO - Protected files: 5
+2025-10-24 00:09:15,383 - celsius_collaborative_engine - INFO - Collaborative improvement system started
+2025-10-24 00:09:15,393 - celsius_system_integration - INFO - System integration database initialized
+2025-10-24 00:09:15,393 - celsius_system_integration - INFO - Celsius System Integration Manager initialized
+2025-10-24 00:09:15,393 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 00:09:15,393 - celsius_system_integration - INFO - Starting Celsius AI System Integration
+2025-10-24 00:09:15,393 - celsius_system_integration - INFO - Auto-startup configured successfully
+2025-10-24 00:09:15,393 - celsius_system_integration - INFO - System integration started successfully
+2025-10-24 00:09:15,393 - celsius_power_manager - INFO - Starting Celsius AI Power Management
+2025-10-24 00:09:15,393 - celsius_power_manager - INFO - Power management started successfully
+2025-10-24 00:09:15,393 - celsius_process_trainer - INFO - Starting Celsius AI Process Training System
+2025-10-24 00:09:15,393 - celsius_process_trainer - INFO - Process training started successfully
+2025-10-24 00:09:15,393 - celsius_process_trainer - INFO - Protected processes: 7
+2025-10-24 00:09:15,393 - celsius_process_trainer - INFO - Celsius AI cannot approve its own code changes
+2025-10-24 00:09:15,393 - celsius_collaborative_engine - INFO - Starting Celsius AI Collaborative Improvement Engine
+2025-10-24 00:09:15,393 - celsius_collaborative_engine - WARNING - SAFETY: Celsius AI cannot approve its own code changes
+2025-10-24 00:09:15,393 - celsius_collaborative_engine - INFO - Protected files: 5
+2025-10-24 00:09:15,393 - celsius_collaborative_engine - INFO - Collaborative improvement system started
+2025-10-24 00:09:16,408 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:09:16,432 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:09:16,536 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:09:16,575 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:09:47,631 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:09:47,723 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:09:47,752 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:09:47,834 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:10:08,875 - celsius_process_trainer - INFO - Graded 247 processes, 0 need attention
+2025-10-24 00:10:08,884 - celsius_process_trainer - INFO - Graded 247 processes, 0 need attention
+2025-10-24 00:10:18,817 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:10:18,905 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:10:18,941 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:10:19,033 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:10:50,016 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:10:50,105 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:10:50,140 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:10:50,231 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:11:21,218 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:11:21,300 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:11:21,337 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:11:21,419 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:11:52,431 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:11:52,514 - celsius_power_manager - INFO - CPU throttling removed
+2025-10-24 00:11:52,555 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:11:52,627 - celsius_power_manager - INFO - GPU power limit removed
+2025-10-24 00:12:01,879 - celsius_process_trainer - INFO - Graded 248 processes, 0 need attention
+2025-10-24 00:12:02,088 - celsius_process_trainer - INFO - Graded 248 processes, 0 need attention
+2025-10-24 00:20:52,718 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 00:20:52,829 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 00:21:54,766 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 00:27:32,624 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 00:44:35,393 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 00:44:35,498 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 00:47:32,216 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 00:47:32,315 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 00:48:19,760 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 01:03:48,300 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 01:03:48,400 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 02:17:14,637 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 02:17:14,658 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5001
+2025-10-24 02:17:14,658 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 02:35:50,536 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 02:35:50,568 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5001
+2025-10-24 02:35:50,568 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 02:38:25,649 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 02:38:25,749 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 02:38:56,083 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 02:38:56,178 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 02:39:40,122 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 02:39:40,122 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5001
+2025-10-24 02:39:40,122 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 03:13:06,926 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 03:13:06,951 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5001
+2025-10-24 03:13:06,951 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 03:13:55,654 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 03:13:55,654 - CelsiusWebLearner - INFO - Starting web learning for topic: cybersecurity
+2025-10-24 03:13:55,980 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.cisa.gov
+2025-10-24 03:13:56,739 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403 Client Error: Forbidden for url: https://krebsonsecurity.com/
+2025-10-24 03:13:58,747 - CelsiusWebLearner - INFO - Completed learning for cybersecurity: 0 pieces of content from 1 sources
+2025-10-24 03:14:03,748 - CelsiusWebLearner - INFO - Starting web learning for topic: technology
+2025-10-24 03:14:04,005 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://techcrunch.com
+2025-10-24 03:14:04,412 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://arstechnica.com
+2025-10-24 03:14:04,412 - CelsiusWebLearner - INFO - Completed learning for technology: 0 pieces of content from 0 sources
+2025-10-24 03:14:09,430 - CelsiusWebLearner - INFO - Starting web learning for topic: system_optimization
+2025-10-24 03:14:09,690 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.tomshardware.com
+2025-10-24 03:14:11,543 - CelsiusWebLearner - WARNING - Failed to extract content from https://www.anandtech.com: 500 Server Error: Internal Server Error for url: https://forums.anandtech.com/
+2025-10-24 03:14:13,557 - CelsiusWebLearner - INFO - Completed learning for system_optimization: 0 pieces of content from 1 sources
+2025-10-24 03:14:18,560 - CelsiusWebLearner - INFO - Starting web learning for topic: programming
+2025-10-24 03:14:19,161 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://realpython.com
+2025-10-24 03:14:19,998 - CelsiusWebLearner - ERROR - Error storing learned content: UNIQUE constraint failed: learned_content.url
+2025-10-24 03:14:22,000 - CelsiusWebLearner - INFO - Completed learning for programming: 0 pieces of content from 1 sources
+2025-10-24 03:14:27,001 - CelsiusWebLearner - INFO - Starting web learning for topic: fitness_health
+2025-10-24 03:14:27,311 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.mayoclinic.org
+2025-10-24 03:14:27,970 - CelsiusWebLearner - ERROR - Error storing learned content: UNIQUE constraint failed: learned_content.url
+2025-10-24 03:14:29,979 - CelsiusWebLearner - INFO - Completed learning for fitness_health: 0 pieces of content from 1 sources
+2025-10-24 03:14:35,549 - CelsiusWebLearner - ERROR - Error storing insight: database is locked
+2025-10-24 03:14:41,057 - CelsiusWebLearner - ERROR - Error storing insight: database is locked
+2025-10-24 03:14:46,094 - CelsiusWebLearner - INFO - Stored learning report for period: daily
+2025-10-24 03:27:37,629 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 03:27:37,630 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5001
+2025-10-24 03:27:37,630 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 03:30:18,900 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 03:30:18,900 - CelsiusWebLearner - INFO - Starting web learning for topic: cybersecurity
+2025-10-24 03:30:19,205 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.cisa.gov
+2025-10-24 03:30:19,985 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403 Client Error: Forbidden for url: https://krebsonsecurity.com/
+2025-10-24 03:30:21,993 - CelsiusWebLearner - INFO - Completed learning for cybersecurity: 0 pieces of content from 1 sources
+2025-10-24 03:30:26,995 - CelsiusWebLearner - INFO - Starting web learning for topic: technology
+2025-10-24 03:30:27,274 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://techcrunch.com
+2025-10-24 03:30:27,686 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://arstechnica.com
+2025-10-24 03:30:27,686 - CelsiusWebLearner - INFO - Completed learning for technology: 0 pieces of content from 0 sources
+2025-10-24 03:30:32,707 - CelsiusWebLearner - INFO - Starting web learning for topic: system_optimization
+2025-10-24 03:30:32,976 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.tomshardware.com
+2025-10-24 03:30:34,698 - CelsiusWebLearner - WARNING - Failed to extract content from https://www.anandtech.com: 500 Server Error: Internal Server Error for url: https://forums.anandtech.com/
+2025-10-24 03:30:36,714 - CelsiusWebLearner - INFO - Completed learning for system_optimization: 0 pieces of content from 1 sources
+2025-10-24 03:30:41,717 - CelsiusWebLearner - INFO - Starting web learning for topic: programming
+2025-10-24 03:30:42,293 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://realpython.com
+2025-10-24 03:30:43,087 - CelsiusWebLearner - ERROR - Error storing learned content: UNIQUE constraint failed: learned_content.url
+2025-10-24 03:30:45,091 - CelsiusWebLearner - INFO - Completed learning for programming: 0 pieces of content from 1 sources
+2025-10-24 03:30:50,092 - CelsiusWebLearner - INFO - Starting web learning for topic: fitness_health
+2025-10-24 03:30:50,413 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.mayoclinic.org
+2025-10-24 03:30:51,157 - CelsiusWebLearner - ERROR - Error storing learned content: UNIQUE constraint failed: learned_content.url
+2025-10-24 03:30:53,161 - CelsiusWebLearner - INFO - Completed learning for fitness_health: 0 pieces of content from 1 sources
+2025-10-24 03:30:58,870 - CelsiusWebLearner - ERROR - Error storing insight: database is locked
+2025-10-24 03:31:04,595 - CelsiusWebLearner - ERROR - Error storing insight: database is locked
+2025-10-24 03:31:09,596 - CelsiusWebLearner - INFO - Stored learning report for period: daily
+2025-10-24 03:46:15,567 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 03:46:15,679 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 03:46:15,679 - CelsiusWebLearner - INFO - Starting web learning for topic: cybersecurity
+2025-10-24 03:46:15,995 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.cisa.gov
+2025-10-24 03:46:16,750 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403 Client Error: Forbidden for url: https://krebsonsecurity.com/
+2025-10-24 03:46:18,753 - CelsiusWebLearner - INFO - Completed learning for cybersecurity: 0 pieces of content from 1 sources
+2025-10-24 03:46:23,754 - CelsiusWebLearner - INFO - Starting web learning for topic: technology
+2025-10-24 03:46:24,039 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://techcrunch.com
+2025-10-24 03:46:24,436 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://arstechnica.com
+2025-10-24 03:46:24,436 - CelsiusWebLearner - INFO - Completed learning for technology: 0 pieces of content from 0 sources
+2025-10-24 03:46:29,448 - CelsiusWebLearner - INFO - Starting web learning for topic: system_optimization
+2025-10-24 03:46:29,714 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.tomshardware.com
+2025-10-24 03:46:31,722 - CelsiusWebLearner - WARNING - Failed to extract content from https://www.anandtech.com: 500 Server Error: Internal Server Error for url: https://forums.anandtech.com/
+2025-10-24 03:46:33,738 - CelsiusWebLearner - INFO - Completed learning for system_optimization: 0 pieces of content from 1 sources
+2025-10-24 03:46:38,740 - CelsiusWebLearner - INFO - Starting web learning for topic: programming
+2025-10-24 03:46:39,399 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://realpython.com
+2025-10-24 03:46:40,176 - CelsiusWebLearner - ERROR - Error storing learned content: UNIQUE constraint failed: learned_content.url
+2025-10-24 03:46:42,176 - CelsiusWebLearner - INFO - Completed learning for programming: 0 pieces of content from 1 sources
+2025-10-24 03:46:47,178 - CelsiusWebLearner - INFO - Starting web learning for topic: fitness_health
+2025-10-24 03:46:47,527 - CelsiusWebLearner - INFO - Robots.txt disallows crawling: https://www.mayoclinic.org
+2025-10-24 03:46:48,227 - CelsiusWebLearner - ERROR - Error storing learned content: UNIQUE constraint failed: learned_content.url
+2025-10-24 03:46:50,235 - CelsiusWebLearner - INFO - Completed learning for fitness_health: 0 pieces of content from 1 sources
+2025-10-24 03:46:55,937 - CelsiusWebLearner - ERROR - Error storing insight: database is locked
+2025-10-24 03:47:01,645 - CelsiusWebLearner - ERROR - Error storing insight: database is locked
+2025-10-24 03:47:12,338 - CelsiusWebLearner - ERROR - Error storing learning report: database is locked
+2025-10-24 13:37:08,043 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 13:37:08,257 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 13:59:30,488 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 13:59:30,632 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 14:06:00,470 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 14:06:00,580 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 14:12:23,828 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 14:12:23,942 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 14:13:18,005 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 14:13:18,115 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 14:13:37,180 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 14:13:37,292 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 14:14:17,324 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 14:14:17,439 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 14:45:12,375 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 14:45:12,487 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 18:49:42,104 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 18:49:42,326 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 18:51:30,822 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 18:51:30,932 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 18:52:37,402 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 18:52:37,502 - CelsiusWebLearner - INFO - Web learning database initialized
+2025-10-24 18:53:01,467 - CelsiusCodeApproval - INFO - Code approval database initialized
+2025-10-24 18:53:01,579 - CelsiusWebLearner - INFO - Web learning database initialized

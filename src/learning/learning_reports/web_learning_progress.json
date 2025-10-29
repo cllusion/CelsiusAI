@@ -1,0 +1,43 @@
+{
+  "last_updated": "2025-10-26T22:14:45.044171",
+  "knowledge_base_size": 7,
+  "sources_learned": 4,
+  "learning_active": true,
+  "recent_items": [
+    {
+      "source": "Common Vulnerabilities and Exposures",
+      "category": "Vulnerabilities",
+      "learned_at": "2025-10-26T22:14:43.041414",
+      "insights": "Cybersecurity insights from Common Vulnerabilities and Exposures",
+      "priority": "medium"
+    },
+    {
+      "source": "Cybersecurity Best Practices",
+      "category": "Defense",
+      "learned_at": "2025-10-26T22:14:45.043670",
+      "insights": "Cybersecurity insights from Cybersecurity Best Practices",
+      "priority": "medium"
+    },
+    {
+      "type": "threat",
+      "name": "Social engineering attacks",
+      "learned_at": "2025-10-26T22:14:45.043670",
+      "severity": "high",
+      "countermeasures": "Defense strategies for Social engineering attacks"
+    },
+    {
+      "type": "defense",
+      "strategy": "Multi-factor authentication",
+      "learned_at": "2025-10-26T22:14:45.043670",
+      "effectiveness": "high",
+      "implementation": "Implementation guide for Multi-factor authentication"
+    },
+    {
+      "type": "vulnerability",
+      "name": "Unpatched software",
+      "learned_at": "2025-10-26T22:14:45.043670",
+      "risk_level": "medium",
+      "mitigation": "Mitigation strategies for Unpatched software"
+    }
+  ]
+}

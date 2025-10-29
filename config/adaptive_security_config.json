@@ -1,0 +1,18 @@
+{
+  "auto_apply_security_updates": true,
+  "threat_detection_sensitivity": "medium",
+  "learning_update_interval": 3600,
+  "max_auto_modifications": 5,
+  "require_approval": true,
+  "protected_files": [
+    "celsius_ultimate_hub.py",
+    "main.py",
+    "enhanced_mobile_dashboard.py"
+  ],
+  "security_rules": {
+    "port_scanning_protection": true,
+    "rate_limiting": true,
+    "authentication_hardening": true,
+    "log_monitoring": true
+  }
+}

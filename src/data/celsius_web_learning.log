@@ -1,0 +1,223 @@
+2025-10-24 23:06:35,949 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-24 23:06:35,949 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-24 23:06:35,949 - WebLearningIntegration - INFO - Celsius AI Web Learning Integration initialized successfully.
+2025-10-24 23:06:35,949 - WebLearningIntegration - INFO - Web learning process started in the background.
+2025-10-24 23:06:35,949 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-24 23:06:35,949 - root - INFO - Learning interval: 3600 seconds
+2025-10-24 23:06:35,949 - root - CRITICAL - Failed to start launcher: 'CelsiusWebLearningIntegration' object has no attribute 'start_learning'
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\learning\celsius_web_learning_launcher.py", line 173, in main
+    await integration.start_learning(interval_seconds=args.interval)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CelsiusWebLearningIntegration' object has no attribute 'start_learning'
+2025-10-24 23:06:35,949 - WebLearningIntegration - INFO - Learning loop cancelled.
+2025-10-24 23:07:34,507 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-24 23:07:34,524 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-24 23:07:34,524 - WebLearningIntegration - INFO - Celsius AI Web Learning Integration initialized successfully.
+2025-10-24 23:07:34,524 - WebLearningIntegration - INFO - Web learning process started in the background.
+2025-10-24 23:07:34,524 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-24 23:07:34,524 - root - INFO - Learning interval: 3600 seconds
+2025-10-24 23:07:34,524 - WebLearningIntegration - INFO - Learning process is already active.
+2025-10-24 23:07:34,527 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-24 23:07:34,527 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-24 23:07:34,527 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-24 23:07:34,665 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://dev.to
+2025-10-24 23:07:34,665 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://krebsonsecurity.com
+2025-10-24 23:07:34,727 - CelsiusWebLearner - INFO - Stored: 'TechCrunch | Startup and Technology News' (Quality: 0.80)
+2025-10-24 23:07:35,036 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-24 23:07:36,761 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-24 23:07:37,012 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-24 23:07:37,045 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-24 23:10:24,019 - WebLearningIntegration - INFO - Learning loop cancelled.
+2025-10-24 23:11:39,428 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-24 23:11:39,434 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-24 23:11:39,435 - WebLearningIntegration - INFO - Celsius AI Web Learning Integration initialized successfully.
+2025-10-24 23:11:39,435 - WebLearningIntegration - INFO - Web learning process started in the background.
+2025-10-24 23:11:39,435 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-24 23:11:39,435 - root - INFO - Learning interval: 3600 seconds
+2025-10-24 23:11:39,435 - WebLearningIntegration - INFO - Learning process is already active.
+2025-10-24 23:11:39,438 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-24 23:11:39,438 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-24 23:11:39,438 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-24 23:11:39,560 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://dev.to
+2025-10-24 23:11:39,764 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403, message='Forbidden', url='https://krebsonsecurity.com'
+2025-10-24 23:11:39,924 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-24 23:11:41,777 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-24 23:11:41,935 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-24 23:11:41,935 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-24 23:13:56,616 - WebLearningIntegration - INFO - Learning loop cancelled.
+2025-10-24 23:16:00,033 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-24 23:16:00,038 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-24 23:16:00,039 - WebLearningIntegration - INFO - Celsius AI Web Learning Integration initialized successfully.
+2025-10-24 23:16:00,039 - WebLearningIntegration - INFO - Web learning process started in the background.
+2025-10-24 23:16:00,039 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-24 23:16:00,039 - root - INFO - Learning interval: 3600 seconds
+2025-10-24 23:16:00,039 - WebLearningIntegration - INFO - Learning process is already active.
+2025-10-24 23:16:00,041 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-24 23:16:00,042 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-24 23:16:00,042 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-24 23:16:00,208 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://dev.to
+2025-10-24 23:16:00,459 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403, message='Forbidden', url='https://krebsonsecurity.com'
+2025-10-24 23:16:00,560 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-24 23:16:02,462 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-24 23:16:02,527 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-24 23:16:02,577 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-24 23:20:16,421 - WebLearningIntegration - INFO - Learning loop cancelled.
+2025-10-24 23:23:30,381 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-24 23:23:30,386 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-24 23:23:30,387 - WebLearningIntegration - INFO - Celsius AI Web Learning Integration initialized successfully.
+2025-10-24 23:23:30,387 - WebLearningIntegration - INFO - Web learning process started in the background.
+2025-10-24 23:23:30,387 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-24 23:23:30,387 - root - INFO - Learning interval: 3600 seconds
+2025-10-24 23:23:30,387 - WebLearningIntegration - INFO - Learning process is already active.
+2025-10-24 23:23:30,389 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-24 23:23:30,389 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-24 23:23:30,390 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-24 23:23:30,518 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://dev.to
+2025-10-24 23:23:30,742 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403, message='Forbidden', url='https://krebsonsecurity.com'
+2025-10-24 23:23:30,885 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-24 23:23:32,753 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-24 23:23:32,887 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-24 23:23:32,887 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-24 23:31:43,524 - WebLearningIntegration - INFO - Learning loop cancelled.
+2025-10-24 23:34:16,610 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-24 23:34:16,621 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-24 23:34:16,621 - WebLearningIntegration - INFO - Celsius AI Web Learning Integration initialized successfully.
+2025-10-24 23:34:16,621 - WebLearningIntegration - INFO - Web learning process started in the background.
+2025-10-24 23:34:16,621 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-24 23:34:16,621 - root - INFO - Learning interval: 3600 seconds
+2025-10-24 23:34:16,621 - WebLearningIntegration - INFO - Learning process is already active.
+2025-10-24 23:34:16,623 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-24 23:34:16,623 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-24 23:34:16,623 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-24 23:34:16,708 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://dev.to
+2025-10-24 23:34:16,936 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403, message='Forbidden', url='https://krebsonsecurity.com'
+2025-10-24 23:34:17,085 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-24 23:34:19,064 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-24 23:34:19,096 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-24 23:34:19,096 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-24 23:35:10,977 - WebLearningIntegration - INFO - Learning loop cancelled.
+2025-10-24 23:38:34,407 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-24 23:38:34,407 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-24 23:38:34,407 - WebLearningIntegration - INFO - Celsius AI Web Learning Integration initialized successfully.
+2025-10-24 23:38:34,407 - WebLearningIntegration - INFO - Web learning process started in the background.
+2025-10-24 23:38:34,407 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-24 23:38:34,407 - root - INFO - Learning interval: 3600 seconds
+2025-10-24 23:38:34,407 - WebLearningIntegration - INFO - Learning process is already active.
+2025-10-24 23:38:34,416 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-24 23:38:34,416 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-24 23:38:34,416 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-24 23:38:34,540 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://dev.to
+2025-10-24 23:38:34,623 - CelsiusWebLearner - ERROR - Error storing content: UNIQUE constraint failed: learned_content.url
+2025-10-24 23:38:34,757 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403, message='Forbidden', url='https://krebsonsecurity.com'
+2025-10-24 23:38:34,924 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-24 23:38:36,758 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-24 23:38:36,942 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-24 23:38:36,942 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-24 23:38:51,752 - WebLearningIntegration - INFO - Learning loop cancelled.
+2025-10-24 23:39:54,840 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-24 23:39:54,842 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-24 23:39:54,842 - WebLearningIntegration - INFO - Celsius AI Web Learning Integration initialized successfully.
+2025-10-24 23:39:54,842 - WebLearningIntegration - INFO - Web learning process started in the background.
+2025-10-24 23:39:54,842 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-24 23:39:54,842 - root - INFO - Learning interval: 3600 seconds
+2025-10-24 23:39:54,842 - WebLearningIntegration - INFO - Learning process is already active.
+2025-10-24 23:39:54,842 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-24 23:39:54,842 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-24 23:39:54,842 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-24 23:39:54,985 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://dev.to
+2025-10-24 23:39:55,055 - CelsiusWebLearner - ERROR - Error storing content: UNIQUE constraint failed: learned_content.url
+2025-10-24 23:39:55,205 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403, message='Forbidden', url='https://krebsonsecurity.com'
+2025-10-24 23:39:55,372 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-24 23:39:57,207 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-24 23:39:57,391 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-24 23:39:57,391 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-24 23:40:44,023 - WebLearningIntegration - INFO - Learning loop cancelled.
+2025-10-24 23:43:56,559 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-24 23:43:56,567 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-24 23:43:56,567 - WebLearningIntegration - INFO - Celsius AI Web Learning Integration initialized successfully.
+2025-10-24 23:43:56,567 - WebLearningIntegration - INFO - Web learning process started in the background.
+2025-10-24 23:43:56,568 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-24 23:43:56,568 - root - INFO - Learning interval: 3600 seconds
+2025-10-24 23:43:56,568 - WebLearningIntegration - INFO - Learning process is already active.
+2025-10-24 23:43:56,570 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-24 23:43:56,570 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-24 23:43:56,570 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-24 23:43:56,702 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://dev.to
+2025-10-24 23:43:56,768 - CelsiusWebLearner - ERROR - Error storing content: UNIQUE constraint failed: learned_content.url
+2025-10-24 23:43:56,852 - CelsiusWebLearner - INFO - Stored: 'Krebs on Security – In-depth security news and investigation' (Quality: 0.75)
+2025-10-24 23:43:57,010 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-24 23:43:58,853 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-24 23:43:59,021 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-24 23:43:59,054 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-24 23:44:24,975 - WebLearningIntegration - INFO - Learning loop cancelled.
+2025-10-25 00:26:17,264 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-25 00:26:17,273 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-25 00:26:17,273 - WebLearningIntegration - INFO - Celsius AI Web Learning Integration initialized successfully.
+2025-10-25 00:26:17,273 - WebLearningIntegration - INFO - Web learning process started in the background.
+2025-10-25 00:26:17,273 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-25 00:26:17,273 - root - INFO - Learning interval: 3600 seconds
+2025-10-25 00:26:17,273 - WebLearningIntegration - INFO - Learning process is already active.
+2025-10-25 00:26:17,275 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-25 00:26:17,275 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-25 00:26:17,275 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-25 00:26:17,474 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://dev.to
+2025-10-25 00:26:17,474 - CelsiusWebLearner - ERROR - Error storing content: UNIQUE constraint failed: learned_content.url
+2025-10-25 00:26:17,691 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-25 00:26:19,564 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-25 00:26:19,692 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-25 00:26:19,756 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-25 00:29:38,553 - WebLearningIntegration - INFO - Learning loop cancelled.
+2025-10-25 00:30:41,914 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-25 00:30:41,930 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-25 00:30:41,930 - WebLearningIntegration - INFO - Celsius AI Web Learning Integration initialized successfully.
+2025-10-25 00:30:41,930 - WebLearningIntegration - INFO - Web learning process started in the background.
+2025-10-25 00:30:41,930 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-25 00:30:41,930 - root - INFO - Learning interval: 3600 seconds
+2025-10-25 00:30:41,930 - WebLearningIntegration - INFO - Learning process is already active.
+2025-10-25 00:30:41,938 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-25 00:30:41,938 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-25 00:30:41,938 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-25 00:30:42,042 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://dev.to
+2025-10-25 00:30:42,105 - CelsiusWebLearner - ERROR - Error storing content: UNIQUE constraint failed: learned_content.url
+2025-10-25 00:30:42,247 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403, message='Forbidden', url='https://krebsonsecurity.com'
+2025-10-25 00:30:42,391 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-25 00:30:44,262 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-25 00:30:44,406 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-25 00:30:44,406 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-25 00:46:03,765 - WebLearningIntegration - INFO - Learning loop cancelled.
+2025-10-25 00:50:11,079 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-25 00:50:11,085 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-25 00:50:11,085 - WebLearningIntegration - INFO - Celsius AI Web Learning Integration initialized successfully.
+2025-10-25 00:50:11,085 - WebLearningIntegration - INFO - Web learning process started in the background.
+2025-10-25 00:50:11,085 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-25 00:50:11,085 - root - INFO - Learning interval: 3600 seconds
+2025-10-25 00:50:11,085 - WebLearningIntegration - INFO - Learning process is already active.
+2025-10-25 00:50:11,085 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-25 00:50:11,085 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-25 00:50:11,085 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-25 00:50:11,203 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-25 00:50:11,219 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://dev.to
+2025-10-25 00:50:11,274 - CelsiusWebLearner - ERROR - Error storing content: UNIQUE constraint failed: learned_content.url
+2025-10-25 00:50:11,409 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403, message='Forbidden', url='https://krebsonsecurity.com'
+2025-10-25 00:50:13,244 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-25 00:50:13,418 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-25 00:50:13,545 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-25 01:03:31,273 - WebLearningIntegration - INFO - Learning loop cancelled.
+2025-10-25 01:08:16,135 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-25 01:08:16,142 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-25 01:08:16,142 - WebLearningIntegration - INFO - Celsius AI Web Learning Integration initialized successfully.
+2025-10-25 01:08:16,142 - WebLearningIntegration - INFO - Web learning process started in the background.
+2025-10-25 01:08:16,142 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-25 01:08:16,142 - root - INFO - Learning interval: 3600 seconds
+2025-10-25 01:08:16,142 - WebLearningIntegration - INFO - Learning process is already active.
+2025-10-25 01:08:16,143 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-25 01:08:16,143 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-25 01:08:16,143 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-25 01:08:16,297 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://dev.to
+2025-10-25 01:08:16,356 - CelsiusWebLearner - ERROR - Error storing content: UNIQUE constraint failed: learned_content.url
+2025-10-25 01:08:16,488 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403, message='Forbidden', url='https://krebsonsecurity.com'
+2025-10-25 01:08:16,635 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-25 01:08:18,507 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-25 01:08:18,634 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-25 01:08:18,634 - CelsiusWebLearner - INFO - Completed learning cycle for technology.

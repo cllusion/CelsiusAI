@@ -1,0 +1,11 @@
+{
+  "smtp_server": "smtp.gmail.com",
+  "smtp_port": 587,
+  "sender_email": "ndrwcbllr@gmail.com", 
+  "sender_password": "doxc mstt etmj ekhe",
+  "recipient_email": "celsius@cllusion.com",
+  "enabled": true,
+  "debug": false,
+  "timeout": 30,
+  "use_tls": true
+}

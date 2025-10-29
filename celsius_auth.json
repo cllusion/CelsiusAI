@@ -1,0 +1,24 @@
+{
+    "users": {
+        "cllusion001": {
+            "password_hash": "1f3f091ac1ba6ae83c8646887320bb944a140f8bb130d3924e13f588c70ca0ad",
+            "role": "admin",
+            "created": "2025-10-25T12:23:33.843168",
+            "last_login": "2025-10-28T18:14:01.155011",
+            "permissions": [
+                "full_access",
+                "system_control",
+                "reports",
+                "settings",
+                "web_learning",
+                "code_approval"
+            ],
+            "salt": "639cff635b81fd6961a9a3ba1b14743d"
+        }
+    },
+    "settings": {
+        "session_timeout": 3600,
+        "max_login_attempts": 5,
+        "lockout_duration": 300
+    }
+}

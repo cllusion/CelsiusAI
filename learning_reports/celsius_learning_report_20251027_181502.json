@@ -1,0 +1,29 @@
+{
+  "period": "daily",
+  "generated_at": "2025-10-27T18:15:02.997831",
+  "total_content_learned": 8,
+  "total_insights": 0,
+  "top_topics": [
+    {
+      "topic": "general_knowledge",
+      "count": 3
+    },
+    {
+      "topic": "cybersecurity",
+      "count": 2
+    },
+    {
+      "topic": "systems_programming",
+      "count": 1
+    },
+    {
+      "topic": "programming",
+      "count": 1
+    },
+    {
+      "topic": "artificial_intelligence",
+      "count": 1
+    }
+  ],
+  "sample_insights": []
+}

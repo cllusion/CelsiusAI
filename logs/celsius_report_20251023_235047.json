@@ -1,0 +1,158 @@
+{
+  "report_timestamp": "2025-10-23T23:50:35.276363",
+  "report_period": "hourly",
+  "system_summary": {
+    "status": "operational",
+    "uptime": "12:58:57",
+    "active_processes": 2,
+    "active_tunnels": 1
+  },
+  "performance_summary": {
+    "error": "No performance data available"
+  },
+  "security_assessment": {
+    "firewall_status": "unknown",
+    "antivirus_running": false,
+    "suspicious_processes": [],
+    "open_ports": [
+      139,
+      5083,
+      49668,
+      49664,
+      49669,
+      49668,
+      49666,
+      139,
+      445,
+      49667,
+      49665,
+      5040,
+      5000,
+      135,
+      4040,
+      49667,
+      445,
+      49665,
+      42050,
+      7680,
+      49666,
+      49664,
+      49669,
+      135,
+      7680
+    ]
+  },
+  "network_overview": {
+    "bytes_sent": 1272144503,
+    "bytes_recv": 5549634639,
+    "packets_sent": 2757353,
+    "packets_recv": 4565941,
+    "total_connections": 114,
+    "connection_status": {
+      "TIME_WAIT": 34,
+      "NONE": 28,
+      "ESTABLISHED": 27,
+      "LISTEN": 25
+    },
+    "internet_connectivity": true
+  },
+  "disk_status": {
+    "total_gb": 3725.09,
+    "used_gb": 65.43,
+    "free_gb": 3659.66,
+    "percent_used": 1.76
+  },
+  "error_analysis": {
+    "total_errors": 1,
+    "critical_count": 0,
+    "warning_count": 1,
+    "errors": [
+      {
+        "level": "warning",
+        "message": "Slow response time: 2062.0081424713135ms",
+        "timestamp": "2025-10-23T23:50:47.827673"
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "category": "security",
+      "priority": "medium",
+      "message": "No active antivirus detected",
+      "action": "Ensure Windows Defender or antivirus software is running"
+    }
+  ],
+  "detailed_metrics": {
+    "timestamp": "2025-10-23T23:50:35.276363",
+    "uptime": "12:58:57",
+    "processes": {
+      "celsius_ai": true,
+      "ngrok": true,
+      "persistent_service": false,
+      "process_count": 2
+    },
+    "ngrok_status": {
+      "active_tunnels": 1,
+      "tunnel_details": [
+        {
+          "name": "command_line",
+          "public_url": "https://6006f002dff7.ngrok-free.app",
+          "proto": "https",
+          "created_at": null
+        }
+      ]
+    },
+    "disk_space": {
+      "total_gb": 3725.09,
+      "used_gb": 65.43,
+      "free_gb": 3659.66,
+      "percent_used": 1.76
+    },
+    "network_status": {
+      "bytes_sent": 1272144503,
+      "bytes_recv": 5549634639,
+      "packets_sent": 2757353,
+      "packets_recv": 4565941,
+      "total_connections": 114,
+      "connection_status": {
+        "TIME_WAIT": 34,
+        "NONE": 28,
+        "ESTABLISHED": 27,
+        "LISTEN": 25
+      },
+      "internet_connectivity": true
+    },
+    "security_status": {
+      "firewall_status": "unknown",
+      "antivirus_running": false,
+      "suspicious_processes": [],
+      "open_ports": [
+        139,
+        5083,
+        49668,
+        49664,
+        49669,
+        49668,
+        49666,
+        139,
+        445,
+        49667,
+        49665,
+        5040,
+        5000,
+        135,
+        4040,
+        49667,
+        445,
+        49665,
+        42050,
+        7680,
+        49666,
+        49664,
+        49669,
+        135,
+        7680
+      ]
+    }
+  }
+}

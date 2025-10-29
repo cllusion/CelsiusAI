@@ -1,0 +1,653 @@
+2025-10-27 17:13:01,757 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-27 17:13:01,965 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-27 17:13:01,965 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\Celsius AI\.venv\Lib\site-packages\certifi\cacert.pem
+2025-10-27 17:13:01,970 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002A0803C8610>
+2025-10-27 18:01:52,603 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-27 18:01:52,603 - CelsiusWebLearner - INFO - Starting continuous learning loop.
+2025-10-27 18:01:52,606 - root - INFO - Learning interval: 3600 seconds
+2025-10-27 18:01:52,607 - root - CRITICAL - Failed to start launcher: object bool can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\learning\celsius_web_learning_launcher.py", line 173, in main
+    await integration.start_learning_process()
+TypeError: object bool can't be used in 'await' expression
+2025-10-27 18:15:02,998 - CelsiusWebLearner - INFO - Starting continuous learning loop.
+2025-10-27 18:15:02,999 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-27 18:17:06,377 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-27 18:17:06,377 - root - INFO - Learning interval: 3600 seconds
+2025-10-27 18:17:06,377 - CelsiusWebLearner - INFO - Starting continuous learning loop.
+2025-10-27 18:17:06,377 - root - CRITICAL - Failed to start launcher: object bool can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\learning\celsius_web_learning_launcher.py", line 173, in main
+    await integration.start_learning_process()
+TypeError: object bool can't be used in 'await' expression
+2025-10-27 18:21:51,414 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-27 18:21:51,414 - root - INFO - Learning interval: 3600 seconds
+2025-10-27 18:21:51,414 - CelsiusWebLearner - INFO - Starting continuous learning loop.
+2025-10-27 18:21:51,414 - root - CRITICAL - Failed to start launcher: object bool can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\learning\celsius_web_learning_launcher.py", line 173, in main
+    await integration.start_learning_process()
+TypeError: object bool can't be used in 'await' expression
+2025-10-27 19:12:40,202 - CelsiusWebLearner - INFO - Starting continuous learning loop.
+2025-10-27 19:12:40,204 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-27 22:06:17,797 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-27 22:06:17,797 - root - INFO - Learning interval: 3600 seconds
+2025-10-27 22:06:17,797 - CelsiusWebLearner - INFO - Starting continuous learning loop.
+2025-10-27 22:06:17,797 - root - CRITICAL - Failed to start launcher: object bool can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\learning\celsius_web_learning_launcher.py", line 173, in main
+    await integration.start_learning_process()
+TypeError: object bool can't be used in 'await' expression
+2025-10-28 01:35:23,313 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-28 01:35:23,313 - root - INFO - Learning interval: 3600 seconds
+2025-10-28 01:35:23,313 - CelsiusWebLearner - INFO - Starting continuous learning loop.
+2025-10-28 01:35:23,313 - root - CRITICAL - Failed to start launcher: object bool can't be used in 'await' expression
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\learning\celsius_web_learning_launcher.py", line 202, in main
+    await integration.start_learning_process()
+TypeError: object bool can't be used in 'await' expression
+2025-10-28 01:43:42,511 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-28 01:43:42,511 - root - INFO - Learning interval: 3600 seconds
+2025-10-28 01:43:42,511 - CelsiusWebLearner - INFO - Starting continuous learning loop.
+2025-10-28 01:43:42,511 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\Celsius AI\.venv\Lib\site-packages\certifi\cacert.pem
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - --- New learning cycle ---
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - Starting learning for topic: artificial_intelligence
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - Starting learning for topic: science
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - Starting learning for topic: web_development
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - Starting learning for topic: data_science
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - Starting learning for topic: systems_programming
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - Starting learning for topic: philosophy_ethics
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - Starting learning for topic: general_knowledge
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - Starting learning for topic: engineering
+2025-10-28 01:43:42,725 - CelsiusWebLearner - INFO - Starting learning for topic: business_finance
+2025-10-28 01:43:42,979 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.sciencedaily.com
+2025-10-28 01:43:43,030 - CelsiusWebLearner - WARNING - Failed to extract content from https://unix.stackexchange.com: 403, message='Forbidden', url='https://unix.stackexchange.com'
+2025-10-28 01:43:43,030 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://lwn.net
+2025-10-28 01:43:43,052 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://plato.stanford.edu
+2025-10-28 01:43:43,193 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://towardsdatascience.com
+2025-10-28 01:43:43,217 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.nature.com
+2025-10-28 01:43:43,398 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.investopedia.com
+2025-10-28 01:43:43,398 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.asme.org
+2025-10-28 01:43:43,415 - CelsiusWebLearner - ERROR - Error storing content: UNIQUE constraint failed: learned_content.url
+2025-10-28 01:43:43,417 - CelsiusWebLearner - ERROR - Error storing content: UNIQUE constraint failed: learned_content.url
+2025-10-28 01:43:43,430 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.bbc.com/news
+2025-10-28 01:43:43,431 - CelsiusWebLearner - ERROR - Error storing content: UNIQUE constraint failed: learned_content.url
+2025-10-28 01:43:43,481 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://britannica.com
+2025-10-28 01:43:43,514 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-28 01:43:43,685 - CelsiusWebLearner - ERROR - Error storing content: UNIQUE constraint failed: learned_content.url
+2025-10-28 01:43:43,715 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://smashingmagazine.com
+2025-10-28 01:43:44,088 - CelsiusWebLearner - ERROR - Error storing content: UNIQUE constraint failed: learned_content.url
+2025-10-28 01:43:44,608 - CelsiusWebLearner - ERROR - Error storing content: UNIQUE constraint failed: learned_content.url
+2025-10-28 01:43:45,028 - CelsiusWebLearner - INFO - Completed learning cycle for systems_programming.
+2025-10-28 01:43:45,263 - CelsiusWebLearner - INFO - Completed learning cycle for science.
+2025-10-28 01:43:45,431 - CelsiusWebLearner - INFO - Completed learning cycle for philosophy_ethics.
+2025-10-28 01:43:45,431 - CelsiusWebLearner - INFO - Completed learning cycle for business_finance.
+2025-10-28 01:43:45,516 - CelsiusWebLearner - INFO - Completed learning cycle for general_knowledge.
+2025-10-28 01:43:45,549 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-28 01:43:45,716 - CelsiusWebLearner - INFO - Completed learning cycle for web_development.
+2025-10-28 01:43:45,933 - CelsiusWebLearner - INFO - Completed learning cycle for engineering.
+2025-10-28 01:43:46,098 - CelsiusWebLearner - INFO - Completed learning cycle for data_science.
+2025-10-28 01:43:46,098 - CelsiusWebLearner - INFO - Completed learning cycle for artificial_intelligence.
+2025-10-28 01:43:46,434 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-28 01:43:46,613 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-28 01:43:46,613 - CelsiusWebLearner - INFO - Cycle complete. Waiting for 1 hour.
+2025-10-28 01:46:03,954 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-28 01:46:03,954 - root - INFO - Learning interval: 3600 seconds
+2025-10-28 01:46:03,954 - CelsiusWebLearner - INFO - Starting continuous learning loop.
+2025-10-28 01:46:03,954 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\Celsius AI\.venv\Lib\site-packages\certifi\cacert.pem
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - --- New learning cycle ---
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - Starting learning for topic: artificial_intelligence
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - Starting learning for topic: science
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - Starting learning for topic: web_development
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - Starting learning for topic: data_science
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - Starting learning for topic: systems_programming
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - Starting learning for topic: philosophy_ethics
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - Starting learning for topic: general_knowledge
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - Starting learning for topic: engineering
+2025-10-28 01:46:04,153 - CelsiusWebLearner - INFO - Starting learning for topic: business_finance
+2025-10-28 01:46:04,303 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.sciencedaily.com
+2025-10-28 01:46:04,452 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.bbc.com/news
+2025-10-28 01:46:04,491 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://towardsdatascience.com
+2025-10-28 01:46:04,559 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://plato.stanford.edu
+2025-10-28 01:46:04,559 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-28 01:46:04,559 - CelsiusWebLearner - WARNING - Failed to extract content from https://unix.stackexchange.com: 403, message='Forbidden', url='https://unix.stackexchange.com'
+2025-10-28 01:46:04,559 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://lwn.net
+2025-10-28 01:46:04,559 - CelsiusWebLearner - WARNING - Failed to extract content from https://krebsonsecurity.com: 403, message='Forbidden', url='https://krebsonsecurity.com'
+2025-10-28 01:46:04,559 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.asme.org
+2025-10-28 01:46:04,574 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.investopedia.com
+2025-10-28 01:46:04,593 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.nature.com
+2025-10-28 01:46:04,964 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://britannica.com
+2025-10-28 01:46:05,274 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://smashingmagazine.com
+2025-10-28 01:46:06,573 - CelsiusWebLearner - INFO - Completed learning cycle for systems_programming.
+2025-10-28 01:46:06,759 - CelsiusWebLearner - INFO - Completed learning cycle for science.
+2025-10-28 01:46:06,759 - CelsiusWebLearner - INFO - Completed learning cycle for philosophy_ethics.
+2025-10-28 01:46:06,859 - CelsiusWebLearner - INFO - Completed learning cycle for business_finance.
+2025-10-28 01:46:06,876 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-28 01:46:06,976 - CelsiusWebLearner - INFO - Completed learning cycle for data_science.
+2025-10-28 01:46:06,976 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-28 01:46:06,976 - CelsiusWebLearner - INFO - Completed learning cycle for general_knowledge.
+2025-10-28 01:46:07,044 - CelsiusWebLearner - INFO - Completed learning cycle for engineering.
+2025-10-28 01:46:07,291 - CelsiusWebLearner - INFO - Completed learning cycle for web_development.
+2025-10-28 01:46:07,697 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-28 01:46:07,888 - CelsiusWebLearner - INFO - Completed learning cycle for artificial_intelligence.
+2025-10-28 01:46:07,888 - CelsiusWebLearner - INFO - Cycle complete. Waiting for 1 hour.
+2025-10-28 01:58:23,311 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 01:58:23,511 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 01:58:23,511 - CelsiusWebLearner - INFO - certifi CA bundle: c:\Users\micro\Celsius AI\.venv\Lib\site-packages\certifi\cacert.pem
+2025-10-28 01:58:25,180 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001D67C629710>
+2025-10-28 01:58:25,180 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001D67E0A83D0>, 400017.718)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001D67E026A90>
+2025-10-28 02:06:54,031 - CelsiusWebLearner - INFO - Starting continuous learning loop.
+2025-10-28 02:06:54,047 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 02:06:54,065 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\Celsius AI\.venv\Lib\site-packages\certifi\cacert.pem
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - --- New learning cycle ---
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - Starting learning for topic: artificial_intelligence
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - Starting learning for topic: science
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - Starting learning for topic: web_development
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - Starting learning for topic: data_science
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - Starting learning for topic: systems_programming
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - Starting learning for topic: philosophy_ethics
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - Starting learning for topic: general_knowledge
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - Starting learning for topic: engineering
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - Starting learning for topic: business_finance
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 02:06:54,282 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\Celsius AI\.venv\Lib\site-packages\certifi\cacert.pem
+2025-10-28 02:06:54,432 - CelsiusWebLearner - WARNING - Failed to extract content from https://www.bleepingcomputer.com: Timeout context manager should be used inside a task
+2025-10-28 02:06:54,495 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.sciencedaily.com
+2025-10-28 02:06:54,498 - CelsiusWebLearner - WARNING - Failed to extract content from https://techcrunch.com: Timeout context manager should be used inside a task
+2025-10-28 02:06:54,517 - CelsiusWebLearner - WARNING - Failed to extract content from https://github.com/trending: Timeout context manager should be used inside a task
+2025-10-28 02:06:54,532 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://towardsdatascience.com
+2025-10-28 02:06:54,543 - CelsiusWebLearner - WARNING - Failed to extract content from https://phys.org: Timeout context manager should be used inside a task
+2025-10-28 02:06:54,546 - CelsiusWebLearner - WARNING - Failed to extract content from https://www.wired.com: Timeout context manager should be used inside a task
+2025-10-28 02:06:54,559 - CelsiusWebLearner - WARNING - Failed to extract content from https://unix.stackexchange.com: Timeout context manager should be used inside a task
+2025-10-28 02:06:54,569 - CelsiusWebLearner - WARNING - Failed to extract content from https://css-tricks.com: Timeout context manager should be used inside a task
+2025-10-28 02:06:54,572 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001659CF52B50>
+2025-10-28 02:06:54,573 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001659E6EC980>, 400526.968)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001659E6ECAD0>, 400527.031)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001659E6ED940>, 400527.031)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001659E6ED470>, 400527.046)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001659E6EC440>, 400527.046)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001659E6ECF30>, 400527.062)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001659E6EDCC0>, 400527.062)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001659E6EC590>, 400527.078)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001659E6ED7F0>, 400527.078)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001659E6EECF0>, 400527.078)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001659E6EDB70>, 400527.078)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001659E6ED780>, 400527.093)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001659E6EC9F0>, 400527.093)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001659E5E4850>
+2025-10-28 02:10:56,099 - CelsiusWebLearner - INFO - Starting continuous learning loop.
+2025-10-28 02:10:56,110 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 02:10:56,111 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 02:10:56,345 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 02:10:56,345 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001C775468D90>
+2025-10-28 02:10:56,345 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\Celsius AI\.venv\Lib\site-packages\certifi\cacert.pem
+2025-10-28 02:10:56,361 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 02:10:56,362 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\Celsius AI\.venv\Lib\site-packages\certifi\cacert.pem
+2025-10-28 02:10:56,362 - CelsiusWebLearner - INFO - --- New learning cycle ---
+2025-10-28 02:10:56,362 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-28 02:10:56,362 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-28 02:10:56,362 - CelsiusWebLearner - INFO - Starting learning for topic: artificial_intelligence
+2025-10-28 02:10:56,362 - CelsiusWebLearner - INFO - Starting learning for topic: science
+2025-10-28 02:10:56,362 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-28 02:10:56,362 - CelsiusWebLearner - INFO - Starting learning for topic: web_development
+2025-10-28 02:10:56,362 - CelsiusWebLearner - INFO - Starting learning for topic: data_science
+2025-10-28 02:10:56,362 - CelsiusWebLearner - INFO - Starting learning for topic: systems_programming
+2025-10-28 02:10:56,362 - CelsiusWebLearner - INFO - Starting learning for topic: philosophy_ethics
+2025-10-28 02:10:56,362 - CelsiusWebLearner - INFO - Starting learning for topic: general_knowledge
+2025-10-28 02:10:56,362 - CelsiusWebLearner - INFO - Starting learning for topic: engineering
+2025-10-28 02:10:56,362 - CelsiusWebLearner - INFO - Starting learning for topic: business_finance
+2025-10-28 02:10:56,413 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,413 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,413 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,428 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,428 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,428 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,428 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,428 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,429 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,433 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,434 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,434 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,434 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,434 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,434 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:10:56,435 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=DNSError(24, 'DNS query cancelled')>
+aiodns.error.DNSError: (24, 'DNS query cancelled')
+2025-10-28 02:11:53,437 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 02:11:53,637 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 02:11:53,637 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\Celsius AI\.venv\Lib\site-packages\certifi\cacert.pem
+2025-10-28 02:14:06,077 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000019CC959D190>
+2025-10-28 02:14:06,077 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000019CCB5835B0>, 400934.859)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000019CCB581160>, 400934.875)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000019CCB582970>, 400934.906)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000019CCB580C20>, 400937.265)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000019CCB581DA0>, 400937.437)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000019CC9BD5860>, 400940.484)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000019CC9BD5780>, 400945.468)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000019CCB105940>, 400949.718)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000019CCB645E80>, 400952.703)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000019CCB105A90>, 400958.593)])']
+connector: <aiohttp.connector.TCPConnector object at 0x0000019CC93890D0>
+2025-10-28 02:14:06,472 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 02:14:06,689 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 02:14:06,689 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\Celsius AI\.venv\Lib\site-packages\certifi\cacert.pem
+2025-10-28 02:14:20,504 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F1B84FD210>
+2025-10-28 02:14:20,504 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001F1B8463930>, 400961.015)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001F1B84638C0>, 400962.75)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001F1B85A9B70>, 400968.593)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001F1B8463AF0>, 400969.156)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001F1B8AF02F0>, 400969.64)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001F1B85ABF50>, 400971.546)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001F1B83BCED0>
+2025-10-28 02:20:37,604 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 02:20:37,816 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 02:20:37,816 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\Celsius AI\.venv\Lib\site-packages\certifi\cacert.pem
+2025-10-28 02:20:53,832 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000192F0AEDA90>
+2025-10-28 02:20:53,832 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x00000192F0B69710>, 401360.562)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x00000192F0B698D0>, 401360.609)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x00000192F0FEBB60>, 401363.828)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x00000192F0D48F30>, 401364.515)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x00000192F3550FA0>, 401365.953)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x00000192F3550E50>, 401366.359)])']
+connector: <aiohttp.connector.TCPConnector object at 0x00000192F047DF10>
+2025-10-28 02:30:52,915 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 02:30:53,136 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 02:30:53,136 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\Celsius AI\.venv\Lib\site-packages\certifi\cacert.pem
+2025-10-28 02:32:28,958 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001C7378691D0>
+2025-10-28 02:32:28,958 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001C73B5F2BA0>, 402047.171)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001C737903EE0>, 402050.343)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001C73793A970>, 402050.453)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001C73B6F5470>, 402054.046)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001C7379020B0>, 402055.609)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001C73B0E5A20>, 402057.875)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001C73B0E5390>, 402061.468)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001C7373A5ED0>
+2025-10-28 19:47:18,621 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 19:47:18,828 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 19:47:18,828 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\certifi\cacert.pem
+2025-10-28 20:02:12,743 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 20:02:12,943 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 20:02:12,943 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\certifi\cacert.pem
+2025-10-28 20:05:14,980 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000019ED09854D0>
+2025-10-28 20:05:14,981 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000019ED32D6C10>, 465206.171)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000019ED34BB070>, 465211.375)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000019ED0EAB8C0>, 465219.203)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000019ED3E4C7C0>, 465227.484)])']
+connector: <aiohttp.connector.TCPConnector object at 0x0000019ED075F910>
+2025-10-28 20:13:20,931 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 20:13:21,131 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 20:13:21,131 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\certifi\cacert.pem
+2025-10-28 20:16:19,549 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001D7A2B23AD0>
+2025-10-28 20:16:19,549 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001D7A2E5A900>, 465871.296)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001D7A5AE1E80>, 465878.937)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001D7A2AE95C0>, 465884.312)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001D7A5EB29E0>, 465892.062)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001D7A28B50D0>
+2025-10-28 20:54:52,842 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 20:54:53,036 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 20:54:53,036 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\certifi\cacert.pem
+2025-10-28 20:56:11,917 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-28 20:56:11,917 - root - INFO - Learning interval: 3600 seconds
+2025-10-28 20:56:11,918 - CelsiusWebLearner - INFO - Starting continuous learning loop.
+2025-10-28 20:56:11,919 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 20:56:12,113 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 20:56:12,113 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\certifi\cacert.pem
+2025-10-28 20:56:12,113 - CelsiusWebLearner - INFO - --- New learning cycle ---
+2025-10-28 20:56:12,113 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-28 20:56:12,113 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-28 20:56:12,113 - CelsiusWebLearner - INFO - Starting learning for topic: artificial_intelligence
+2025-10-28 20:56:12,113 - CelsiusWebLearner - INFO - Starting learning for topic: science
+2025-10-28 20:56:12,114 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-28 20:56:12,114 - CelsiusWebLearner - INFO - Starting learning for topic: web_development
+2025-10-28 20:56:12,114 - CelsiusWebLearner - INFO - Starting learning for topic: data_science
+2025-10-28 20:56:12,114 - CelsiusWebLearner - INFO - Starting learning for topic: systems_programming
+2025-10-28 20:56:12,114 - CelsiusWebLearner - INFO - Starting learning for topic: philosophy_ethics
+2025-10-28 20:56:12,114 - CelsiusWebLearner - INFO - Starting learning for topic: general_knowledge
+2025-10-28 20:56:12,114 - CelsiusWebLearner - INFO - Starting learning for topic: engineering
+2025-10-28 20:56:12,114 - CelsiusWebLearner - INFO - Starting learning for topic: business_finance
+2025-10-28 20:56:12,338 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://krebsonsecurity.com
+2025-10-28 20:56:12,441 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.sciencedaily.com
+2025-10-28 20:56:12,517 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://towardsdatascience.com
+2025-10-28 20:56:12,604 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.investopedia.com
+2025-10-28 20:56:12,652 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://plato.stanford.edu
+2025-10-28 20:56:12,653 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://lwn.net
+2025-10-28 20:56:12,841 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.nature.com
+2025-10-28 20:56:12,856 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.bbc.com/news
+2025-10-28 20:56:12,887 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.asme.org
+2025-10-28 20:56:12,908 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-28 20:56:13,352 - CelsiusWebLearner - INFO - Found alternative sources for www.sciencedaily.com: ['https://www.sciencedaily.com/rss', 'https://www.sciencedaily.com/rss/all.xml']
+2025-10-28 20:56:13,391 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://britannica.com
+2025-10-28 20:56:13,452 - CelsiusWebLearner - INFO - Found alternative sources for lwn.net: ['https://lwn.net/headlines/rss']
+2025-10-28 20:56:13,607 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://smashingmagazine.com
+2025-10-28 20:56:14,700 - CelsiusWebLearner - WARNING - Failed to extract content from https://unix.stackexchange.com: 403, message='Forbidden', url='https://unix.stackexchange.com'
+2025-10-28 20:56:15,037 - CelsiusWebLearner - INFO - Found alternative sources for realpython.com: ['https://realpython.com/feed', 'https://realpython.com/sitemap.xml', 'https://realpython.com/rss', 'https://realpython.com/rss.xml', 'https://realpython.com/atom.xml']
+2025-10-28 20:56:15,893 - CelsiusWebLearner - INFO - Found alternative sources for krebsonsecurity.com: ['https://krebsonsecurity.com/feed', 'https://krebsonsecurity.com/rss', 'https://krebsonsecurity.com/feed/', 'https://krebsonsecurity.com/comments/feed/']
+2025-10-28 20:56:15,905 - CelsiusWebLearner - INFO - Found alternative sources for smashingmagazine.com: ['https://smashingmagazine.com/feed', 'https://smashingmagazine.com/sitemap.xml', 'https://smashingmagazine.com/rss', 'https://www.smashingmagazine.com/feed/']
+2025-10-28 20:56:16,168 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-28 20:56:16,344 - CelsiusWebLearner - INFO - Found alternative sources for www.nature.com: ['https://www.nature.com/nature.rss']
+2025-10-28 20:56:16,427 - CelsiusWebLearner - INFO - Completed learning cycle for artificial_intelligence.
+2025-10-28 20:56:16,620 - CelsiusWebLearner - INFO - Found alternative sources for www.asme.org: ['https://www.asme.org/sitemap.xml']
+2025-10-28 20:56:16,744 - CelsiusWebLearner - INFO - Found contact for krebsonsecurity.com: help@washpost.com
+2025-10-28 20:56:16,746 - CelsiusWebLearner - INFO - Saved contact request for krebsonsecurity.com -> help@washpost.com to C:\Users\micro\Celsius AI\data\web_learning_contact_requests.json
+2025-10-28 20:56:16,826 - CelsiusWebLearner - INFO - Completed learning cycle for systems_programming.
+2025-10-28 20:56:17,136 - CelsiusWebLearner - INFO - Found contact for realpython.com: info@realpython.com
+2025-10-28 20:56:17,152 - CelsiusWebLearner - INFO - Saved contact request for realpython.com -> info@realpython.com to C:\Users\micro\Celsius AI\data\web_learning_contact_requests.json
+2025-10-28 20:56:17,539 - CelsiusWebLearner - INFO - Found contact for smashingmagazine.com: mac@smashingmagazine.com
+2025-10-28 20:56:17,553 - CelsiusWebLearner - INFO - Saved contact request for smashingmagazine.com -> mac@smashingmagazine.com to C:\Users\micro\Celsius AI\data\web_learning_contact_requests.json
+2025-10-28 20:56:17,743 - CelsiusWebLearner - INFO - Completed learning cycle for philosophy_ethics.
+2025-10-28 20:56:17,806 - CelsiusWebLearner - INFO - Found alternative sources for www.bbc.com: ['https://www.bbc.com/sitemap.xml']
+2025-10-28 20:56:18,743 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-28 20:56:18,754 - CelsiusWebLearner - INFO - Found contact for www.nature.com: jo.smith@university.ac.uk
+2025-10-28 20:56:18,770 - CelsiusWebLearner - INFO - Saved contact request for www.nature.com -> jo.smith@university.ac.uk to C:\Users\micro\Celsius AI\data\web_learning_contact_requests.json
+2025-10-28 20:56:18,853 - CelsiusWebLearner - INFO - Completed learning cycle for business_finance.
+2025-10-28 20:56:19,158 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-28 20:56:19,555 - CelsiusWebLearner - INFO - Completed learning cycle for web_development.
+2025-10-28 20:56:20,777 - CelsiusWebLearner - INFO - Completed learning cycle for science.
+2025-10-28 20:56:21,769 - CelsiusWebLearner - INFO - Completed learning cycle for general_knowledge.
+2025-10-28 20:56:22,266 - CelsiusWebLearner - INFO - Completed learning cycle for engineering.
+2025-10-28 20:56:23,300 - CelsiusWebLearner - INFO - Found alternative sources for towardsdatascience.com: ['https://towardsdatascience.com/feed', 'https://towardsdatascience.com/rss', 'https://towardsdatascience.com/feed/', 'https://towardsdatascience.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftowardsdatascience.com%2F&format=xml']
+2025-10-28 20:56:29,168 - CelsiusWebLearner - INFO - Completed learning cycle for data_science.
+2025-10-28 20:56:29,168 - CelsiusWebLearner - INFO - Cycle complete. Waiting for 1 hour.
+2025-10-28 20:58:24,918 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000028254D13A10>
+2025-10-28 20:58:24,918 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x00000282557E8600>, 468417.421)])']
+connector: <aiohttp.connector.TCPConnector object at 0x0000028255250FD0>
+2025-10-28 21:12:56,015 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 21:12:56,221 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 21:12:56,221 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\certifi\cacert.pem
+2025-10-28 21:13:10,818 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-28 21:13:10,819 - root - INFO - Learning interval: 3600 seconds
+2025-10-28 21:13:10,819 - CelsiusWebLearner - INFO - Starting continuous learning loop.
+2025-10-28 21:13:10,820 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 21:13:11,019 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 21:13:11,019 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\certifi\cacert.pem
+2025-10-28 21:13:11,019 - CelsiusWebLearner - INFO - --- New learning cycle ---
+2025-10-28 21:13:11,020 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-28 21:13:11,020 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-28 21:13:11,020 - CelsiusWebLearner - INFO - Starting learning for topic: artificial_intelligence
+2025-10-28 21:13:11,020 - CelsiusWebLearner - INFO - Starting learning for topic: science
+2025-10-28 21:13:11,020 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-28 21:13:11,020 - CelsiusWebLearner - INFO - Starting learning for topic: web_development
+2025-10-28 21:13:11,020 - CelsiusWebLearner - INFO - Starting learning for topic: data_science
+2025-10-28 21:13:11,020 - CelsiusWebLearner - INFO - Starting learning for topic: systems_programming
+2025-10-28 21:13:11,020 - CelsiusWebLearner - INFO - Starting learning for topic: philosophy_ethics
+2025-10-28 21:13:11,021 - CelsiusWebLearner - INFO - Starting learning for topic: general_knowledge
+2025-10-28 21:13:11,021 - CelsiusWebLearner - INFO - Starting learning for topic: engineering
+2025-10-28 21:13:11,021 - CelsiusWebLearner - INFO - Starting learning for topic: business_finance
+2025-10-28 21:13:11,230 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://krebsonsecurity.com
+2025-10-28 21:13:11,363 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.bbc.com/news
+2025-10-28 21:13:11,440 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://plato.stanford.edu
+2025-10-28 21:13:11,453 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.sciencedaily.com
+2025-10-28 21:13:11,470 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://lwn.net
+2025-10-28 21:13:11,474 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://towardsdatascience.com
+2025-10-28 21:13:11,477 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.asme.org
+2025-10-28 21:13:11,501 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.investopedia.com
+2025-10-28 21:13:11,560 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.nature.com
+2025-10-28 21:13:11,600 - CelsiusWebLearner - WARNING - Failed to extract content from https://unix.stackexchange.com: 403, message='Forbidden', url='https://unix.stackexchange.com'
+2025-10-28 21:13:11,808 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-28 21:13:11,841 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://britannica.com
+2025-10-28 21:13:12,331 - CelsiusWebLearner - INFO - Found alternative sources for www.sciencedaily.com: ['https://www.sciencedaily.com/rss', 'https://www.sciencedaily.com/rss/all.xml']
+2025-10-28 21:13:12,751 - CelsiusWebLearner - INFO - Found alternative sources for lwn.net: ['https://lwn.net/headlines/rss']
+2025-10-28 21:13:12,808 - CelsiusWebLearner - INFO - Found alternative sources for www.bbc.com: ['https://www.bbc.com/sitemap.xml']
+2025-10-28 21:13:12,951 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://smashingmagazine.com
+2025-10-28 21:13:13,285 - CelsiusWebLearner - INFO - Found alternative sources for realpython.com: ['https://realpython.com/feed', 'https://realpython.com/sitemap.xml', 'https://realpython.com/rss', 'https://realpython.com/rss.xml', 'https://realpython.com/atom.xml']
+2025-10-28 21:13:14,009 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-28 21:13:14,489 - CelsiusWebLearner - INFO - Found alternative sources for krebsonsecurity.com: ['https://krebsonsecurity.com/feed', 'https://krebsonsecurity.com/rss', 'https://krebsonsecurity.com/feed/', 'https://krebsonsecurity.com/comments/feed/']
+2025-10-28 21:13:14,614 - CelsiusWebLearner - INFO - Found alternative sources for towardsdatascience.com: ['https://towardsdatascience.com/feed', 'https://towardsdatascience.com/rss', 'https://towardsdatascience.com/feed/', 'https://towardsdatascience.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftowardsdatascience.com%2F&format=xml']
+2025-10-28 21:13:14,796 - CelsiusWebLearner - INFO - Completed learning cycle for artificial_intelligence.
+2025-10-28 21:13:14,873 - CelsiusWebLearner - INFO - Completed learning cycle for philosophy_ethics.
+2025-10-28 21:13:15,089 - CelsiusWebLearner - INFO - Found alternative sources for smashingmagazine.com: ['https://smashingmagazine.com/feed', 'https://smashingmagazine.com/sitemap.xml', 'https://smashingmagazine.com/rss', 'https://www.smashingmagazine.com/feed/']
+2025-10-28 21:13:15,092 - CelsiusWebLearner - INFO - Found contact for krebsonsecurity.com: help@washpost.com
+2025-10-28 21:13:15,796 - CelsiusWebLearner - INFO - Completed learning cycle for systems_programming.
+2025-10-28 21:13:15,936 - CelsiusWebLearner - INFO - Found alternative sources for www.asme.org: ['https://www.asme.org/sitemap.xml']
+2025-10-28 21:13:15,981 - CelsiusWebLearner - INFO - Found contact for realpython.com: info@realpython.com
+2025-10-28 21:13:16,107 - CelsiusWebLearner - INFO - Completed learning cycle for business_finance.
+2025-10-28 21:13:16,378 - CelsiusWebLearner - INFO - Found alternative sources for www.nature.com: ['https://www.nature.com/nature.rss']
+2025-10-28 21:13:16,892 - CelsiusWebLearner - INFO - Found contact for smashingmagazine.com: mac@smashingmagazine.com
+2025-10-28 21:13:17,100 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-28 21:13:17,617 - CelsiusWebLearner - INFO - Found contact for www.nature.com: jo.smith@university.ac.uk
+2025-10-28 21:13:17,999 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-28 21:13:18,278 - CelsiusWebLearner - INFO - Completed learning cycle for general_knowledge.
+2025-10-28 21:13:18,480 - CelsiusWebLearner - INFO - Completed learning cycle for data_science.
+2025-10-28 21:13:18,883 - CelsiusWebLearner - INFO - Completed learning cycle for web_development.
+2025-10-28 21:13:19,628 - CelsiusWebLearner - INFO - Completed learning cycle for science.
+2025-10-28 21:13:21,596 - CelsiusWebLearner - INFO - Completed learning cycle for engineering.
+2025-10-28 21:13:21,596 - CelsiusWebLearner - INFO - Cycle complete. Waiting for 1 hour.
+2025-10-28 21:16:01,073 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000024BC36454D0>
+2025-10-28 21:16:01,073 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000024BC6289320>, 469473.593)])']
+connector: <aiohttp.connector.TCPConnector object at 0x0000024BC341F910>
+2025-10-28 21:19:07,085 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 21:19:07,285 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 21:19:07,285 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\certifi\cacert.pem
+2025-10-28 21:22:21,493 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002B1216C3A10>
+2025-10-28 21:22:21,493 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000002B12325AB30>, 469854.015)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000002B1216D4450>
+2025-10-28 21:22:55,337 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 21:22:55,532 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 21:22:55,532 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\certifi\cacert.pem
+2025-10-28 21:26:26,352 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001C3D0FB3B50>
+2025-10-28 21:26:26,353 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001C3D2653C40>, 470098.875)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001C3D0D450D0>
+2025-10-28 21:27:58,314 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 21:27:58,504 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 21:27:58,504 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\certifi\cacert.pem
+2025-10-28 21:28:28,550 - root - INFO - Starting Web Learning System in daemon mode...
+2025-10-28 21:28:28,550 - root - INFO - Learning interval: 3600 seconds
+2025-10-28 21:28:28,550 - CelsiusWebLearner - INFO - Starting continuous learning loop.
+2025-10-28 21:28:28,552 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 21:28:28,753 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 21:28:28,753 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\certifi\cacert.pem
+2025-10-28 21:28:28,753 - CelsiusWebLearner - INFO - --- New learning cycle ---
+2025-10-28 21:28:28,753 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-28 21:28:28,753 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-28 21:28:28,753 - CelsiusWebLearner - INFO - Starting learning for topic: artificial_intelligence
+2025-10-28 21:28:28,754 - CelsiusWebLearner - INFO - Starting learning for topic: science
+2025-10-28 21:28:28,754 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-28 21:28:28,754 - CelsiusWebLearner - INFO - Starting learning for topic: web_development
+2025-10-28 21:28:28,754 - CelsiusWebLearner - INFO - Starting learning for topic: data_science
+2025-10-28 21:28:28,754 - CelsiusWebLearner - INFO - Starting learning for topic: systems_programming
+2025-10-28 21:28:28,754 - CelsiusWebLearner - INFO - Starting learning for topic: philosophy_ethics
+2025-10-28 21:28:28,754 - CelsiusWebLearner - INFO - Starting learning for topic: general_knowledge
+2025-10-28 21:28:28,754 - CelsiusWebLearner - INFO - Starting learning for topic: engineering
+2025-10-28 21:28:28,754 - CelsiusWebLearner - INFO - Starting learning for topic: business_finance
+2025-10-28 21:28:29,046 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://krebsonsecurity.com
+2025-10-28 21:28:29,212 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.bbc.com/news
+2025-10-28 21:28:29,248 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.asme.org
+2025-10-28 21:28:29,288 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.investopedia.com
+2025-10-28 21:28:29,420 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.nature.com
+2025-10-28 21:28:29,574 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://towardsdatascience.com
+2025-10-28 21:28:29,636 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://lwn.net
+2025-10-28 21:28:29,738 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://britannica.com
+2025-10-28 21:28:29,739 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-28 21:28:29,791 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.sciencedaily.com
+2025-10-28 21:28:30,082 - CelsiusWebLearner - WARNING - Failed to extract content from https://unix.stackexchange.com: 403, message='Forbidden', url='https://unix.stackexchange.com'
+2025-10-28 21:28:30,423 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://plato.stanford.edu
+2025-10-28 21:28:30,526 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://smashingmagazine.com
+2025-10-28 21:28:30,555 - CelsiusWebLearner - INFO - Found alternative sources for www.bbc.com: ['https://www.bbc.com/sitemap.xml']
+2025-10-28 21:28:31,057 - CelsiusWebLearner - INFO - Found alternative sources for www.sciencedaily.com: ['https://www.sciencedaily.com/rss', 'https://www.sciencedaily.com/rss/all.xml']
+2025-10-28 21:28:31,292 - CelsiusWebLearner - INFO - Found alternative sources for lwn.net: ['https://lwn.net/headlines/rss']
+2025-10-28 21:28:31,368 - CelsiusWebLearner - INFO - Found alternative sources for realpython.com: ['https://realpython.com/feed', 'https://realpython.com/sitemap.xml', 'https://realpython.com/rss', 'https://realpython.com/rss.xml', 'https://realpython.com/atom.xml']
+2025-10-28 21:28:31,492 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-28 21:28:32,134 - CelsiusWebLearner - INFO - Found alternative sources for www.nature.com: ['https://www.nature.com/nature.rss']
+2025-10-28 21:28:32,789 - CelsiusWebLearner - INFO - Completed learning cycle for artificial_intelligence.
+2025-10-28 21:28:33,733 - CelsiusWebLearner - INFO - Found alternative sources for krebsonsecurity.com: ['https://krebsonsecurity.com/feed', 'https://krebsonsecurity.com/rss', 'https://krebsonsecurity.com/feed/', 'https://krebsonsecurity.com/comments/feed/']
+2025-10-28 21:28:33,784 - CelsiusWebLearner - INFO - Found contact for realpython.com: info@realpython.com
+2025-10-28 21:28:33,889 - CelsiusWebLearner - INFO - Found contact for www.nature.com: jo.smith@university.ac.uk
+2025-10-28 21:28:33,958 - CelsiusWebLearner - INFO - Found alternative sources for smashingmagazine.com: ['https://smashingmagazine.com/feed', 'https://smashingmagazine.com/sitemap.xml', 'https://smashingmagazine.com/rss', 'https://www.smashingmagazine.com/feed/']
+2025-10-28 21:28:34,060 - CelsiusWebLearner - INFO - Found alternative sources for towardsdatascience.com: ['https://towardsdatascience.com/feed', 'https://towardsdatascience.com/rss', 'https://towardsdatascience.com/feed/', 'https://towardsdatascience.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftowardsdatascience.com%2F&format=xml']
+2025-10-28 21:28:35,044 - CelsiusWebLearner - INFO - Completed learning cycle for philosophy_ethics.
+2025-10-28 21:28:35,143 - CelsiusWebLearner - INFO - Found contact for krebsonsecurity.com: help@washpost.com
+2025-10-28 21:28:35,143 - CelsiusWebLearner - INFO - Completed learning cycle for business_finance.
+2025-10-28 21:28:35,294 - CelsiusWebLearner - INFO - Found alternative sources for www.asme.org: ['https://www.asme.org/sitemap.xml']
+2025-10-28 21:28:35,423 - CelsiusWebLearner - INFO - Found contact for smashingmagazine.com: mac@smashingmagazine.com
+2025-10-28 21:28:35,589 - CelsiusWebLearner - INFO - Completed learning cycle for systems_programming.
+2025-10-28 21:28:35,778 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-28 21:28:35,868 - CelsiusWebLearner - INFO - Completed learning cycle for science.
+2025-10-28 21:28:37,157 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-28 21:28:37,418 - CelsiusWebLearner - INFO - Completed learning cycle for web_development.
+2025-10-28 21:28:38,180 - CelsiusWebLearner - INFO - Completed learning cycle for data_science.
+2025-10-28 21:28:38,801 - CelsiusWebLearner - INFO - Completed learning cycle for general_knowledge.
+2025-10-28 21:28:40,770 - CelsiusWebLearner - INFO - Completed learning cycle for engineering.
+2025-10-28 21:28:40,770 - CelsiusWebLearner - INFO - Cycle complete. Waiting for 1 hour.
+2025-10-28 21:30:10,291 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 21:30:10,487 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 21:30:10,487 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\certifi\cacert.pem
+2025-10-28 21:33:39,626 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000027BF7AF3A10>
+2025-10-28 21:33:39,626 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000027BFB12B9A0>, 470514.14)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000027BF8640600>, 470525.328)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000027BF85C39A0>, 470532.14)])']
+connector: <aiohttp.connector.TCPConnector object at 0x0000027BF7EAFA50>
+2025-10-28 22:28:40,767 - CelsiusWebLearner - INFO - --- New learning cycle ---
+2025-10-28 22:28:40,768 - CelsiusWebLearner - INFO - Starting learning for topic: cybersecurity
+2025-10-28 22:28:40,768 - CelsiusWebLearner - INFO - Starting learning for topic: programming
+2025-10-28 22:28:40,768 - CelsiusWebLearner - INFO - Starting learning for topic: artificial_intelligence
+2025-10-28 22:28:40,768 - CelsiusWebLearner - INFO - Starting learning for topic: science
+2025-10-28 22:28:40,768 - CelsiusWebLearner - INFO - Starting learning for topic: technology
+2025-10-28 22:28:40,768 - CelsiusWebLearner - INFO - Starting learning for topic: web_development
+2025-10-28 22:28:40,768 - CelsiusWebLearner - INFO - Starting learning for topic: data_science
+2025-10-28 22:28:40,768 - CelsiusWebLearner - INFO - Starting learning for topic: systems_programming
+2025-10-28 22:28:40,768 - CelsiusWebLearner - INFO - Starting learning for topic: philosophy_ethics
+2025-10-28 22:28:40,768 - CelsiusWebLearner - INFO - Starting learning for topic: general_knowledge
+2025-10-28 22:28:40,768 - CelsiusWebLearner - INFO - Starting learning for topic: engineering
+2025-10-28 22:28:40,769 - CelsiusWebLearner - INFO - Starting learning for topic: business_finance
+2025-10-28 22:28:41,066 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.nature.com
+2025-10-28 22:28:41,099 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://krebsonsecurity.com
+2025-10-28 22:28:41,179 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://towardsdatascience.com
+2025-10-28 22:28:41,182 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.bbc.com/news
+2025-10-28 22:28:41,191 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.sciencedaily.com
+2025-10-28 22:28:41,304 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://lwn.net
+2025-10-28 22:28:41,307 - CelsiusWebLearner - WARNING - Failed to extract content from https://unix.stackexchange.com: 403, message='Forbidden', url='https://unix.stackexchange.com'
+2025-10-28 22:28:41,380 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://plato.stanford.edu
+2025-10-28 22:28:41,530 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://smashingmagazine.com
+2025-10-28 22:28:41,615 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.investopedia.com
+2025-10-28 22:28:41,633 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://realpython.com
+2025-10-28 22:28:41,915 - CelsiusWebLearner - INFO - Found alternative sources for www.bbc.com: ['https://www.bbc.com/sitemap.xml']
+2025-10-28 22:28:42,034 - CelsiusWebLearner - INFO - Found alternative sources for www.sciencedaily.com: ['https://www.sciencedaily.com/rss', 'https://www.sciencedaily.com/rss/all.xml']
+2025-10-28 22:28:42,137 - CelsiusWebLearner - INFO - Found alternative sources for lwn.net: ['https://lwn.net/headlines/rss']
+2025-10-28 22:28:42,327 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://www.asme.org
+2025-10-28 22:28:42,590 - CelsiusWebLearner - WARNING - Crawling disallowed by robots.txt at https://britannica.com
+2025-10-28 22:28:43,111 - CelsiusWebLearner - INFO - Found alternative sources for realpython.com: ['https://realpython.com/feed', 'https://realpython.com/sitemap.xml', 'https://realpython.com/rss', 'https://realpython.com/rss.xml', 'https://realpython.com/atom.xml']
+2025-10-28 22:28:43,315 - CelsiusWebLearner - INFO - Found alternative sources for www.nature.com: ['https://www.nature.com/nature.rss']
+2025-10-28 22:28:43,492 - CelsiusWebLearner - INFO - Completed learning cycle for technology.
+2025-10-28 22:28:43,814 - CelsiusWebLearner - INFO - Found alternative sources for smashingmagazine.com: ['https://smashingmagazine.com/feed', 'https://smashingmagazine.com/sitemap.xml', 'https://smashingmagazine.com/rss', 'https://www.smashingmagazine.com/feed/']
+2025-10-28 22:28:44,212 - CelsiusWebLearner - INFO - Found alternative sources for krebsonsecurity.com: ['https://krebsonsecurity.com/feed', 'https://krebsonsecurity.com/rss', 'https://krebsonsecurity.com/feed/', 'https://krebsonsecurity.com/comments/feed/']
+2025-10-28 22:28:44,707 - CelsiusWebLearner - INFO - Found contact for realpython.com: info@realpython.com
+2025-10-28 22:28:44,776 - CelsiusWebLearner - INFO - Completed learning cycle for philosophy_ethics.
+2025-10-28 22:28:44,916 - CelsiusWebLearner - INFO - Completed learning cycle for systems_programming.
+2025-10-28 22:28:44,933 - CelsiusWebLearner - INFO - Found contact for krebsonsecurity.com: help@washpost.com
+2025-10-28 22:28:45,146 - CelsiusWebLearner - INFO - Found alternative sources for www.asme.org: ['https://www.asme.org/sitemap.xml']
+2025-10-28 22:28:45,252 - CelsiusWebLearner - INFO - Found contact for www.nature.com: jo.smith@university.ac.uk
+2025-10-28 22:28:45,566 - CelsiusWebLearner - INFO - Found contact for smashingmagazine.com: mac@smashingmagazine.com
+2025-10-28 22:28:45,790 - CelsiusWebLearner - INFO - Completed learning cycle for business_finance.
+2025-10-28 22:28:46,719 - CelsiusWebLearner - INFO - Completed learning cycle for programming.
+2025-10-28 22:28:46,954 - CelsiusWebLearner - INFO - Completed learning cycle for cybersecurity.
+2025-10-28 22:28:47,249 - CelsiusWebLearner - INFO - Completed learning cycle for science.
+2025-10-28 22:28:47,571 - CelsiusWebLearner - INFO - Completed learning cycle for web_development.
+2025-10-28 22:28:48,242 - CelsiusWebLearner - INFO - Completed learning cycle for general_knowledge.
+2025-10-28 22:28:48,412 - CelsiusWebLearner - INFO - Completed learning cycle for artificial_intelligence.
+2025-10-28 22:28:49,714 - CelsiusWebLearner - INFO - Completed learning cycle for engineering.
+2025-10-28 22:28:51,870 - CelsiusWebLearner - INFO - Found alternative sources for towardsdatascience.com: ['https://towardsdatascience.com/feed', 'https://towardsdatascience.com/rss', 'https://towardsdatascience.com/feed/', 'https://towardsdatascience.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftowardsdatascience.com%2F&format=xml']
+2025-10-28 22:28:57,390 - CelsiusWebLearner - INFO - Completed learning cycle for data_science.
+2025-10-28 22:28:57,390 - CelsiusWebLearner - INFO - Cycle complete. Waiting for 1 hour.
+2025-10-28 22:33:39,952 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 22:33:40,167 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 22:33:40,167 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\certifi\cacert.pem
+2025-10-28 22:36:28,947 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000025933C13A10>
+2025-10-28 22:36:28,948 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000025934E9FF50>, 474288.625)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000025934703930>, 474295.39)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x000002593722C6E0>, 474301.468)])']
+connector: <aiohttp.connector.TCPConnector object at 0x00000259341950D0>
+2025-10-28 23:41:46,343 - CelsiusWebLearner - INFO - Async web learning database initialized.
+2025-10-28 23:41:46,551 - CelsiusWebLearner - INFO - Web Learner initialized with async session.
+2025-10-28 23:41:46,553 - CelsiusWebLearner - INFO - certifi CA bundle: C:\Users\micro\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\certifi\cacert.pem
+2025-10-28 23:44:15,335 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000020A38D19B90>
+2025-10-28 23:44:15,336 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000020A3A561EF0>, 478344.75)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000020A3A560980>, 478345.0)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000020A3A1BF850>, 478347.015)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000020A3A0B3B60>, 478352.234)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000020A3A0B3D20>, 478352.515)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000020A3A0B3770>, 478358.562)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000020A3C28A040>, 478363.75)])', 'deque([(<aiohttp.client_proto.ResponseHandler object at 0x0000020A3A7B3AF0>, 478367.859)])']
+connector: <aiohttp.connector.TCPConnector object at 0x0000020A387B52D0>

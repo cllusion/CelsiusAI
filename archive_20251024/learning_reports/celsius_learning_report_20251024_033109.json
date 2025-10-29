@@ -1,0 +1,25 @@
+{
+  "report_period": "daily",
+  "generated_at": "2025-10-24T03:31:09.596379",
+  "topics_covered": 2,
+  "total_content_learned": 3,
+  "insights_generated": 15,
+  "topic_breakdown": [
+    {
+      "topic": "technology",
+      "content_count": 2,
+      "average_quality": 0.6
+    },
+    {
+      "topic": "fitness_health",
+      "content_count": 1,
+      "average_quality": 1.0
+    }
+  ],
+  "learning_summary": "Acquired 3 pieces of high-quality content across 2 topics. Primary focus area was 'technology' with 2 articles analyzed. Overall content quality score: 0.80/1.0",
+  "recommendations": [
+    "Consider increasing focus on 'fitness_health' topic - only 1 items learned",
+    "Continue regular web learning to maintain knowledge currency",
+    "Focus on authoritative sources for higher quality insights"
+  ]
+}

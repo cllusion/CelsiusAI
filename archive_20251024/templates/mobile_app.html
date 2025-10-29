@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius AI - Mobile Defense Assistant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px 20px;
+            border-bottom: 2px solid #00d4ff;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header h1 {
+            font-size: 1.4em;
+            color: #00d4ff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ff4444;
+            transition: all 0.3s ease;
+        }
+
+        .status-indicator.online {
+            background: #44ff44;
+            box-shadow: 0 0 10px #44ff44;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 100%;
+        }
+
+        .chat-container {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            min-height: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .message {
+            margin-bottom: 15px;
+            padding: 12px 15px;
+            border-radius: 12px;
+            max-width: 85%;
+            word-wrap: break-word;
+        }
+
+        .message.user {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            margin-left: auto;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .message.ai {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .input-section {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        #messageInput {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #messageInput:focus {
+            border-color: #00d4ff;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+        }
+
+        #messageInput::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .send-btn {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: #000;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .send-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.7);
+        }
+
+        .send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .quick-commands {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .quick-commands h3 {
+            color: #00d4ff;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .command-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+        }
+
+        .command-btn {
+            padding: 10px 12px;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 8px;
+            color: #00d4ff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.2;
+        }
+
+        .command-btn:hover {
+            background: rgba(0, 212, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .loading {
+            text-align: center;
+            color: #00d4ff;
+            margin: 10px 0;
+        }
+
+        .loading:after {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-top: 2px solid #00d4ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .error {
+            background: rgba(255, 68, 68, 0.2);
+            border: 1px solid rgba(255, 68, 68, 0.5);
+            color: #ff4444;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.2em;
+            }
+            
+            .command-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>
+            🛡️ Celsius AI Mobile
+            <div class="status-indicator" id="statusIndicator"></div>
+        </h1>
+    </div>
+
+    <div class="container">
+        <div class="chat-container" id="chatContainer">
+            <div class="message ai">
+                Celsius AI: Welcome! I'm your complete AI assistant with internet access and self-learning capabilities.<br>
+                Samsung S25 Ultra Edition<br><br>
+                
+                I can help you with:<br>
+                - Cybersecurity & Threat Analysis<br>
+                - Device Management & Protection<br>
+                - Threat Intelligence & Research<br>
+                - Security Education & Learning<br>
+                - Ethical Hacking (with proper authorization)<br>
+                - General AI Assistance with real-time learning<br>
+                - Code analysis and self-repair<br><br>
+                
+                I now have internet access to learn and improve continuously while maintaining strict legal and ethical boundaries.
+            </div>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" id="messageInput" placeholder="Ask me anything - security, hacking, AI assistance..." autocomplete="off">
+                <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+                    ➤
+                </button>
+            </div>
+        </div>
+
+        <div class="quick-commands">
+            <h3>�️ Security Commands</h3>
+            <div class="command-grid">
+                <div class="command-btn" onclick="sendQuickCommand('scan network')">
+                    🌐 Scan Network
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('check threats')">
+                    ⚠️ Check Threats
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('security status')">
+                    🛡️ Security Status
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('vulnerability check')">
+                    🔍 Vuln Check
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-commands">
+            <h3>📱 Device Management</h3>
+            <div class="command-grid">
+                <div class="command-btn" onclick="sendQuickCommand('list devices')">
+                    📱 List Devices
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('device status')">
+                    📊 Device Status
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('sync security')">
+                    🔄 Sync Security
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('security news')">
+                    📰 Security News
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-commands">
+            <h3>🧠 Intelligence & Research</h3>
+            <div class="command-grid">
+                <div class="command-btn" onclick="sendQuickCommand('threat intel')">
+                    🧠 Threat Intel
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('What is the latest cybersecurity trend?')">
+                    📈 Cyber Trends
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('Explain zero-day vulnerabilities')">
+                    🎯 Zero-Day Info
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('How do I protect against ransomware?')">
+                    �️ Ransomware Defense
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-commands">
+            <h3>🎓 Learning & Education</h3>
+            <div class="command-grid">
+                <div class="command-btn" onclick="sendQuickCommand('Teach me about phishing attacks')">
+                    🎣 Phishing Education
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('What is penetration testing?')">
+                    🔬 Pentesting Basics
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('Explain network security')">
+                    🌐 Network Security
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('Best security practices for mobile devices')">
+                    � Mobile Security
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-commands">
+            <h3>🔬 White Hat Testing (Authorized)</h3>
+            <div class="command-grid">
+                <div class="command-btn" onclick="sendQuickCommand('request pentest authorization')">
+                    📋 Request Auth
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('authorize')">
+                    ✅ Check Auth Status
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('port scan')">
+                    🔍 Port Scan
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('What ethical hacking techniques can I learn?')">
+                    🎓 Ethical Hacking
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-commands">
+            <h3>💬 General AI Assistant</h3>
+            <div class="command-grid">
+                <div class="command-btn" onclick="sendQuickCommand('What can you help me with?')">
+                    💡 Capabilities
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('Tell me about current cyber threats')">
+                    📊 Threat Landscape
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('help')">
+                    ❓ Help
+                </div>
+                <div class="command-btn" onclick="sendQuickCommand('status')">
+                    📈 System Status
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isLoading = false;
+
+        // Check server status on load
+        window.onload = function() {
+            checkServerStatus();
+            document.getElementById('messageInput').focus();
+            
+            // Add enter key support
+            document.getElementById('messageInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+        };
+
+        function checkServerStatus() {
+            fetch('/api/status')
+                .then(response => response.json())
+                .then(data => {
+                    const indicator = document.getElementById('statusIndicator');
+                    if (data.server_online) {
+                        indicator.classList.add('online');
+                    } else {
+                        indicator.classList.remove('online');
+                    }
+                })
+                .catch(error => {
+                    console.error('Status check failed:', error);
+                    document.getElementById('statusIndicator').classList.remove('online');
+                });
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const message = input.value.trim();
+            
+            if (!message || isLoading) return;
+            
+            addMessage(message, 'user');
+            input.value = '';
+            
+            isLoading = true;
+            updateUI();
+            
+            fetch('/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.response) {
+                    addMessage(data.response, 'ai');
+                } else if (data.error) {
+                    addError(data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Chat error:', error);
+                addError('Failed to connect to Celsius AI server');
+            })
+            .finally(() => {
+                isLoading = false;
+                updateUI();
+            });
+        }
+
+        function sendQuickCommand(command) {
+            document.getElementById('messageInput').value = command;
+            sendMessage();
+        }
+
+        function addMessage(text, type) {
+            const chatContainer = document.getElementById('chatContainer');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            
+            if (type === 'ai') {
+                messageDiv.innerHTML = `Celsius AI: ${text}`;
+            } else {
+                messageDiv.innerHTML = `You: ${text}`;
+            }
+            
+            chatContainer.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function addError(text) {
+            const chatContainer = document.getElementById('chatContainer');
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error';
+            errorDiv.innerHTML = `❌ ${text}`;
+            
+            chatContainer.appendChild(errorDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function updateUI() {
+            const sendBtn = document.getElementById('sendBtn');
+            const input = document.getElementById('messageInput');
+            
+            if (isLoading) {
+                sendBtn.disabled = true;
+                sendBtn.innerHTML = '⏳';
+                input.disabled = true;
+                
+                // Add loading message
+                const chatContainer = document.getElementById('chatContainer');
+                let loadingDiv = document.querySelector('.loading');
+                if (!loadingDiv) {
+                    loadingDiv = document.createElement('div');
+                    loadingDiv.className = 'loading';
+                    loadingDiv.innerHTML = '🤖 Celsius AI is analyzing...';
+                    chatContainer.appendChild(loadingDiv);
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                }
+            } else {
+                sendBtn.disabled = false;
+                sendBtn.innerHTML = '➤';
+                input.disabled = false;
+                input.focus();
+                
+                // Remove loading message
+                const loadingDiv = document.querySelector('.loading');
+                if (loadingDiv) {
+                    loadingDiv.remove();
+                }
+            }
+        }
+
+        // Refresh status every 30 seconds
+        setInterval(checkServerStatus, 30000);
+    </script>
+</body>
+</html>

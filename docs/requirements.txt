@@ -1,0 +1,34 @@
+aiohttp
+aiosqlite
+bcrypt
+beautifulsoup4
+fastapi
+matplotlib
+psutil
+ttkthemes
+uvicorn
+yara-python
+aiodns
+aiosmtplib
+requests
+scapy
+sqlalchemy
+pyyaml
+python-dotenv
+coloredlogs
+aiofiles
+python-multipart
+websockets
+asyncio-mqtt
+asyncio-periodic
+pytest
+pytest-asyncio
+black
+flake8
+openai
+vt-py
+watchdog
+pystray
+Pillow
+pywin32; sys_platform == "win32"
+pyobjc; sys_platform == "darwin"

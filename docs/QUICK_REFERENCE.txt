@@ -1,0 +1,159 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              🛡️ CELSIUS AI - QUICK REFERENCE GUIDE 🛡️                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ DAILY STARTUP                                                                 │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+1. Double-click: Start_Celsius_Ultimate.bat
+2. Select Option 1: Ultimate Hub
+3. Login: cllusion001 / T3qy22ny*@dyu0ppn*pG
+4. Go to Services tab → Start services you need
+
+RECOMMENDED SERVICES FOR DAILY USE:
+✓ Enhanced Dashboard (web interface)
+✓ Core AI Engine (main AI)
+✓ Guardian System (monitoring)
+✓ Real-Time Defender (security)
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ REMOTE ACCESS (Mobile/External)                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+1. Start Enhanced Dashboard service
+2. Go to "Ngrok Tunnels" tab
+3. Click "Start Dashboard Tunnel"
+4. Wait 5 seconds, click "Refresh Status"
+5. Copy public URL from tree or visit: http://localhost:4040
+6. Access dashboard from phone/tablet using public URL
+7. IMPORTANT: Stop tunnel when done for security!
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ CODE APPROVAL WORKFLOW                                                        │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+WHEN CELSIUS AI WANTS TO CHANGE CODE:
+
+1. You'll see a new request in "Code Approvals" tab
+2. Click on the request to view details
+3. Read the analysis:
+   - What files will change
+   - What benefits you get
+   - What risks exist
+   - What alternatives were considered
+4. Make your decision:
+   - APPROVE: Green button → AI implements change
+   - REJECT: Red button → AI drops the change
+5. Add notes to explain your reasoning
+
+REMEMBER: Celsius AI CANNOT change code without your approval!
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ MONITORING CELSIUS AI LEARNING                                                │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+The Learning System runs in the background and:
+• Monitors all Celsius processes every 30 seconds
+• Tracks CPU, memory, disk, network usage
+• Identifies performance patterns
+• Detects anomalies
+• Suggests optimizations
+
+NO ACTION REQUIRED - it learns automatically!
+
+When it finds an improvement, it submits to Code Approvals for your review.
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ TROUBLESHOOTING                                                               │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+PROBLEM: Service won't start
+SOLUTION: Check port availability in Dashboard tab
+
+PROBLEM: Can't access dashboard remotely
+SOLUTION: Ensure ngrok installed and tunnel started
+
+PROBLEM: No approval requests appearing
+SOLUTION: Learning System may still be gathering data
+
+PROBLEM: Ngrok tunnel shows "N/A"
+SOLUTION: Visit http://localhost:4040 for full tunnel details
+
+PROBLEM: Hub closes when I close Guardian
+SOLUTION: That's normal - they're independent now!
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ KEYBOARD SHORTCUTS                                                            │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Ultimate Hub:
+• Tab navigation: Use mouse to click tabs
+• F5: Refresh current view (where applicable)
+• Ctrl+Q: Quit application
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ IMPORTANT NOTES                                                               │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+⚠️ SECURITY:
+- Always stop ngrok tunnels when not needed
+- Public URLs expose your dashboard to the internet
+- Review all code approval requests carefully
+- Keep login credentials secure
+
+✅ BEST PRACTICES:
+- Start Guardian System for automatic monitoring
+- Check Code Approvals tab daily
+- Stop unused services to save resources
+- Review Monitoring tab for system health
+
+🔄 UPDATES:
+- Learning System runs 24/7 (no action needed)
+- Code changes ONLY happen when you approve
+- Services remain running when Hub/Guardian close
+- All data persists in SQLite databases
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ FILE LOCATIONS                                                                │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Databases:
+• code_approvals.db - Approval request history
+• celsius_learning.db - Learning observations and metrics
+• celsius_activity.db - User activity and service logs
+
+Logs:
+• logs/ directory - All system logs
+• Check Monitoring tab in Hub for recent logs
+
+Configuration:
+• config/services.json - Service definitions
+• No .md files - all docs in code comments now!
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                         QUICK COMMAND REFERENCE                               ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+START CELSIUS:
+  Start_Celsius_Ultimate.bat
+
+START WEB DASHBOARD ONLY:
+  python enhanced_mobile_dashboard.py
+
+START DEFENDER ONLY:
+  python celsius_realtime_defender.py
+
+START GUARDIAN ONLY:
+  python celsius_ultimate_guardian.py
+
+VIEW NGROK DASHBOARD:
+  http://localhost:4040
+
+ACCESS LOCAL DASHBOARD:
+  http://localhost:5000
+
+═══════════════════════════════════════════════════════════════════════════════
+For detailed documentation, see: SYSTEM_REDESIGN_COMPLETE.txt
+For project overview, see: .github/copilot-instructions.md
+═══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,58 @@
+{
+  "timestamp": "2025-10-24T13:38:52.741608",
+  "duration": 3.1661274433135986,
+  "total_results": {
+    "passed": 17,
+    "failed": 0,
+    "skipped": 2,
+    "errors": 0
+  },
+  "suite_results": {
+    "System Responsiveness": {
+      "tests_run": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "success_rate": 100.0,
+      "duration": 3.0333147048950195
+    },
+    "Mobile Integration": {
+      "tests_run": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 2,
+      "success_rate": 100.0,
+      "duration": 0.0
+    },
+    "GUI Components": {
+      "tests_run": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "success_rate": 100.0,
+      "duration": 0.06611180305480957
+    },
+    "System Integration": {
+      "tests_run": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "success_rate": 100.0,
+      "duration": 0.06670093536376953
+    },
+    "Performance Benchmarks": {
+      "tests_run": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "success_rate": 100.0,
+      "duration": 0.0
+    }
+  },
+  "system_info": {
+    "platform": "Windows",
+    "python_version": "3.11.9",
+    "cpu_count": 16,
+    "memory_gb": 31.085853576660156
+  }
+}

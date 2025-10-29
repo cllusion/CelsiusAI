@@ -1,0 +1,48 @@
+{
+  "timestamp": "2025-10-24T18:53:54.445761",
+  "tests": [
+    {
+      "name": "Process Persistence",
+      "status": "PARTIAL",
+      "details": {
+        "running": 0,
+        "expected": 5,
+        "missing": [
+          "enhanced_mobile_dashboard.py",
+          "main.py",
+          "celsius_web_learning_launcher.py",
+          "celsius_ultimate_guardian.py",
+          "celsius_ultimate_hub.py"
+        ]
+      }
+    },
+    {
+      "name": "Web Dashboard Connectivity",
+      "status": "FAIL",
+      "url": "http://localhost:5000"
+    },
+    {
+      "name": "Guardian Database Logging",
+      "status": "PASS",
+      "database": "C:\\Users\\micro\\Celsius AI\\celsius_guardian.db"
+    },
+    {
+      "name": "Service Recovery Simulation",
+      "status": "SKIP",
+      "note": "Skipped to avoid service disruption"
+    },
+    {
+      "name": "Ultimate Hub UI Response",
+      "status": "FAIL",
+      "manual_check": "Scrolling functionality in Services tab"
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "pass": 1,
+    "partial": 1,
+    "fail": 2,
+    "skip": 1,
+    "score": "1/4"
+  }
+}

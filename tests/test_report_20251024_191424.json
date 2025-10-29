@@ -1,0 +1,74 @@
+{
+  "timestamp": "2025-10-24T19:14:24.885448",
+  "duration": 3.2351717948913574,
+  "total_results": {
+    "passed": 22,
+    "failed": 1,
+    "skipped": 7,
+    "errors": 0
+  },
+  "suite_results": {
+    "System Responsiveness": {
+      "tests_run": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "success_rate": 100.0,
+      "duration": 3.0512313842773438
+    },
+    "Mobile Integration": {
+      "tests_run": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 3,
+      "success_rate": 100.0,
+      "duration": 0.008193016052246094
+    },
+    "Email Notifications": {
+      "tests_run": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 3,
+      "success_rate": 100.0,
+      "duration": 0.001005411148071289
+    },
+    "GUI Components": {
+      "tests_run": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1,
+      "success_rate": 100.0,
+      "duration": 0.08436131477355957
+    },
+    "Hourly Logging": {
+      "tests_run": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "success_rate": 100.0,
+      "duration": 0.011101007461547852
+    },
+    "System Integration": {
+      "tests_run": 3,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "success_rate": 66.66666666666666,
+      "duration": 0.06676077842712402
+    },
+    "Performance Benchmarks": {
+      "tests_run": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "success_rate": 100.0,
+      "duration": 0.012518882751464844
+    }
+  },
+  "system_info": {
+    "platform": "Windows",
+    "python_version": "3.11.9",
+    "cpu_count": 16,
+    "memory_gb": 31.085853576660156
+  }
+}

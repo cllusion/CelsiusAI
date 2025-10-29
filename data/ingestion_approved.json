@@ -1,0 +1,952 @@
+[
+  {
+    "source": "https://www.gutenberg.org/ebooks/1342",
+    "title": "Pride and Prejudice - Project Gutenberg",
+    "added_at": "2025-10-28T20:59:50.712259"
+  },
+  {
+    "source": "https://www.gutenberg.org/ebooks/84",
+    "title": "Frankenstein - Project Gutenberg",
+    "added_at": "2025-10-28T20:59:50.712259"
+  },
+  {
+    "source": "https://www.gutenberg.org/ebooks/1342",
+    "title": "Pride and Prejudice - Project Gutenberg",
+    "added_at": "2025-10-28T21:00:04.685648"
+  },
+  {
+    "source": "https://www.gutenberg.org/ebooks/84",
+    "title": "Frankenstein - Project Gutenberg",
+    "added_at": "2025-10-28T21:00:04.685648"
+  },
+  {
+    "source": "https://www.cisa.gov/rss.xml",
+    "title": "Alternative for https://www.cisa.gov",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://realpython.com/feed",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://krebsonsecurity.com/feed/",
+    "title": "Alternative for https://krebsonsecurity.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://krebsonsecurity.com/comments/feed/",
+    "title": "Alternative for https://krebsonsecurity.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://phys.org/sitemap.xml",
+    "title": "Alternative for https://phys.org",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://phys.org/rss-feed/",
+    "title": "Alternative for https://phys.org",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://realpython.com/sitemap.xml",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://realpython.com/rss",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://realpython.com/rss.xml",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://realpython.com/atom.xml",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://dev.to/feed",
+    "title": "Alternative for https://dev.to",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://dev.to/rss",
+    "title": "Alternative for https://dev.to",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://hackernoon.com/feed",
+    "title": "Alternative for https://hackernoon.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://huggingface.co/blog/feed.xml",
+    "title": "Alternative for https://huggingface.co",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.nature.com/nature.rss",
+    "title": "Alternative for https://www.nature.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.sciencedaily.com/rss",
+    "title": "Alternative for https://www.sciencedaily.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.sciencedaily.com/rss/all.xml",
+    "title": "Alternative for https://www.sciencedaily.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.scientificamerican.com/platform/syndication/rss/",
+    "title": "Alternative for https://www.scientificamerican.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://techcrunch.com/feed",
+    "title": "Alternative for https://techcrunch.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://techcrunch.com/rss",
+    "title": "Alternative for https://techcrunch.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://techcrunch.com/feed/",
+    "title": "Alternative for https://techcrunch.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://arstechnica.com/feed",
+    "title": "Alternative for https://arstechnica.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://arstechnica.com/rss",
+    "title": "Alternative for https://arstechnica.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.wired.com/feed",
+    "title": "Alternative for https://www.wired.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.wired.com/feed/rss",
+    "title": "Alternative for https://www.wired.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.theverge.com/rss.xml",
+    "title": "Alternative for https://www.theverge.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.theverge.com/atom.xml",
+    "title": "Alternative for https://www.theverge.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.theverge.com/rss/index.xml",
+    "title": "Alternative for https://www.theverge.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://css-tricks.com/feed",
+    "title": "Alternative for https://css-tricks.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://css-tricks.com/rss",
+    "title": "Alternative for https://css-tricks.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://css-tricks.com/feed/",
+    "title": "Alternative for https://css-tricks.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://css-tricks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcss-tricks.com%2F&format=xml",
+    "title": "Alternative for https://css-tricks.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://smashingmagazine.com/feed",
+    "title": "Alternative for https://smashingmagazine.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://smashingmagazine.com/sitemap.xml",
+    "title": "Alternative for https://smashingmagazine.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://smashingmagazine.com/rss",
+    "title": "Alternative for https://smashingmagazine.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.smashingmagazine.com/feed/",
+    "title": "Alternative for https://smashingmagazine.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://towardsdatascience.com/feed",
+    "title": "Alternative for https://towardsdatascience.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://towardsdatascience.com/rss",
+    "title": "Alternative for https://towardsdatascience.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://towardsdatascience.com/feed/",
+    "title": "Alternative for https://towardsdatascience.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://towardsdatascience.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftowardsdatascience.com%2F&format=xml",
+    "title": "Alternative for https://towardsdatascience.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://datasciencecentral.com/feed",
+    "title": "Alternative for https://datasciencecentral.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://datasciencecentral.com/rss",
+    "title": "Alternative for https://datasciencecentral.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.datasciencecentral.com/feed/",
+    "title": "Alternative for https://datasciencecentral.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.datasciencecentral.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.datasciencecentral.com%2F&format=xml",
+    "title": "Alternative for https://datasciencecentral.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://iep.utm.edu/feed",
+    "title": "Alternative for https://iep.utm.edu",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://iep.utm.edu/rss",
+    "title": "Alternative for https://iep.utm.edu",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://iep.utm.edu/feed/",
+    "title": "Alternative for https://iep.utm.edu",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://iep.utm.edu/comments/feed/",
+    "title": "Alternative for https://iep.utm.edu",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.bbc.com/sitemap.xml",
+    "title": "Alternative for https://www.bbc.com/news",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://engineering.com/feed",
+    "title": "Alternative for https://engineering.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://engineering.com/rss",
+    "title": "Alternative for https://engineering.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.asme.org/sitemap.xml",
+    "title": "Alternative for https://www.asme.org",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.reddit.com/discover.rss",
+    "title": "Alternative for https://www.reddit.com/r/netsec/",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://news.ycombinator.com/rss",
+    "title": "Alternative for https://news.ycombinator.com/",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://krebsonsecurity.com/feed",
+    "title": "Alternative for https://krebsonsecurity.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://krebsonsecurity.com/rss",
+    "title": "Alternative for https://krebsonsecurity.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://phys.org/rss-feed/breaking/",
+    "title": "Alternative for https://phys.org",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://phys.org/rss-feed/editorials/",
+    "title": "Alternative for https://phys.org",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://feeds-api.dotdashmeredith.com/v1/rss/google/f8466ec3-5044-46bc-94b7-2df65f770eff",
+    "title": "Alternative for https://www.investopedia.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.bleepingcomputer.com/feed/",
+    "title": "Alternative for https://www.bleepingcomputer.com",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.kernel.org/feeds/all.atom.xml",
+    "title": "Alternative for https://kernel.org",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.kernel.org/feeds/kdist.xml",
+    "title": "Alternative for https://kernel.org",
+    "added_at": "2025-10-28T21:23:10.221547"
+  },
+  {
+    "source": "https://www.cisa.gov/rss.xml",
+    "title": "Alternative for https://www.cisa.gov",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://realpython.com/feed",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://realpython.com/sitemap.xml",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://realpython.com/rss",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://realpython.com/rss.xml",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://realpython.com/atom.xml",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://dev.to/feed",
+    "title": "Alternative for https://dev.to",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://dev.to/rss",
+    "title": "Alternative for https://dev.to",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://hackernoon.com/feed",
+    "title": "Alternative for https://hackernoon.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://huggingface.co/blog/feed.xml",
+    "title": "Alternative for https://huggingface.co",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.nature.com/nature.rss",
+    "title": "Alternative for https://www.nature.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.sciencedaily.com/rss",
+    "title": "Alternative for https://www.sciencedaily.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.sciencedaily.com/rss/all.xml",
+    "title": "Alternative for https://www.sciencedaily.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.scientificamerican.com/platform/syndication/rss/",
+    "title": "Alternative for https://www.scientificamerican.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://techcrunch.com/feed",
+    "title": "Alternative for https://techcrunch.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://techcrunch.com/rss",
+    "title": "Alternative for https://techcrunch.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://techcrunch.com/feed/",
+    "title": "Alternative for https://techcrunch.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://arstechnica.com/feed",
+    "title": "Alternative for https://arstechnica.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://arstechnica.com/rss",
+    "title": "Alternative for https://arstechnica.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.wired.com/feed",
+    "title": "Alternative for https://www.wired.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.wired.com/feed/rss",
+    "title": "Alternative for https://www.wired.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.theverge.com/rss.xml",
+    "title": "Alternative for https://www.theverge.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.theverge.com/atom.xml",
+    "title": "Alternative for https://www.theverge.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.theverge.com/rss/index.xml",
+    "title": "Alternative for https://www.theverge.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://css-tricks.com/feed",
+    "title": "Alternative for https://css-tricks.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://css-tricks.com/rss",
+    "title": "Alternative for https://css-tricks.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://css-tricks.com/feed/",
+    "title": "Alternative for https://css-tricks.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://css-tricks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcss-tricks.com%2F&format=xml",
+    "title": "Alternative for https://css-tricks.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://smashingmagazine.com/feed",
+    "title": "Alternative for https://smashingmagazine.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://smashingmagazine.com/sitemap.xml",
+    "title": "Alternative for https://smashingmagazine.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://smashingmagazine.com/rss",
+    "title": "Alternative for https://smashingmagazine.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.smashingmagazine.com/feed/",
+    "title": "Alternative for https://smashingmagazine.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://towardsdatascience.com/feed",
+    "title": "Alternative for https://towardsdatascience.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://towardsdatascience.com/rss",
+    "title": "Alternative for https://towardsdatascience.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://towardsdatascience.com/feed/",
+    "title": "Alternative for https://towardsdatascience.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://towardsdatascience.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftowardsdatascience.com%2F&format=xml",
+    "title": "Alternative for https://towardsdatascience.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://datasciencecentral.com/feed",
+    "title": "Alternative for https://datasciencecentral.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://datasciencecentral.com/rss",
+    "title": "Alternative for https://datasciencecentral.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.datasciencecentral.com/feed/",
+    "title": "Alternative for https://datasciencecentral.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.datasciencecentral.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.datasciencecentral.com%2F&format=xml",
+    "title": "Alternative for https://datasciencecentral.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://iep.utm.edu/feed",
+    "title": "Alternative for https://iep.utm.edu",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://iep.utm.edu/rss",
+    "title": "Alternative for https://iep.utm.edu",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://iep.utm.edu/feed/",
+    "title": "Alternative for https://iep.utm.edu",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://iep.utm.edu/comments/feed/",
+    "title": "Alternative for https://iep.utm.edu",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.bbc.com/sitemap.xml",
+    "title": "Alternative for https://www.bbc.com/news",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://engineering.com/feed",
+    "title": "Alternative for https://engineering.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://engineering.com/rss",
+    "title": "Alternative for https://engineering.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.asme.org/sitemap.xml",
+    "title": "Alternative for https://www.asme.org",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.reddit.com/discover.rss",
+    "title": "Alternative for https://www.reddit.com/r/netsec/",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://news.ycombinator.com/rss",
+    "title": "Alternative for https://news.ycombinator.com/",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://krebsonsecurity.com/feed",
+    "title": "Alternative for https://krebsonsecurity.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://krebsonsecurity.com/rss",
+    "title": "Alternative for https://krebsonsecurity.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://krebsonsecurity.com/feed/",
+    "title": "Alternative for https://krebsonsecurity.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://krebsonsecurity.com/comments/feed/",
+    "title": "Alternative for https://krebsonsecurity.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://phys.org/sitemap.xml",
+    "title": "Alternative for https://phys.org",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://phys.org/rss-feed/",
+    "title": "Alternative for https://phys.org",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://phys.org/rss-feed/breaking/",
+    "title": "Alternative for https://phys.org",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://phys.org/rss-feed/editorials/",
+    "title": "Alternative for https://phys.org",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://feeds-api.dotdashmeredith.com/v1/rss/google/f8466ec3-5044-46bc-94b7-2df65f770eff",
+    "title": "Alternative for https://www.investopedia.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.bleepingcomputer.com/feed/",
+    "title": "Alternative for https://www.bleepingcomputer.com",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.kernel.org/feeds/all.atom.xml",
+    "title": "Alternative for https://kernel.org",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.kernel.org/feeds/kdist.xml",
+    "title": "Alternative for https://kernel.org",
+    "added_at": "2025-10-28T21:28:57.343324"
+  },
+  {
+    "source": "https://www.cisa.gov/rss.xml",
+    "title": "Alternative for https://www.cisa.gov",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://realpython.com/feed",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://realpython.com/sitemap.xml",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://realpython.com/rss",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://realpython.com/rss.xml",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://realpython.com/atom.xml",
+    "title": "Alternative for https://realpython.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://dev.to/feed",
+    "title": "Alternative for https://dev.to",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://dev.to/rss",
+    "title": "Alternative for https://dev.to",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://hackernoon.com/feed",
+    "title": "Alternative for https://hackernoon.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://huggingface.co/blog/feed.xml",
+    "title": "Alternative for https://huggingface.co",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.nature.com/nature.rss",
+    "title": "Alternative for https://www.nature.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.sciencedaily.com/rss",
+    "title": "Alternative for https://www.sciencedaily.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.sciencedaily.com/rss/all.xml",
+    "title": "Alternative for https://www.sciencedaily.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.scientificamerican.com/platform/syndication/rss/",
+    "title": "Alternative for https://www.scientificamerican.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://techcrunch.com/feed",
+    "title": "Alternative for https://techcrunch.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://techcrunch.com/rss",
+    "title": "Alternative for https://techcrunch.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://techcrunch.com/feed/",
+    "title": "Alternative for https://techcrunch.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://arstechnica.com/feed",
+    "title": "Alternative for https://arstechnica.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://arstechnica.com/rss",
+    "title": "Alternative for https://arstechnica.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.wired.com/feed",
+    "title": "Alternative for https://www.wired.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.wired.com/feed/rss",
+    "title": "Alternative for https://www.wired.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.theverge.com/rss.xml",
+    "title": "Alternative for https://www.theverge.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.theverge.com/atom.xml",
+    "title": "Alternative for https://www.theverge.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.theverge.com/rss/index.xml",
+    "title": "Alternative for https://www.theverge.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://css-tricks.com/feed",
+    "title": "Alternative for https://css-tricks.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://css-tricks.com/rss",
+    "title": "Alternative for https://css-tricks.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://css-tricks.com/feed/",
+    "title": "Alternative for https://css-tricks.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://css-tricks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcss-tricks.com%2F&format=xml",
+    "title": "Alternative for https://css-tricks.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://smashingmagazine.com/feed",
+    "title": "Alternative for https://smashingmagazine.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://smashingmagazine.com/sitemap.xml",
+    "title": "Alternative for https://smashingmagazine.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://smashingmagazine.com/rss",
+    "title": "Alternative for https://smashingmagazine.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.smashingmagazine.com/feed/",
+    "title": "Alternative for https://smashingmagazine.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://towardsdatascience.com/feed",
+    "title": "Alternative for https://towardsdatascience.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://towardsdatascience.com/rss",
+    "title": "Alternative for https://towardsdatascience.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://towardsdatascience.com/feed/",
+    "title": "Alternative for https://towardsdatascience.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://towardsdatascience.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftowardsdatascience.com%2F&format=xml",
+    "title": "Alternative for https://towardsdatascience.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://datasciencecentral.com/feed",
+    "title": "Alternative for https://datasciencecentral.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://datasciencecentral.com/rss",
+    "title": "Alternative for https://datasciencecentral.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.datasciencecentral.com/feed/",
+    "title": "Alternative for https://datasciencecentral.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.datasciencecentral.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.datasciencecentral.com%2F&format=xml",
+    "title": "Alternative for https://datasciencecentral.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://iep.utm.edu/feed",
+    "title": "Alternative for https://iep.utm.edu",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://iep.utm.edu/rss",
+    "title": "Alternative for https://iep.utm.edu",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://iep.utm.edu/feed/",
+    "title": "Alternative for https://iep.utm.edu",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://iep.utm.edu/comments/feed/",
+    "title": "Alternative for https://iep.utm.edu",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.bbc.com/sitemap.xml",
+    "title": "Alternative for https://www.bbc.com/news",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://engineering.com/feed",
+    "title": "Alternative for https://engineering.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://engineering.com/rss",
+    "title": "Alternative for https://engineering.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.asme.org/sitemap.xml",
+    "title": "Alternative for https://www.asme.org",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.reddit.com/discover.rss",
+    "title": "Alternative for https://www.reddit.com/r/netsec/",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://news.ycombinator.com/rss",
+    "title": "Alternative for https://news.ycombinator.com/",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://krebsonsecurity.com/feed",
+    "title": "Alternative for https://krebsonsecurity.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://krebsonsecurity.com/rss",
+    "title": "Alternative for https://krebsonsecurity.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://krebsonsecurity.com/feed/",
+    "title": "Alternative for https://krebsonsecurity.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://krebsonsecurity.com/comments/feed/",
+    "title": "Alternative for https://krebsonsecurity.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://phys.org/sitemap.xml",
+    "title": "Alternative for https://phys.org",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://phys.org/rss-feed/",
+    "title": "Alternative for https://phys.org",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://phys.org/rss-feed/breaking/",
+    "title": "Alternative for https://phys.org",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://phys.org/rss-feed/editorials/",
+    "title": "Alternative for https://phys.org",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://feeds-api.dotdashmeredith.com/v1/rss/google/f8466ec3-5044-46bc-94b7-2df65f770eff",
+    "title": "Alternative for https://www.investopedia.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.bleepingcomputer.com/feed/",
+    "title": "Alternative for https://www.bleepingcomputer.com",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.kernel.org/feeds/all.atom.xml",
+    "title": "Alternative for https://kernel.org",
+    "added_at": "2025-10-28T23:42:45.569572"
+  },
+  {
+    "source": "https://www.kernel.org/feeds/kdist.xml",
+    "title": "Alternative for https://kernel.org",
+    "added_at": "2025-10-28T23:42:45.569572"
+  }
+]

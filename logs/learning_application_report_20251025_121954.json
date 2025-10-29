@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-10-25T12:19:54.503232",
+  "security": {
+    "insights": 4,
+    "applicable_insights": 0,
+    "improvements": 0,
+    "status": "active"
+  },
+  "self_improvement": {
+    "opportunities": 1,
+    "improvements": 1,
+    "pending": 1,
+    "applied": 0
+  },
+  "overall_status": "active",
+  "cycle_complete": true
+}

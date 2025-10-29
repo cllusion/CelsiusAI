@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius AI - Mobile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+        
+        .chat-container {
+            flex: 1;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .messages {
+            height: 300px;
+            overflow-y: auto;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 80%;
+        }
+        
+        .user-message {
+            background: rgba(255,255,255,0.2);
+            margin-left: auto;
+            text-align: right;
+        }
+        
+        .ai-message {
+            background: rgba(255,255,255,0.1);
+            border-left: 3px solid #4CAF50;
+        }
+        
+        .input-area {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .input-field {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .send-button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background: #4CAF50;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .send-button:active {
+            transform: scale(0.95);
+        }
+        
+        .status {
+            text-align: center;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.1);
+            font-size: 12px;
+        }
+        
+        .connected {
+            background: rgba(76, 175, 80, 0.3);
+        }
+        
+        .disconnected {
+            background: rgba(244, 67, 54, 0.3);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .feature-title {
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">C°</div>
+            <div class="title">Celsius AI</div>
+            <div class="subtitle">Universal Intelligence Assistant</div>
+        </div>
+        
+        <div id="status" class="status disconnected">
+            Connecting to Celsius AI...
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <div class="feature-title">AI Chat</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">Analytics</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-title">Security</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Real-time</div>
+            </div>
+        </div>
+        
+        <div class="chat-container">
+            <div id="messages" class="messages">
+                <div class="message ai-message">
+                    Hello! I'm Celsius AI. How can I assist you today?
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <input type="text" id="messageInput" class="input-field" 
+                       placeholder="Type your message..." 
+                       onkeypress="handleKeyPress(event)">
+                <button class="send-button" onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isConnected = false;
+        let serverUrl = 'http://localhost:5000'; // Default local server
+        
+        // Try to detect the server URL
+        const possibleUrls = [
+            'http://localhost:5000',
+            'http://192.168.1.100:5000', // Adjust to your network
+            'http://127.0.0.1:5000'
+        ];
+        
+        async function checkConnection() {
+            for (let url of possibleUrls) {
+                try {
+                    const response = await fetch(url + '/api/status', { 
+                        method: 'GET',
+                        timeout: 2000 
+                    });
+                    if (response.ok) {
+                        serverUrl = url;
+                        isConnected = true;
+                        updateStatus('Connected to Celsius AI', 'connected');
+                        return;
+                    }
+                } catch (error) {
+                    // Continue trying other URLs
+                }
+            }
+            updateStatus('Cannot connect to Celsius AI server', 'disconnected');
+        }
+        
+        function updateStatus(message, className) {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = 'status ' + className;
+        }
+        
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+        
+        async function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            // Add user message to chat
+            addMessage(message, 'user-message');
+            input.value = '';
+            
+            if (isConnected) {
+                try {
+                    const response = await fetch(serverUrl + '/api/chat', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ message: message })
+                    });
+                    
+                    const data = await response.json();
+                    addMessage(data.response || 'Sorry, I could not process that request.', 'ai-message');
+                } catch (error) {
+                    addMessage('Connection error. Please try again.', 'ai-message');
+                    isConnected = false;
+                    updateStatus('Connection lost', 'disconnected');
+                }
+            } else {
+                // Offline responses
+                const offlineResponse = getOfflineResponse(message);
+                addMessage(offlineResponse, 'ai-message');
+            }
+        }
+        
+        function addMessage(text, className) {
+            const messages = document.getElementById('messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message ' + className;
+            messageDiv.textContent = text;
+            messages.appendChild(messageDiv);
+            messages.scrollTop = messages.scrollHeight;
+        }
+        
+        function getOfflineResponse(message) {
+            const msg = message.toLowerCase();
+            
+            if (msg.includes('hello') || msg.includes('hi')) {
+                return 'Hello! I\'m currently offline. Please start the Celsius AI server on your computer.';
+            } else if (msg.includes('help')) {
+                return 'I can help with various tasks when connected to the server. Try starting the Celsius AI system.';
+            } else if (msg.includes('status')) {
+                return 'Status: Offline mode. Connection to Celsius AI server required for full functionality.';
+            } else {
+                return 'I\'m currently offline. Please ensure the Celsius AI server is running and try again.';
+            }
+        }
+        
+        // Initialize
+        checkConnection();
+        
+        // Retry connection every 10 seconds
+        setInterval(checkConnection, 10000);
+        
+        // Add some sample messages for demo
+        setTimeout(() => {
+            if (!isConnected) {
+                addMessage('You can still interact with me in offline mode. Type "help" for more information.', 'ai-message');
+            }
+        }, 2000);
+    </script>
+</body>
+</html>

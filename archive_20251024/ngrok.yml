@@ -1,0 +1,24 @@
+version: "2"
+authtoken: 32zwuYatyHVr0C6Tf9AF2WWtMnX_xqrbXAGgmrXrkKTJbdxx
+
+tunnels:
+  celsius-ai:
+    proto: http
+    addr: 5000
+    inspect: true
+    bind_tls: true
+    # Keep the tunnel name consistent for reconnections
+    # This helps maintain URL stability across restarts
+    
+# Global settings for better persistence
+console_ui: true
+web_addr: localhost:4040
+log_level: info
+log_format: logfmt
+log: logs/ngrok.log
+
+# Connection settings for reliability  
+heartbeat_interval: 1m
+heartbeat_tolerance: 5s
+reconnect_session: true
+session_heartbeat: true

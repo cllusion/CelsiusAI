@@ -1,0 +1,168 @@
+{
+  "report_timestamp": "2025-10-23T20:32:44.077047",
+  "report_period": "hourly",
+  "system_summary": {
+    "status": "operational",
+    "uptime": "9:41:05",
+    "active_processes": 7,
+    "active_tunnels": 0
+  },
+  "performance_summary": {
+    "error": "No performance data available"
+  },
+  "security_assessment": {
+    "firewall_status": "unknown",
+    "antivirus_running": false,
+    "suspicious_processes": [],
+    "open_ports": [
+      8000,
+      5000,
+      5000,
+      139,
+      49665,
+      49667,
+      49668,
+      5083,
+      49669,
+      445,
+      7680,
+      42050,
+      49666,
+      49666,
+      49667,
+      5040,
+      49664,
+      49665,
+      135,
+      139,
+      49669,
+      49664,
+      5000,
+      135,
+      445,
+      49668,
+      5000,
+      7680
+    ]
+  },
+  "network_overview": {
+    "bytes_sent": 930457964,
+    "bytes_recv": 5369829335,
+    "packets_sent": 2385621,
+    "packets_recv": 4258651,
+    "total_connections": 93,
+    "connection_status": {
+      "TIME_WAIT": 14,
+      "NONE": 26,
+      "ESTABLISHED": 25,
+      "LISTEN": 28
+    },
+    "internet_connectivity": true
+  },
+  "disk_status": {
+    "total_gb": 3725.09,
+    "used_gb": 64.93,
+    "free_gb": 3660.16,
+    "percent_used": 1.74
+  },
+  "error_analysis": {
+    "total_errors": 2,
+    "critical_count": 0,
+    "warning_count": 2,
+    "errors": [
+      {
+        "level": "warning",
+        "message": "ngrok tunnel service not running",
+        "timestamp": "2025-10-23T20:32:56.523056"
+      },
+      {
+        "level": "warning",
+        "message": "Slow response time: 2035.4084968566895ms",
+        "timestamp": "2025-10-23T20:32:58.558464"
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "category": "network",
+      "priority": "medium",
+      "message": "ngrok tunnel is not active - no external access available",
+      "action": "Start ngrok service for remote access"
+    },
+    {
+      "category": "security",
+      "priority": "medium",
+      "message": "No active antivirus detected",
+      "action": "Ensure Windows Defender or antivirus software is running"
+    }
+  ],
+  "detailed_metrics": {
+    "timestamp": "2025-10-23T20:32:44.077047",
+    "uptime": "9:41:05",
+    "processes": {
+      "celsius_ai": true,
+      "ngrok": false,
+      "persistent_service": false,
+      "process_count": 7
+    },
+    "ngrok_status": {
+      "active_tunnels": 0,
+      "tunnel_details": []
+    },
+    "disk_space": {
+      "total_gb": 3725.09,
+      "used_gb": 64.93,
+      "free_gb": 3660.16,
+      "percent_used": 1.74
+    },
+    "network_status": {
+      "bytes_sent": 930457964,
+      "bytes_recv": 5369829335,
+      "packets_sent": 2385621,
+      "packets_recv": 4258651,
+      "total_connections": 93,
+      "connection_status": {
+        "TIME_WAIT": 14,
+        "NONE": 26,
+        "ESTABLISHED": 25,
+        "LISTEN": 28
+      },
+      "internet_connectivity": true
+    },
+    "security_status": {
+      "firewall_status": "unknown",
+      "antivirus_running": false,
+      "suspicious_processes": [],
+      "open_ports": [
+        8000,
+        5000,
+        5000,
+        139,
+        49665,
+        49667,
+        49668,
+        5083,
+        49669,
+        445,
+        7680,
+        42050,
+        49666,
+        49666,
+        49667,
+        5040,
+        49664,
+        49665,
+        135,
+        139,
+        49669,
+        49664,
+        5000,
+        135,
+        445,
+        49668,
+        5000,
+        7680
+      ]
+    }
+  }
+}

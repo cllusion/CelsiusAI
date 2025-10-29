@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "C:\Users\micro\Celsius AI\src\hub\celsius_ultimate_hub.py", line 1918, in _refresh_approvals_async
+    self.root.after(0, update_ui)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\tkinter\__init__.py", line 872, in after
+    name = self._register(callit)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\tkinter\__init__.py", line 1603, in _register
+    self.tk.createcommand(name, f)
+RuntimeError: main thread is not in main loop

@@ -1,0 +1,6 @@
+# Archived prototype (disabled)
+# Original file moved here and renamed to .disabled to avoid static analysis noise.
+# To re-enable, rename back to fetch_gemini_test.py and ensure required dependencies
+# (google-generativeai, google-auth, aiohttp, etc.) are installed in your venv.
+
+# Original content available in repository history.

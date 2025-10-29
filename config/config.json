@@ -1,0 +1,17 @@
+{
+  "ai_model": "microsoft/DialoGPT-medium",
+  "use_openai": false,
+  "security_scan_interval": 300,
+  "threat_db_path": "data/threats.db",
+  "quarantine_path": "quarantine/",
+  "device_discovery_enabled": true,
+  "sync_interval": 600,
+  "monitor_network": true,
+  "network_interface": null,
+  "log_level": "INFO",
+  "log_file": "logs/celsius_ai.log",
+  "db_url": "sqlite:///data/celsius_ai.db",
+  "api_host": "localhost",
+  "api_port": 8080,
+  "api_enabled": false
+}

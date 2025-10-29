@@ -1,0 +1,24 @@
+{
+  "auto_apply_improvements": false,
+  "max_daily_changes": 3,
+  "backup_before_changes": true,
+  "learning_analysis_interval": 7200,
+  "code_quality_threshold": 0.8,
+  "allowed_improvement_types": [
+    "performance_optimization",
+    "error_handling",
+    "code_quality",
+    "documentation",
+    "logging",
+    "security"
+  ],
+  "protected_files": [
+    "celsius_ultimate_hub.py",
+    "main.py"
+  ],
+  "improvement_sources": [
+    "learning_reports",
+    "error_logs",
+    "performance_metrics"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "providers": [
+    {
+      "name": "example",
+      "type": "example",
+      "endpoint": "https://api.example.com/models/your-model",
+      "headers": {
+        "Authorization": "Bearer <YOUR_TOKEN>",
+        "Content-Type": "application/json"
+      },
+      "fetch_payload": {
+        "prompt": "Generate a short safe conversation between two AIs about system monitoring and alerts.",
+        "max_output_tokens": 200
+      }
+    }
+  ]
+}

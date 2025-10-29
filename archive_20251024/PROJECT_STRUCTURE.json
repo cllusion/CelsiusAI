@@ -1,0 +1,23 @@
+{
+  "core_system": [
+    "enhanced_celsius_remote.py - Main AI with remote access",
+    "enhanced_mobile_dashboard.py - Mobile dashboard with activity logging",
+    "celsius_persistent_service.py - Persistent service system"
+  ],
+  "mobile_apps": [
+    "android_build/ - Complete Android Studio project",
+    "apk_ready/ - Ready-to-install APK package"
+  ],
+  "installation": [
+    "install_celsius_desktop.py - Desktop installer",
+    "DEPLOYMENT_COMPLETE.md - Complete system overview"
+  ],
+  "data": [
+    "celsius_activity.db - Activity logging database",
+    "shutdown_key.txt - Service shutdown password"
+  ],
+  "assets": [
+    "celsius_icon.png - Application icon",
+    "celsius_icon.ico - Windows icon"
+  ]
+}

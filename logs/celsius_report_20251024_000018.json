@@ -1,0 +1,164 @@
+{
+  "report_timestamp": "2025-10-24T00:00:06.465569",
+  "report_period": "hourly",
+  "system_summary": {
+    "status": "operational",
+    "uptime": "13:08:28",
+    "active_processes": 2,
+    "active_tunnels": 1
+  },
+  "performance_summary": {
+    "period_minutes": 60,
+    "sample_count": 2,
+    "cpu_average": 8.4,
+    "memory_average": 50.7,
+    "disk_usage": 1.76,
+    "response_time_average": 2058.67,
+    "performance_score": 80
+  },
+  "security_assessment": {
+    "firewall_status": "unknown",
+    "antivirus_running": false,
+    "suspicious_processes": [],
+    "open_ports": [
+      445,
+      5083,
+      49664,
+      139,
+      49665,
+      49666,
+      7680,
+      49666,
+      49668,
+      49668,
+      7680,
+      445,
+      135,
+      4040,
+      5000,
+      135,
+      49667,
+      139,
+      49665,
+      49669,
+      49664,
+      42050,
+      49669,
+      49667,
+      5040
+    ]
+  },
+  "network_overview": {
+    "bytes_sent": 1290562830,
+    "bytes_recv": 5555952317,
+    "packets_sent": 2776669,
+    "packets_recv": 4580544,
+    "total_connections": 153,
+    "connection_status": {
+      "ESTABLISHED": 33,
+      "TIME_WAIT": 71,
+      "NONE": 24,
+      "LISTEN": 25
+    },
+    "internet_connectivity": true
+  },
+  "disk_status": {
+    "total_gb": 3725.09,
+    "used_gb": 65.44,
+    "free_gb": 3659.65,
+    "percent_used": 1.76
+  },
+  "error_analysis": {
+    "total_errors": 1,
+    "critical_count": 0,
+    "warning_count": 1,
+    "errors": [
+      {
+        "level": "warning",
+        "message": "Slow response time: 2031.5406322479248ms",
+        "timestamp": "2025-10-24T00:00:18.963989"
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "category": "security",
+      "priority": "medium",
+      "message": "No active antivirus detected",
+      "action": "Ensure Windows Defender or antivirus software is running"
+    }
+  ],
+  "detailed_metrics": {
+    "timestamp": "2025-10-24T00:00:06.465569",
+    "uptime": "13:08:28",
+    "processes": {
+      "celsius_ai": true,
+      "ngrok": true,
+      "persistent_service": false,
+      "process_count": 2
+    },
+    "ngrok_status": {
+      "active_tunnels": 1,
+      "tunnel_details": [
+        {
+          "name": "command_line",
+          "public_url": "https://6006f002dff7.ngrok-free.app",
+          "proto": "https",
+          "created_at": null
+        }
+      ]
+    },
+    "disk_space": {
+      "total_gb": 3725.09,
+      "used_gb": 65.44,
+      "free_gb": 3659.65,
+      "percent_used": 1.76
+    },
+    "network_status": {
+      "bytes_sent": 1290562830,
+      "bytes_recv": 5555952317,
+      "packets_sent": 2776669,
+      "packets_recv": 4580544,
+      "total_connections": 153,
+      "connection_status": {
+        "ESTABLISHED": 33,
+        "TIME_WAIT": 71,
+        "NONE": 24,
+        "LISTEN": 25
+      },
+      "internet_connectivity": true
+    },
+    "security_status": {
+      "firewall_status": "unknown",
+      "antivirus_running": false,
+      "suspicious_processes": [],
+      "open_ports": [
+        445,
+        5083,
+        49664,
+        139,
+        49665,
+        49666,
+        7680,
+        49666,
+        49668,
+        49668,
+        7680,
+        445,
+        135,
+        4040,
+        5000,
+        135,
+        49667,
+        139,
+        49665,
+        49669,
+        49664,
+        42050,
+        49669,
+        49667,
+        5040
+      ]
+    }
+  }
+}

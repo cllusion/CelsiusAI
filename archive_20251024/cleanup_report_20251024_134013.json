@@ -1,0 +1,66 @@
+{
+  "cleanup_date": "2025-10-24T13:40:13.001234",
+  "analysis": {
+    "total_files": 121,
+    "archivable_files": 17,
+    "current_size_mb": 0.2168560028076172,
+    "categories": {
+      "old_server_hubs": {
+        "files": [
+          "celsius_server_hub_ultimate.py",
+          "celsius_server_hub_old.py",
+          "celsius_server_hub_backup.py"
+        ],
+        "count": 3,
+        "size_mb": 0.1250762939453125
+      },
+      "old_startup_scripts": {
+        "files": [
+          "Start_Celsius_Clean.bat",
+          "Start_Celsius_Streamlined.bat"
+        ],
+        "count": 2,
+        "size_mb": 0.0022554397583007812
+      },
+      "individual_test_files": {
+        "files": [
+          "test_twilio_sms.py",
+          "test_responsiveness.py",
+          "test_red_pocket_sms.py",
+          "test_mobile_startup.py",
+          "test_integration.py",
+          "test_hourly_logging.py",
+          "test_gui.py",
+          "test_email_only_mode.py"
+        ],
+        "count": 8,
+        "size_mb": 0.024672508239746094
+      },
+      "temp_and_logs": {
+        "files": [
+          "celsius_approval.log",
+          "celsius_language_improvement.log",
+          "celsius_web_learning.log",
+          "guardian_persistent.log"
+        ],
+        "count": 4,
+        "size_mb": 0.06485176086425781
+      }
+    }
+  },
+  "archived_files_count": 17,
+  "space_saved_mb": 0.2168560028076172,
+  "remaining_files": 104,
+  "cleanup_summary": {
+    "old_server_hubs": 3,
+    "old_startup_scripts": 2,
+    "individual_tests": 8,
+    "temp_logs": 4
+  },
+  "unified_system_files": [
+    "celsius_ultimate_hub.py",
+    "Start_Celsius_Ultimate.bat",
+    "ultimate_test_suite.py",
+    "celsius_server_hub.py (redirect)"
+  ]
+}
