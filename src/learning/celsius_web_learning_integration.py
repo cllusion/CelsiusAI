@@ -22,7 +22,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 try:
     from celsius_web_learner import CelsiusWebLearner
 except ImportError:
-    print("❌ Error: celsius_web_learner.py not found")
+    print("[ERROR] celsius_web_learner.py not found")
     CelsiusWebLearner = None
 
 
@@ -219,16 +219,16 @@ class CelsiusWebLearningIntegration:
 
         except Exception as e:
             self.integration_status = f"error: {str(e)}"
-            print(f"❌ Error initializing web learning: {str(e)}")
+            print(f"[ERROR] Initializing web learning: {str(e)}")
 
     def start_learning_process(self):
         """Start the continuous learning process"""
         if not self.web_learner:
-            print("❌ Web learner not initialized")
+            print("[ERROR] Web learner not initialized")
             return False
 
         if self.learning_active:
-            print("ℹ️ Learning process already active")
+            print("[INFO] Learning process already active")
             return True
 
         self.learning_active = True
@@ -236,12 +236,12 @@ class CelsiusWebLearningIntegration:
         def run_async_learner():
             """Run the learner's async continuous loop in a dedicated event loop."""
             try:
-                print("🚀 Starting Celsius AI web learning (async) in background thread...")
+                print("[START] Starting Celsius AI web learning (async) in background thread...")
                 import asyncio
 
                 asyncio.run(self.web_learner.start_continuous_learning())
             except Exception as e:
-                print(f"❌ Web learning async runner exited with error: {e}")
+                print(f"[ERROR] Web learning async runner exited with error: {e}")
 
         # Start the async learner loop in a background thread
         self.learning_thread = threading.Thread(target=run_async_learner, daemon=True)
@@ -297,7 +297,7 @@ class CelsiusWebLearningIntegration:
             return None
 
         try:
-            print("📊 Generating daily learning report...")
+            print("[INFO] Generating daily learning report...")
 
             report = self.web_learner.generate_learning_report("daily")
 
@@ -312,7 +312,7 @@ class CelsiusWebLearningIntegration:
                 return report
 
         except Exception as e:
-            print(f"❌ Error generating daily report: {str(e)}")
+            print(f"[ERROR] Generating daily report: {str(e)}")
             return None
 
     def save_learning_report(self, report: Dict):
@@ -351,7 +351,7 @@ class CelsiusWebLearningIntegration:
             print(f"Learning report saved: {filename}")
 
         except Exception as e:
-            print(f"❌ Error saving learning report: {str(e)}")
+            print(f"[ERROR] Saving learning report: {str(e)}")
 
     def get_learning_status(self) -> Dict:
         """Get current learning status"""
@@ -427,7 +427,7 @@ class CelsiusWebLearningIntegration:
             ]
 
         except Exception as e:
-            print(f"❌ Error getting recent insights: {str(e)}")
+            print(f"[ERROR] Getting recent insights: {str(e)}")
             return []
 
     def search_learned_content(self, query: str, topic: Optional[str] = None) -> List[Dict]:
@@ -472,13 +472,13 @@ class CelsiusWebLearningIntegration:
             ]
 
         except Exception as e:
-            print(f"❌ Error searching learned content: {str(e)}")
+            print(f"[ERROR] Searching learned content: {str(e)}")
             return []
 
     def stop_learning(self):
         """Stop the learning process"""
         self.learning_active = False
-        print("🛑 Stopping web learning process...")
+        print("[INFO] Stopping web learning process...")
 
         if self.web_learner:
             self.web_learner.stop_learning()
@@ -497,30 +497,30 @@ class CelsiusWebLearningIntegration:
             if key in self.settings:
                 self.settings[key] = value
 
-        print(f"⚙️ Learning settings updated: {list(new_settings.keys())}")
+        print(f"[INFO] Learning settings updated: {list(new_settings.keys())}")
 
     def get_learning_summary(self) -> str:
         """Get a human-readable learning summary"""
         status = self.get_learning_status()
 
         if not status["learner_available"]:
-            return "❌ Web learning not available - learner not initialized"
+            return "[ERROR] Web learning not available - learner not initialized"
 
         if not status["learning_active"]:
-            return "⏸️ Web learning is paused"
+            return "[PAUSED] Web learning is paused"
 
         summary_parts = [
-            f"🌐 Web Learning Status: {'Active' if status['learning_active'] else 'Inactive'}",
-            f"📚 Content Learned: {status['total_content_learned']} articles",
-            f"💡 Insights Generated: {status['total_insights']} insights",
-            f"⏰ Learning Interval: {status['settings']['learning_interval_hours']} hours",
-            f"🎯 Daily Session Limit: {status['settings']['max_learning_sessions_per_day']}",
-            f"🛡️ Ethical Mode: {'Enabled' if status['settings']['ethical_mode'] else 'Disabled'}",
+            f"Web Learning Status: {'Active' if status['learning_active'] else 'Inactive'}",
+            f"Content Learned: {status['total_content_learned']} articles",
+            f"Insights Generated: {status['total_insights']} insights",
+            f"Learning Interval: {status['settings']['learning_interval_hours']} hours",
+            f"Daily Session Limit: {status['settings']['max_learning_sessions_per_day']}",
+            f"Ethical Mode: {'Enabled' if status['settings']['ethical_mode'] else 'Disabled'}",
         ]
 
         if status["last_report_time"]:
             last_report = datetime.fromisoformat(status["last_report_time"])
-            summary_parts.append(f"📊 Last Report: {last_report.strftime('%Y-%m-%d %H:%M')}")
+            summary_parts.append(f"Last Report: {last_report.strftime('%Y-%m-%d %H:%M')}")
 
         return "\n".join(summary_parts)
 
