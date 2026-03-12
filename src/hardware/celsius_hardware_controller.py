@@ -192,7 +192,7 @@ class CelsiusHardwareController:
             # Try to access fan controls
             fans = w.query("SELECT * FROM Fan")
             return len(fans) > 0
-        except:
+        except Exception:
             return False
 
     async def _detect_manufacturer_software(self):
@@ -700,7 +700,7 @@ class WMIFanInterface:
             import wmi
 
             self.wmi = wmi.WMI(namespace="root\\wmi")
-        except:
+        except Exception:
             raise Exception("WMI not available")
 
     async def set_fan_speed(self, fan_id: str, speed_percent: int):
@@ -708,7 +708,7 @@ class WMIFanInterface:
             # Implementation depends on specific motherboard WMI interface
             # This is a placeholder for actual WMI fan control
             pass
-        except:
+        except Exception:
             pass
 
 

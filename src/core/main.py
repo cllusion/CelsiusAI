@@ -19,6 +19,13 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from src.utils.logger import setup_logger
 
+# Apply database migrations at startup (idempotent — safe to call every run)
+try:
+    from src.utils.db_migrations import apply_all_migrations
+    apply_all_migrations(PROJECT_ROOT / "data")
+except Exception as _mig_err:
+    print(f"Warning: DB migrations failed: {_mig_err}")
+
 # Import CelsiusUltimateHub if it exists, otherwise create a placeholder
 try:
     from src.hub.celsius_ultimate_hub import CelsiusUltimateHub
@@ -183,7 +190,7 @@ class CelsiusAIMain:
                 print(f"\nSystem Integration:")
                 print(f"  Status: {integration_status.get('status', 'Unknown')}")
                 print(f"  Processes Monitored: {len(integration_status.get('processes', []))}")
-            except:
+            except Exception:
                 print(f"  System Integration: Status unavailable")
 
         print(f"\nSystem Active: {self.system_active}")

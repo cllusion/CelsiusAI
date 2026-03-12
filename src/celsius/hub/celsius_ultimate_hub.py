@@ -339,7 +339,7 @@ class UltimateHub:
             # Force close even if cleanup fails
             try:
                 self.root.destroy()
-            except:
+            except Exception:
                 pass
 
     def close_all_windows(self):
@@ -531,7 +531,7 @@ class UltimateHub:
             # Force close anyway
             try:
                 self.root.destroy()
-            except:
+            except Exception:
                 pass
 
     def _periodic_update_email_status(self):
@@ -3991,7 +3991,7 @@ Data Points: {len(filtered_data)}"""
                             try:
                                 cursor.execute(f"SELECT COUNT(*) FROM {table_name}")
                                 total_rows += cursor.fetchone()[0]
-                            except:
+                            except Exception:
                                 pass
                         
                         conn.close()
@@ -4473,7 +4473,7 @@ Data Points: {len(filtered_data)}"""
                 try:
                     with open(cand_path, 'r', encoding='utf-8') as f:
                         existing = json.load(f)
-                except:
+                except Exception:
                     existing = []
             
             # Add samples
@@ -4585,7 +4585,7 @@ Data Points: {len(filtered_data)}"""
                                 cursor.execute(f"SELECT COUNT(*) FROM {table_name}")
                                 count = cursor.fetchone()[0]
                                 report_lines.append(f"• {table_name}: {count} records\n")
-                            except:
+                            except Exception:
                                 pass
                     else:
                         report_lines.append("• No security-specific tables found\n")
@@ -4611,7 +4611,7 @@ Data Points: {len(filtered_data)}"""
                         if log_file.stat().st_mtime > (datetime.now() - timedelta(hours=24)).timestamp():
                             with open(log_file, 'r', encoding='utf-8', errors='ignore') as f:
                                 recent_errors += sum(1 for line in f if 'ERROR' in line or 'CRITICAL' in line)
-                except:
+                except Exception:
                     pass
                 report_lines.append(f"• Recent errors (24h): {recent_errors}\n")
             
@@ -4723,7 +4723,7 @@ Data Points: {len(filtered_data)}"""
                             report_lines.append("   Process: Active\n")
                         else:
                             report_lines.append("   Process: Terminated\n")
-                    except:
+                    except Exception:
                         report_lines.append("   Process: Unknown\n")
                 else:
                     report_lines.append("   Process: Not started\n")
@@ -4795,7 +4795,7 @@ Data Points: {len(filtered_data)}"""
                     with open(ingestion_path, 'r') as f:
                         candidates = json.load(f)
                     report_lines.append(f"Ingestion Candidates: {len(candidates)}")
-                except:
+                except Exception:
                     report_lines.append("Ingestion Candidates: Error reading file")
             else:
                 report_lines.append("Ingestion Candidates: None")
@@ -5142,7 +5142,7 @@ Download URL: {info.get('download_url', 'Not available')}
                                       capture_output=True, text=True, cwd=self.project_root)
                 if result.returncode == 0:
                     return result.stdout.strip()
-            except:
+            except Exception:
                 pass
             
             # Fallback to date-based version

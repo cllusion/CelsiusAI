@@ -38,7 +38,7 @@ class SimpleHardwareController:
                     if "cpu" in name.lower() or "core" in name.lower():
                         return max(entry.current for entry in entries)
             return None
-        except:
+        except Exception:
             return None
 
     def set_fan_speed_via_registry(self, speed_percent):
@@ -51,7 +51,7 @@ class SimpleHardwareController:
                 # Set fan speed (implementation varies by hardware)
                 pass
             return True
-        except:
+        except Exception:
             return False
 
     def control_rgb_via_openrgb(self, r, g, b, effect="static"):
@@ -61,7 +61,7 @@ class SimpleHardwareController:
             cmd = f"OpenRGB.exe --color {r:02x}{g:02x}{b:02x} --mode {effect}"
             subprocess.run(cmd, shell=True, capture_output=True, timeout=5)
             return True
-        except:
+        except Exception:
             return False
 
     def control_rgb_via_powershell(self, r, g, b):
@@ -80,7 +80,7 @@ class SimpleHardwareController:
 
             subprocess.run(["powershell", "-Command", ps_script], capture_output=True, timeout=10)
             return True
-        except:
+        except Exception:
             return False
 
     def apply_profile(self, profile_name):

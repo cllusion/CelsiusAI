@@ -35,10 +35,12 @@ at startup, and its `process_query` method is the main entry point for user
 interaction.
 """
 
+from __future__ import annotations
+
 import asyncio
 import json
 import logging
-from typing import Dict, List, Optional, Any
+from typing import Optional, Any
 from datetime import datetime
 
 # Optional imports with fallbacks for key libraries
@@ -78,61 +80,61 @@ except ImportError:
 
     # Define dummy classes to ensure the application can still run
     class ThreatAnalyzer:
-        def __init__(self, config):
+        def __init__(self, config: CelsiusConfig) -> None:
             pass
 
-        async def initialize(self):
+        async def initialize(self) -> None:
             pass
 
-        async def shutdown(self):
+        async def shutdown(self) -> None:
             pass
 
-        async def perform_scan(self, scan_type: str) -> dict:
+        async def perform_scan(self, scan_type: str) -> dict[str, Any]:
             return {"error": "Not available"}
 
-        async def analyze_current_threats(self) -> dict:
+        async def analyze_current_threats(self) -> dict[str, Any]:
             return {"error": "Not available"}
 
     class IntelligenceProcessor:
-        def __init__(self, config):
+        def __init__(self, config: CelsiusConfig) -> None:
             pass
 
-        async def initialize(self):
+        async def initialize(self) -> None:
             pass
 
-        async def shutdown(self):
+        async def shutdown(self) -> None:
             pass
 
-        async def query_intelligence(self, query: str) -> dict:
+        async def query_intelligence(self, query: str) -> dict[str, Any]:
             return {"error": "Not available"}
 
     class DeviceManager:
-        def __init__(self, config):
+        def __init__(self, config: CelsiusConfig) -> None:
             pass
 
-        async def get_device_status(self) -> list:
+        async def get_device_status(self) -> list[dict[str, Any]]:
             return []
 
     class WhiteHatEngine:
-        def __init__(self, config):
+        def __init__(self, config: CelsiusConfig) -> None:
             pass
 
-        async def initialize(self):
+        async def initialize(self) -> None:
             pass
 
-        def get_authorization_status(self) -> dict:
+        def get_authorization_status(self) -> dict[str, Any]:
             return {"authorized": False}
 
         async def request_authorization(self) -> bool:
             return False
 
-        async def execute_technique(self, technique: str, target: str) -> dict:
+        async def execute_technique(self, technique: str, target: str) -> dict[str, Any]:
             return {"error": "Not available"}
 
-        async def run_engagement(self, target: str) -> dict:
+        async def run_engagement(self, target: str) -> dict[str, Any]:
             return {"error": "Not available"}
 
-        def get_available_techniques(self) -> list:
+        def get_available_techniques(self) -> list[str]:
             return []
 
 
@@ -145,7 +147,7 @@ class CelsiusAI:
     and user interaction.
     """
 
-    def __init__(self, config: CelsiusConfig):
+    def __init__(self, config: CelsiusConfig) -> None:
         """
         Initializes the CelsiusAI assistant and its subsystems.
 
@@ -170,8 +172,8 @@ class CelsiusAI:
             self.device_manager = DeviceManager(config)
             self.whitehat_engine = WhiteHatEngine(config)
 
-        self.conversation_history: List[Dict[str, Any]] = []
-        self.security_context: Dict[str, Any] = {
+        self.conversation_history: list[dict[str, Any]] = []
+        self.security_context: dict[str, Any] = {
             "threat_level": "low",
             "active_threats": [],
             "last_scan": None,
@@ -179,7 +181,7 @@ class CelsiusAI:
             "whitehat_authorized": False,
         }
 
-    async def initialize(self):
+    async def initialize(self) -> None:
         """
         Initializes the AI assistant and its subsystems, loading necessary models
         and data. This method is designed to be resilient and allow the application
@@ -270,7 +272,7 @@ class CelsiusAI:
             logger.error(f"Error processing query: {e}", exc_info=True)
             return f"I'm sorry, but I encountered an unexpected error while processing your request: {e}"
 
-    def _add_to_history(self, text: str, role: str):
+    def _add_to_history(self, text: str, role: str) -> None:
         """
         Adds an entry to the conversation history and manages its size.
 
@@ -560,7 +562,7 @@ class CelsiusAI:
             if any(word in query_lower for word in ["status", "stats", "statistics"]):
                 stats = self.self_learning.get_learning_stats()
                 return f"""🧠 **Learning Status Report**
-                
+
 **Knowledge Base:**
 • Total Entries: {stats.get('total_entries', 0)}
 • Active Domains: {stats.get('domains_covered', 0)}
@@ -607,7 +609,7 @@ Use 'learn about [topic]' to teach me something new!"""
                 suggestions = await self.self_learning.suggest_learning_topics()
                 if suggestions:
                     return f"""💡 **Learning Suggestions:**
-                    
+
 {chr(10).join([f"• {suggestion}" for suggestion in suggestions])}
 
 I can learn more effectively if you teach me about these topics!"""
@@ -647,7 +649,7 @@ I can learn more effectively if you teach me about these topics!"""
                     knowledge = await self.self_learning.get_knowledge(query=search_terms)
                     if knowledge:
                         return f"""🔍 **Knowledge Search Results:**
-                        
+
 Found {len(knowledge)} relevant entries about "{search_terms}":
 
 {chr(10).join([f"• {entry.content[:100]}..." for entry in knowledge[:3]])}
@@ -663,7 +665,7 @@ Domain coverage: {', '.join(set(entry.domain for entry in knowledge))}"""
             # Default learning help
             else:
                 return """🧠 **Celsius AI Learning System**
-                
+
 I can learn from conversations and expand my knowledge across multiple domains:
 
 **Commands:**
@@ -713,7 +715,7 @@ I continuously learn from our conversations to provide better assistance!"""
             # Import Gemini data
             if "import" in query_lower and "gemini" in query_lower:
                 return """📊 **Import Health Data from Gemini**
-                
+
 To import your health data from Gemini:
 
 1. **Export your Gemini data**: Copy your health conversations or data
@@ -722,7 +724,7 @@ To import your health data from Gemini:
 
 **Supported data types:**
 • Weight measurements (lbs/kg)
-• Workout sessions and duration  
+• Workout sessions and duration
 • Fitness goals and targets
 • Health metrics (steps, sleep, heart rate)
 • Nutrition information
@@ -771,11 +773,11 @@ Just paste your Gemini health conversations or data after 'import gemini health 
             # Set fitness goals
             elif "set" in query_lower and "goal" in query_lower:
                 return """🎯 **Set Fitness Goals**
-                
+
 I can help you set and track fitness goals! Tell me:
 
 • **Goal type**: Weight loss, muscle gain, endurance, strength
-• **Target**: Specific number (e.g., "lose 10 lbs", "run 5K")  
+• **Target**: Specific number (e.g., "lose 10 lbs", "run 5K")
 • **Timeline**: When you want to achieve it
 
 **Examples:**
@@ -820,12 +822,12 @@ Just describe your goal and I'll track your progress!"""
             # General health help
             else:
                 return """🏥 **Celsius Health & Fitness Assistant**
-                
+
 I can help you manage your health and fitness data!
 
 **Key Features:**
 • 📊 **Import from Gemini**: Transfer all your health conversations
-• 🎯 **Goal Tracking**: Set and monitor fitness goals  
+• 🎯 **Goal Tracking**: Set and monitor fitness goals
 • 📈 **Progress Analysis**: Trends and insights
 • 💪 **Workout Logging**: Track exercise sessions
 • ⚖️ **Health Metrics**: Weight, measurements, vital signs
@@ -865,7 +867,7 @@ Ready to help you achieve your health and fitness goals! 💪"""
             logger.error(f"General query failed: {e}", exc_info=True)
             return f"❌ General query failed: {e}"
 
-    async def _get_system_status(self) -> Dict[str, Any]:
+    async def _get_system_status(self) -> dict[str, Any]:
         """Get comprehensive system status."""
         return {
             "health": "Good",
@@ -880,7 +882,7 @@ Ready to help you achieve your health and fitness goals! 💪"""
             },
         }
 
-    async def shutdown(self):
+    async def shutdown(self) -> None:
         """
         Shuts down the AI assistant and its subsystems gracefully.
         """
