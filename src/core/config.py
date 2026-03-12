@@ -34,10 +34,12 @@ application to get configuration settings.
 Environment variables should be prefixed with `CELSIUS_` (e.g., `CELSIUS_LOG_LEVEL=DEBUG`).
 """
 
+from __future__ import annotations
+
 import os
 import json
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Any
+from typing import Optional, Any
 from pathlib import Path
 
 # Define the root of the project to resolve paths correctly
@@ -116,7 +118,7 @@ class CelsiusConfig:
     api_enabled: bool = True
     """If True, the FastAPI backend will be enabled."""
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         """
         Performs validation and setup after the dataclass is initialized.
         This method automatically creates necessary directories.
@@ -148,7 +150,7 @@ def load_config(config_path: str = "config.json") -> CelsiusConfig:
     Returns:
         CelsiusConfig: An instance of the configuration object.
     """
-    config_data = {}
+    config_data: dict[str, Any] = {}
     full_config_path = PROJECT_ROOT / config_path
 
     # Load from config file if it exists
@@ -160,7 +162,7 @@ def load_config(config_path: str = "config.json") -> CelsiusConfig:
             print(f"Warning: Could not load config file {full_config_path}: {e}")
 
     # Define mappings from environment variables to config keys
-    env_mappings = {
+    env_mappings: dict[str, str] = {
         "CELSIUS_AI_MODEL": "ai_model",
         "CELSIUS_USE_OPENAI": "use_openai",
         "OPENAI_API_KEY": "openai_api_key",
@@ -176,7 +178,7 @@ def load_config(config_path: str = "config.json") -> CelsiusConfig:
     # Override with environment variables
     for env_var, config_key in env_mappings.items():
         if env_var in os.environ:
-            value = os.environ[env_var]
+            value: Any = os.environ[env_var]
             # Coerce type for boolean and integer values
             if config_key in ["use_openai", "device_discovery_enabled", "monitor_network", "api_enabled"]:
                 value = value.lower() in ("true", "1", "yes", "on")
@@ -191,7 +193,7 @@ def load_config(config_path: str = "config.json") -> CelsiusConfig:
     return CelsiusConfig(**config_data)
 
 
-def save_config(config: CelsiusConfig, config_path: str = "config.json"):
+def save_config(config: CelsiusConfig, config_path: str = "config.json") -> None:
     """
     Saves the current configuration object to a JSON file.
 
@@ -200,7 +202,7 @@ def save_config(config: CelsiusConfig, config_path: str = "config.json"):
         config_path (str): The path to the destination JSON file.
     """
     # Create a dictionary from the dataclass, excluding sensitive keys if necessary
-    config_dict = {
+    config_dict: dict[str, Any] = {
         "ai_model": config.ai_model,
         "use_openai": config.use_openai,
         "security_scan_interval": config.security_scan_interval,

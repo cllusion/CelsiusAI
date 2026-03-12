@@ -15,6 +15,12 @@ import logging
 import re
 import shutil
 
+try:
+    from src.utils.code_safety_gate import CodeSafetyGate
+    _SAFETY_GATE_AVAILABLE = True
+except ImportError:
+    _SAFETY_GATE_AVAILABLE = False
+
 
 class SelfImprovementEngine:
     """
@@ -53,6 +59,7 @@ class SelfImprovementEngine:
         """Load self-improvement configuration"""
         default_config = {
             "auto_apply_improvements": False,  # Safety first - require approval
+            "require_tests_pass_before_apply": True,  # Gate: tests must pass before any auto-apply
             "max_daily_changes": 3,
             "backup_before_changes": True,
             "learning_analysis_interval": 7200,  # 2 hours
@@ -270,6 +277,26 @@ class SelfImprovementEngine:
 
         return applicable_files[:5]  # Limit to 5 files
 
+    def _run_safety_gate(self, files: List[str] | None = None) -> bool:
+        """Run the code safety gate (lint + tests). Returns True if safe to proceed."""
+        if not self.config.get("require_tests_pass_before_apply", True):
+            self.logger.warning("Safety gate DISABLED via config — skipping test run")
+            return True
+
+        if not _SAFETY_GATE_AVAILABLE:
+            self.logger.warning("CodeSafetyGate not available — proceeding without gate")
+            return True
+
+        gate = CodeSafetyGate(project_root=self.project_root)
+        result = gate.check(changed_files=files)
+        if result.passed:
+            self.logger.info("Safety gate passed: %s", result.reason)
+        else:
+            self.logger.error(
+                "Safety gate BLOCKED: %s\n%s", result.reason, result.stderr[:500]
+            )
+        return result.passed
+
     async def generate_code_improvements(self, opportunities: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Generate specific code improvements from opportunities"""
         improvements = []
@@ -278,6 +305,15 @@ class SelfImprovementEngine:
         if daily_changes >= self.config.get("max_daily_changes", 3):
             self.logger.warning("Daily change limit reached")
             return improvements
+
+        # Safety gate: only proceed if tests currently pass.
+        # This establishes a clean baseline before generating improvements.
+        if self.config.get("auto_apply_improvements", False):
+            if not self._run_safety_gate():
+                self.logger.error(
+                    "Safety gate failed — auto-apply blocked. Fix existing test failures first."
+                )
+                return improvements
 
         for opportunity in opportunities:
             if opportunity["confidence"] >= self.config.get("code_quality_threshold", 0.8):
@@ -494,7 +530,8 @@ class SelfImprovementEngine:
             applied_count = cursor.fetchone()[0]
 
             conn.close()
-        except:
+        except Exception:
+            self.logger.exception("Failed to query improvement stats")
             pending_count = applied_count = 0
 
         report = {

@@ -19,12 +19,15 @@ Key Features:
 - **Asynchronous File Handling**: Uses `aiofiles` for non-blocking file I/O.
 - **Graceful Degradation**: The API can run in a degraded mode if core AI components fail to load.
 - **CORS Enabled**: Allows cross-origin requests from frontend applications.
+- **API Key Authentication**: Optional API key auth via X-API-Key header or api_key query param.
+- **Request ID Middleware**: Every response carries a unique X-Request-ID header.
 """
 
 # --- Standard Library Imports ---
 import asyncio
 import json
 import logging
+import os
 import sys
 import uuid
 from datetime import datetime, timedelta
@@ -34,9 +37,11 @@ from typing import Any, Dict, List, Optional
 # --- Third-Party Imports ---
 import aiofiles
 import uvicorn
-from fastapi import Depends, FastAPI, File, HTTPException, UploadFile, WebSocket, WebSocketDisconnect, status
+from fastapi import Depends, FastAPI, File, HTTPException, Request, Security, UploadFile, WebSocket, WebSocketDisconnect, status
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse, Response
+from fastapi.security.api_key import APIKeyHeader, APIKeyQuery
+from starlette.middleware.base import BaseHTTPMiddleware
 from pydantic import BaseModel, Field
 
 # --- Project-Specific Imports ---
@@ -164,6 +169,71 @@ app.add_middleware(
 )
 
 
+# --- Request ID Middleware ---
+class RequestIDMiddleware(BaseHTTPMiddleware):
+    """Attaches a unique X-Request-ID to every response for traceability.
+
+    The value is taken from the incoming X-Request-ID header when present so
+    that callers can correlate their own trace IDs; otherwise a fresh UUID4 is
+    generated.
+    """
+
+    async def dispatch(self, request: Request, call_next) -> Response:
+        request_id = request.headers.get("X-Request-ID") or str(uuid.uuid4())
+        response = await call_next(request)
+        response.headers["X-Request-ID"] = request_id
+        return response
+
+
+app.add_middleware(RequestIDMiddleware)
+
+
+# --- API Key Authentication ---
+# TODO: Add per-endpoint or global rate limiting (e.g. via slowapi / redis-based
+#       token-bucket) to protect against brute-force and denial-of-service attacks.
+
+_API_KEY_HEADER = APIKeyHeader(name="X-API-Key", auto_error=False)
+_API_KEY_QUERY = APIKeyQuery(name="api_key", auto_error=False)
+
+
+async def verify_api_key(
+    header_key: Optional[str] = Security(_API_KEY_HEADER),
+    query_key: Optional[str] = Security(_API_KEY_QUERY),
+) -> None:
+    """FastAPI dependency that enforces API key authentication.
+
+    Behaviour
+    ---------
+    - If the ``CELSIUS_API_KEY`` environment variable is **not set**, a warning
+      is logged and the request is allowed through (backward-compatible open
+      mode).
+    - If the variable **is set** and the supplied key (via ``X-API-Key`` header
+      or ``api_key`` query parameter) matches, the request is allowed.
+    - If the variable is set and the key is missing or wrong, HTTP 401 is
+      returned.
+
+    The dependency is intentionally designed to *fail open* when the env var is
+    absent so that existing deployments without authentication configured are
+    not broken.
+    """
+    configured_key = os.environ.get("CELSIUS_API_KEY")
+
+    if not configured_key:
+        logger.warning(
+            "CELSIUS_API_KEY is not set — API key authentication is DISABLED. "
+            "Set this environment variable to enable authentication."
+        )
+        return  # fail-open for backward compatibility
+
+    provided_key = header_key or query_key
+    if not provided_key or provided_key != configured_key:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid or missing API key.",
+            headers={"WWW-Authenticate": "ApiKey"},
+        )
+
+
 # --- Dependency Injection ---
 def get_ai_core() -> CelsiusAI:
     if not app_state.ai_core:
@@ -248,7 +318,7 @@ for dir_path in [DOCUMENTS_DIR, CHAT_HISTORY_DIR]:
 
 @app.get("/", response_class=HTMLResponse, tags=["General"])
 async def root():
-    """Serves a simple welcome page and a link to the API documentation."""
+    """Serves a simple welcome page and a link to the API documentation. (public)"""
     return HTMLResponse(
         """
         <html>
@@ -262,8 +332,17 @@ async def root():
     )
 
 
+@app.get("/health", tags=["General"])
+async def health_check():
+    """Lightweight liveness probe — no authentication required. (public)"""
+    return {"status": "ok"}
+
+
 @app.get("/api/status", response_model=SystemStatus, tags=["System"])
-async def get_system_status(ai_core: CelsiusAI = Depends(get_ai_core)):
+async def get_system_status(
+    ai_core: CelsiusAI = Depends(get_ai_core),
+    _: None = Depends(verify_api_key),
+):
     """Provides the current operational status of the Celsius AI system."""
     return SystemStatus(ai_status="online" if ai_core else "offline", last_update=datetime.now().isoformat())
 
@@ -273,6 +352,7 @@ async def chat_with_ai(
     message: ChatMessage,
     ai_core: CelsiusAI = Depends(get_ai_core),
     ws_manager: WebSocketManager = Depends(get_websocket_manager),
+    _: None = Depends(verify_api_key),
 ):
     """
     Handles chat interactions with the Celsius AI.
@@ -295,7 +375,10 @@ async def chat_with_ai(
 
 
 @app.get("/api/chat/history", response_model=List[Dict[str, Any]], tags=["Chat History"])
-async def get_chat_history(days: int = 7):
+async def get_chat_history(
+    days: int = 7,
+    _: None = Depends(verify_api_key),
+):
     """
     Retrieves chat history from the last specified number of days.
     """
@@ -317,7 +400,10 @@ async def get_chat_history(days: int = 7):
 
 
 @app.post("/api/documents/upload", tags=["Document Management"])
-async def upload_document(file: UploadFile = File(...)):
+async def upload_document(
+    file: UploadFile = File(...),
+    _: None = Depends(verify_api_key),
+):
     """
     Handles file uploads, validates them, and stores them with metadata.
     """
@@ -355,7 +441,10 @@ async def upload_document(file: UploadFile = File(...)):
 
 
 @app.get("/api/documents/{file_id}", tags=["Document Management"])
-async def download_document(file_id: str):
+async def download_document(
+    file_id: str,
+    _: None = Depends(verify_api_key),
+):
     """
     Allows downloading of a previously uploaded file by its ID.
     """
@@ -381,7 +470,7 @@ async def download_document(file_id: str):
 
 
 @app.get("/api/documents", response_model=List[Dict[str, Any]], tags=["Document Management"])
-async def list_documents():
+async def list_documents(_: None = Depends(verify_api_key)):
     """
     Lists all available documents by reading their metadata files.
     """
@@ -398,7 +487,10 @@ async def list_documents():
 
 
 @app.post("/api/whitehat/authorize", tags=["White Hat Authorization"])
-async def request_whitehat_authorization(request: AuthorizationRequest):
+async def request_whitehat_authorization(
+    request: AuthorizationRequest,
+    _: None = Depends(verify_api_key),
+):
     """
     Submits a request for white hat penetration testing authorization.
     In a real system, this would trigger a formal review process.
@@ -424,7 +516,10 @@ async def request_whitehat_authorization(request: AuthorizationRequest):
 
 
 @app.get("/api/whitehat/status/{authorization_id}", tags=["White Hat Authorization"])
-async def get_whitehat_status(authorization_id: str):
+async def get_whitehat_status(
+    authorization_id: str,
+    _: None = Depends(verify_api_key),
+):
     """
     Checks the status of a specific white hat authorization request.
     """
@@ -445,7 +540,7 @@ async def get_whitehat_status(authorization_id: str):
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket, ws_manager: WebSocketManager = Depends(get_websocket_manager)):
-    """Handles real-time, bidirectional communication with clients."""
+    """Handles real-time, bidirectional communication with clients. (public — no API key required)"""
     await ws_manager.connect(websocket)
     try:
         await websocket.send_json(

@@ -91,7 +91,7 @@ class MobileActivityDashboard:
                 response = requests.post("http://localhost:8000/api/chat", json={"message": message}, timeout=30)
                 if response.status_code == 200:
                     return jsonify(response.json())
-            except:
+            except Exception:
                 pass
 
             # Fallback response
@@ -129,7 +129,7 @@ class MobileActivityDashboard:
 
             conn.close()
             return activities
-        except:
+        except Exception:
             return []
 
     def get_pending_changes(self):
@@ -162,7 +162,7 @@ class MobileActivityDashboard:
 
             conn.close()
             return changes
-        except:
+        except Exception:
             return []
 
     # CODE APPROVAL METHODS DISABLED

@@ -22,7 +22,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 try:
     from celsius_web_learner import CelsiusWebLearner
 except ImportError:
-    print("❌ Error: celsius_web_learner.py not found")
+    print("[ERROR] celsius_web_learner.py not found")
     CelsiusWebLearner = None
 
 
@@ -60,6 +60,86 @@ class CelsiusWebLearningIntegration:
             db_path = PROJECT_ROOT / "data" / "web_learning.db"
             db_path.parent.mkdir(parents=True, exist_ok=True)
             self.web_learner = CelsiusWebLearner(db_path)
+
+            # Admin-provided approved sources (inserted by approval CAR_20251029_000232)
+            approved_sources = [
+                "https://www.cisa.gov/rss.xml",
+                "https://realpython.com/feed",
+                "https://realpython.com/sitemap.xml",
+                "https://realpython.com/rss",
+                "https://realpython.com/rss.xml",
+                "https://realpython.com/atom.xml",
+                "https://dev.to/feed",
+                "https://dev.to/rss",
+                "https://hackernoon.com/feed",
+                "https://huggingface.co/blog/feed.xml",
+                "https://www.nature.com/nature.rss",
+                "https://www.sciencedaily.com/rss",
+                "https://www.sciencedaily.com/rss/all.xml",
+                "https://www.scientificamerican.com/platform/syndication/rss/",
+                "https://techcrunch.com/feed",
+                "https://techcrunch.com/rss",
+                "https://techcrunch.com/feed/",
+                "https://arstechnica.com/feed",
+                "https://arstechnica.com/rss",
+                "https://www.wired.com/feed",
+                "https://www.wired.com/feed/rss",
+                "https://www.theverge.com/rss.xml",
+                "https://www.theverge.com/atom.xml",
+                "https://www.theverge.com/rss/index.xml",
+                "https://css-tricks.com/feed",
+                "https://css-tricks.com/rss",
+                "https://css-tricks.com/feed/",
+                "https://css-tricks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcss-tricks.com%2F&format=xml",
+                "https://smashingmagazine.com/feed",
+                "https://smashingmagazine.com/sitemap.xml",
+                "https://smashingmagazine.com/rss",
+                "https://www.smashingmagazine.com/feed/",
+                "https://towardsdatascience.com/feed",
+                "https://towardsdatascience.com/rss",
+                "https://towardsdatascience.com/feed/",
+                "https://towardsdatascience.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftowardsdatascience.com%2F&format=xml",
+                "https://datasciencecentral.com/feed",
+                "https://datasciencecentral.com/rss",
+                "https://www.datasciencecentral.com/feed/",
+                "https://www.datasciencecentral.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.datasciencecentral.com%2F&format=xml",
+                "https://iep.utm.edu/feed",
+                "https://iep.utm.edu/rss",
+                "https://iep.utm.edu/feed/",
+                "https://iep.utm.edu/comments/feed/",
+                "https://www.bbc.com/sitemap.xml",
+                "https://engineering.com/feed",
+                "https://engineering.com/rss",
+                "https://www.asme.org/sitemap.xml",
+                "https://www.reddit.com/discover.rss",
+                "https://news.ycombinator.com/rss",
+                "https://krebsonsecurity.com/feed",
+                "https://krebsonsecurity.com/rss",
+                "https://krebsonsecurity.com/feed/",
+                "https://krebsonsecurity.com/comments/feed/",
+                "https://phys.org/sitemap.xml",
+                "https://phys.org/rss-feed/",
+                "https://phys.org/rss-feed/breaking/",
+                "https://phys.org/rss-feed/editorials/",
+                "https://feeds-api.dotdashmeredith.com/v1/rss/google/f8466ec3-5044-46bc-94b7-2df65f770eff",
+                "https://www.bleepingcomputer.com/feed/",
+                "https://www.kernel.org/feeds/all.atom.xml",
+                "https://www.kernel.org/feeds/kdist.xml",
+            ]
+            try:
+                for src in approved_sources:
+                    from urllib.parse import urlparse
+                    net = urlparse(src).netloc or src
+                    self.web_learner.trusted_sources.add(net.lower())
+                topic_name = 'approved_sources'
+                if topic_name not in self.web_learner.learning_topics:
+                    self.web_learner.learning_topics[topic_name] = {'keywords': [], 'sources': []}
+                for src in approved_sources:
+                    if src not in self.web_learner.learning_topics[topic_name]['sources']:
+                        self.web_learner.learning_topics[topic_name]['sources'].append(src)
+            except Exception:
+                pass
+
             # Load any admin-approved ingestion sources and add them as trusted
             # sources and as an "approved_sources" learning topic so the
             # learner will consider them during learning cycles.
@@ -139,16 +219,16 @@ class CelsiusWebLearningIntegration:
 
         except Exception as e:
             self.integration_status = f"error: {str(e)}"
-            print(f"❌ Error initializing web learning: {str(e)}")
+            print(f"[ERROR] Initializing web learning: {str(e)}")
 
     def start_learning_process(self):
         """Start the continuous learning process"""
         if not self.web_learner:
-            print("❌ Web learner not initialized")
+            print("[ERROR] Web learner not initialized")
             return False
 
         if self.learning_active:
-            print("ℹ️ Learning process already active")
+            print("[INFO] Learning process already active")
             return True
 
         self.learning_active = True
@@ -156,12 +236,12 @@ class CelsiusWebLearningIntegration:
         def run_async_learner():
             """Run the learner's async continuous loop in a dedicated event loop."""
             try:
-                print("🚀 Starting Celsius AI web learning (async) in background thread...")
+                print("[START] Starting Celsius AI web learning (async) in background thread...")
                 import asyncio
 
                 asyncio.run(self.web_learner.start_continuous_learning())
             except Exception as e:
-                print(f"❌ Web learning async runner exited with error: {e}")
+                print(f"[ERROR] Web learning async runner exited with error: {e}")
 
         # Start the async learner loop in a background thread
         self.learning_thread = threading.Thread(target=run_async_learner, daemon=True)
@@ -217,7 +297,7 @@ class CelsiusWebLearningIntegration:
             return None
 
         try:
-            print("📊 Generating daily learning report...")
+            print("[INFO] Generating daily learning report...")
 
             report = self.web_learner.generate_learning_report("daily")
 
@@ -232,7 +312,7 @@ class CelsiusWebLearningIntegration:
                 return report
 
         except Exception as e:
-            print(f"❌ Error generating daily report: {str(e)}")
+            print(f"[ERROR] Generating daily report: {str(e)}")
             return None
 
     def save_learning_report(self, report: Dict):
@@ -271,7 +351,7 @@ class CelsiusWebLearningIntegration:
             print(f"Learning report saved: {filename}")
 
         except Exception as e:
-            print(f"❌ Error saving learning report: {str(e)}")
+            print(f"[ERROR] Saving learning report: {str(e)}")
 
     def get_learning_status(self) -> Dict:
         """Get current learning status"""
@@ -347,7 +427,7 @@ class CelsiusWebLearningIntegration:
             ]
 
         except Exception as e:
-            print(f"❌ Error getting recent insights: {str(e)}")
+            print(f"[ERROR] Getting recent insights: {str(e)}")
             return []
 
     def search_learned_content(self, query: str, topic: Optional[str] = None) -> List[Dict]:
@@ -392,13 +472,13 @@ class CelsiusWebLearningIntegration:
             ]
 
         except Exception as e:
-            print(f"❌ Error searching learned content: {str(e)}")
+            print(f"[ERROR] Searching learned content: {str(e)}")
             return []
 
     def stop_learning(self):
         """Stop the learning process"""
         self.learning_active = False
-        print("🛑 Stopping web learning process...")
+        print("[INFO] Stopping web learning process...")
 
         if self.web_learner:
             self.web_learner.stop_learning()
@@ -417,30 +497,30 @@ class CelsiusWebLearningIntegration:
             if key in self.settings:
                 self.settings[key] = value
 
-        print(f"⚙️ Learning settings updated: {list(new_settings.keys())}")
+        print(f"[INFO] Learning settings updated: {list(new_settings.keys())}")
 
     def get_learning_summary(self) -> str:
         """Get a human-readable learning summary"""
         status = self.get_learning_status()
 
         if not status["learner_available"]:
-            return "❌ Web learning not available - learner not initialized"
+            return "[ERROR] Web learning not available - learner not initialized"
 
         if not status["learning_active"]:
-            return "⏸️ Web learning is paused"
+            return "[PAUSED] Web learning is paused"
 
         summary_parts = [
-            f"🌐 Web Learning Status: {'Active' if status['learning_active'] else 'Inactive'}",
-            f"📚 Content Learned: {status['total_content_learned']} articles",
-            f"💡 Insights Generated: {status['total_insights']} insights",
-            f"⏰ Learning Interval: {status['settings']['learning_interval_hours']} hours",
-            f"🎯 Daily Session Limit: {status['settings']['max_learning_sessions_per_day']}",
-            f"🛡️ Ethical Mode: {'Enabled' if status['settings']['ethical_mode'] else 'Disabled'}",
+            f"Web Learning Status: {'Active' if status['learning_active'] else 'Inactive'}",
+            f"Content Learned: {status['total_content_learned']} articles",
+            f"Insights Generated: {status['total_insights']} insights",
+            f"Learning Interval: {status['settings']['learning_interval_hours']} hours",
+            f"Daily Session Limit: {status['settings']['max_learning_sessions_per_day']}",
+            f"Ethical Mode: {'Enabled' if status['settings']['ethical_mode'] else 'Disabled'}",
         ]
 
         if status["last_report_time"]:
             last_report = datetime.fromisoformat(status["last_report_time"])
-            summary_parts.append(f"📊 Last Report: {last_report.strftime('%Y-%m-%d %H:%M')}")
+            summary_parts.append(f"Last Report: {last_report.strftime('%Y-%m-%d %H:%M')}")
 
         return "\n".join(summary_parts)
 

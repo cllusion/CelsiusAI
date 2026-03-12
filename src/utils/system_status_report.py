@@ -155,7 +155,7 @@ def check_process_running(script_name):
                 if cmdline and any(script_name in arg for arg in cmdline):
                     return True
         return False
-    except:
+    except Exception:
         return False
 
 

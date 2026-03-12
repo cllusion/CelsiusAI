@@ -350,7 +350,7 @@ class AdaptiveSecurityEngine:
                 improvement_date = datetime.fromisoformat(improvement["timestamp"]).date()
                 if improvement_date == today:
                     count += 1
-            except:
+            except Exception:
                 continue
 
         return count

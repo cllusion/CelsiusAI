@@ -2909,7 +2909,7 @@ Database Size: {self.db_path.stat().st_size / 1024:.2f} KB
                                         break
                             else:
                                 self.tunnel_tree.insert("", "end", values=(port, "Starting...", "Initializing"))
-                        except:
+                        except Exception:
                             self.tunnel_tree.insert("", "end", values=(port, "Check ngrok dashboard", "Running"))
 
             except (psutil.NoSuchProcess, psutil.AccessDenied):
@@ -4378,7 +4378,7 @@ USER RESPONSE:
                     if "celsius_ultimate_guardian" in cmdline:
                         uptime = datetime.now() - datetime.fromtimestamp(proc.info.get("create_time", 0))
                         guardian_processes.append({"pid": proc.info.get("pid"), "uptime": uptime})
-                except:
+                except Exception:
                     pass
 
             if guardian_processes:
@@ -4476,7 +4476,7 @@ USER RESPONSE:
                                 "cpu": proc.info.get("cpu_percent", 0),
                             }
                         )
-                except:
+                except Exception:
                     pass
 
             if celsius_processes:
