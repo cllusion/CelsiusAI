@@ -1,22 +1,22 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
-🧪 CELSIUS AI - ULTIMATE ASYNC TESTING SUITE 🧪
-═══════════════════════════════════════════════════════════════════════════════════════════
+ðŸ§ª CELSIUS AI - ULTIMATE ASYNC TESTING SUITE ðŸ§ª
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 A comprehensive, asynchronous testing framework for the modernized Celsius AI ecosystem.
 This suite is designed to validate the functionality, performance, and integration of
 all refactored, async-native components.
 
 Features:
-• 🚀 Asynchronous Test Execution via `unittest.IsolatedAsyncioTestCase`
-• 🔧 System Responsiveness & Resource Monitoring
-• 🔗 Full System Integration and Dependency Validation
-• 📊 Advanced, Asynchronous Test Reporting to SQLite
-• 🎯 Performance Benchmarking for Async Operations
-• 🖥️ GUI Component Import and Availability Checks
-• 📧 Email and Notification System Validation
+â€¢ ðŸš€ Asynchronous Test Execution via `unittest.IsolatedAsyncioTestCase`
+â€¢ ðŸ”§ System Responsiveness & Resource Monitoring
+â€¢ ðŸ”— Full System Integration and Dependency Validation
+â€¢ ðŸ“Š Advanced, Asynchronous Test Reporting to SQLite
+â€¢ ðŸŽ¯ Performance Benchmarking for Async Operations
+â€¢ ðŸ–¥ï¸ GUI Component Import and Availability Checks
+â€¢ ðŸ“§ Email and Notification System Validation
 
-═══════════════════════════════════════════════════════════════════════════════════════════
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 """
 
 import unittest
@@ -26,6 +26,7 @@ import json
 import aiosqlite
 import subprocess
 import tkinter as tk
+import os
 from datetime import datetime, timedelta
 from pathlib import Path
 import psutil
@@ -59,12 +60,7 @@ class AsyncTestResultManager:
         self.test_dir.mkdir(exist_ok=True)
         self.results_db_path = self.test_dir / "test_results.db"
         self.current_session_id = datetime.now().isoformat()
-        self.loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(self.loop)
-        self.loop.run_until_complete(self.initialize_database())
-
-    def __del__(self):
-        self.loop.close()
+        # Remove the event loop creation - will be handled by caller
 
     async def initialize_database(self):
         """Initializes the SQLite database for storing test results."""
@@ -105,7 +101,13 @@ class AsyncTestResultManager:
 
     def log_test_result(self, test_case, status: str, duration: float, error_message: Optional[str] = None):
         """Synchronous wrapper to log a test result to the database using the event loop."""
-        self.loop.run_until_complete(self._log_test_result_async(test_case, status, duration, error_message))
+        # Create a new event loop for this operation since we don't have a persistent one
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        try:
+            loop.run_until_complete(self._log_test_result_async(test_case, status, duration, error_message))
+        finally:
+            loop.close()
 
     async def _log_test_result_async(
         self, test_case, status: str, duration: float, error_message: Optional[str] = None
@@ -140,9 +142,15 @@ class AsyncTestResultManager:
         start_time: datetime,
     ):
         """Synchronous wrapper to log the final session summary."""
-        self.loop.run_until_complete(
-            self._log_session_summary_async(total_tests, passed, failed, errors, skipped, duration, start_time)
-        )
+        # Create a new event loop for this operation
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        try:
+            loop.run_until_complete(
+                self._log_session_summary_async(total_tests, passed, failed, errors, skipped, duration, start_time)
+            )
+        finally:
+            loop.close()
 
     async def _log_session_summary_async(
         self,
@@ -191,6 +199,7 @@ class DatabaseTestResult(unittest.TextTestResult):
         super().__init__(*args, **kwargs)
         self.result_manager = AsyncTestResultManager()
         self.test_starts: Dict[str, float] = {}
+        self.db_initialized = False
 
     def startTest(self, test):
         self.test_starts[test.id()] = time.perf_counter()
@@ -200,27 +209,27 @@ class DatabaseTestResult(unittest.TextTestResult):
         super().addSuccess(test)
         duration = time.perf_counter() - self.test_starts.get(test.id(), time.perf_counter())
         self.result_manager.log_test_result(test, "passed", duration)
-        logger.info(f"✅ PASSED: {test.id()} ({duration:.4f}s)")
+        logger.info(f"âœ… PASSED: {test.id()} ({duration:.4f}s)")
 
     def addError(self, test, err):
         super().addError(test, err)
         duration = time.perf_counter() - self.test_starts.get(test.id(), time.perf_counter())
         error_message = self._exc_info_to_string(err, test)
         self.result_manager.log_test_result(test, "error", duration, error_message)
-        logger.error(f"❌ ERROR: {test.id()} ({duration:.4f}s)")
+        logger.error(f"âŒ ERROR: {test.id()} ({duration:.4f}s)")
 
     def addFailure(self, test, err):
         super().addFailure(test, err)
         duration = time.perf_counter() - self.test_starts.get(test.id(), time.perf_counter())
         error_message = self._exc_info_to_string(err, test)
         self.result_manager.log_test_result(test, "failed", duration, error_message)
-        logger.error(f"🔥 FAILED: {test.id()} ({duration:.4f}s)")
+        logger.error(f"ðŸ”¥ FAILED: {test.id()} ({duration:.4f}s)")
 
     def addSkip(self, test, reason):
         super().addSkip(test, reason)
         duration = time.perf_counter() - self.test_starts.get(test.id(), 0)
         self.result_manager.log_test_result(test, "skipped", duration, reason)
-        logger.warning(f"⏭️ SKIPPED: {test.id()} - {reason}")
+        logger.warning(f"â­ï¸ SKIPPED: {test.id()} - {reason}")
 
 
 class DatabaseTestRunner(unittest.TextTestRunner):
@@ -474,9 +483,50 @@ def main():
     runner.run(suite)
 
 
+def run_tests_programmatically():
+    """Run the test suite programmatically without launching GUI."""
+    logger.info("Running tests programmatically...")
+    
+    suite = unittest.TestSuite()
+
+    # Define the test classes to be included in the run
+    test_classes_to_run = [
+        SystemResponsivenessTests,
+        IntegrationTests,
+        PerformanceBenchmarkTests,
+    ]
+
+    loader = unittest.TestLoader()
+    for test_class in test_classes_to_run:
+        suite.addTests(loader.loadTestsFromTestCase(test_class))
+
+    logger.info("Starting the test runner...")
+    
+    # Use standard unittest runner without async complications
+    runner = unittest.TextTestRunner(verbosity=0)
+    result = runner.run(suite)
+    
+    return {
+        'testsRun': result.testsRun,
+        'failures': len(result.failures),
+        'errors': len(result.errors),
+        'skipped': len(result.skipped),
+        'wasSuccessful': result.wasSuccessful()
+    }
+
+
 if __name__ == "__main__":
+    # Check if we're being run programmatically
+    if os.environ.get('CELSIUS_TEST_MODE') == '1':
+        # Run programmatically and exit
+        result = run_tests_programmatically()
+        print(f"Test Results: {result}")
+        sys.exit(0 if result['wasSuccessful'] else 1)
+    
     # Ensure the script is run from the project root for correct pathing
     if "src" not in [p.name for p in Path.cwd().iterdir()]:
         logger.warning("This script is best run from the 'Celsius AI' project root directory.")
 
     main()
+
+

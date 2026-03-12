@@ -60,6 +60,86 @@ class CelsiusWebLearningIntegration:
             db_path = PROJECT_ROOT / "data" / "web_learning.db"
             db_path.parent.mkdir(parents=True, exist_ok=True)
             self.web_learner = CelsiusWebLearner(db_path)
+
+            # Admin-provided approved sources (inserted by approval CAR_20251029_000232)
+            approved_sources = [
+                "https://www.cisa.gov/rss.xml",
+                "https://realpython.com/feed",
+                "https://realpython.com/sitemap.xml",
+                "https://realpython.com/rss",
+                "https://realpython.com/rss.xml",
+                "https://realpython.com/atom.xml",
+                "https://dev.to/feed",
+                "https://dev.to/rss",
+                "https://hackernoon.com/feed",
+                "https://huggingface.co/blog/feed.xml",
+                "https://www.nature.com/nature.rss",
+                "https://www.sciencedaily.com/rss",
+                "https://www.sciencedaily.com/rss/all.xml",
+                "https://www.scientificamerican.com/platform/syndication/rss/",
+                "https://techcrunch.com/feed",
+                "https://techcrunch.com/rss",
+                "https://techcrunch.com/feed/",
+                "https://arstechnica.com/feed",
+                "https://arstechnica.com/rss",
+                "https://www.wired.com/feed",
+                "https://www.wired.com/feed/rss",
+                "https://www.theverge.com/rss.xml",
+                "https://www.theverge.com/atom.xml",
+                "https://www.theverge.com/rss/index.xml",
+                "https://css-tricks.com/feed",
+                "https://css-tricks.com/rss",
+                "https://css-tricks.com/feed/",
+                "https://css-tricks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcss-tricks.com%2F&format=xml",
+                "https://smashingmagazine.com/feed",
+                "https://smashingmagazine.com/sitemap.xml",
+                "https://smashingmagazine.com/rss",
+                "https://www.smashingmagazine.com/feed/",
+                "https://towardsdatascience.com/feed",
+                "https://towardsdatascience.com/rss",
+                "https://towardsdatascience.com/feed/",
+                "https://towardsdatascience.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftowardsdatascience.com%2F&format=xml",
+                "https://datasciencecentral.com/feed",
+                "https://datasciencecentral.com/rss",
+                "https://www.datasciencecentral.com/feed/",
+                "https://www.datasciencecentral.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.datasciencecentral.com%2F&format=xml",
+                "https://iep.utm.edu/feed",
+                "https://iep.utm.edu/rss",
+                "https://iep.utm.edu/feed/",
+                "https://iep.utm.edu/comments/feed/",
+                "https://www.bbc.com/sitemap.xml",
+                "https://engineering.com/feed",
+                "https://engineering.com/rss",
+                "https://www.asme.org/sitemap.xml",
+                "https://www.reddit.com/discover.rss",
+                "https://news.ycombinator.com/rss",
+                "https://krebsonsecurity.com/feed",
+                "https://krebsonsecurity.com/rss",
+                "https://krebsonsecurity.com/feed/",
+                "https://krebsonsecurity.com/comments/feed/",
+                "https://phys.org/sitemap.xml",
+                "https://phys.org/rss-feed/",
+                "https://phys.org/rss-feed/breaking/",
+                "https://phys.org/rss-feed/editorials/",
+                "https://feeds-api.dotdashmeredith.com/v1/rss/google/f8466ec3-5044-46bc-94b7-2df65f770eff",
+                "https://www.bleepingcomputer.com/feed/",
+                "https://www.kernel.org/feeds/all.atom.xml",
+                "https://www.kernel.org/feeds/kdist.xml",
+            ]
+            try:
+                for src in approved_sources:
+                    from urllib.parse import urlparse
+                    net = urlparse(src).netloc or src
+                    self.web_learner.trusted_sources.add(net.lower())
+                topic_name = 'approved_sources'
+                if topic_name not in self.web_learner.learning_topics:
+                    self.web_learner.learning_topics[topic_name] = {'keywords': [], 'sources': []}
+                for src in approved_sources:
+                    if src not in self.web_learner.learning_topics[topic_name]['sources']:
+                        self.web_learner.learning_topics[topic_name]['sources'].append(src)
+            except Exception:
+                pass
+
             # Load any admin-approved ingestion sources and add them as trusted
             # sources and as an "approved_sources" learning topic so the
             # learner will consider them during learning cycles.
