@@ -18,6 +18,24 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 import logging
 
+try:
+    from src.hub.theme import PALETTE as _C
+except ImportError:
+    _C = {
+        "bg": "#0d0d14", "card": "#1a1a2e", "surface": "#13131e",
+        "pri_light": "#a78bfa", "text": "#e2e8f0", "text_muted": "#64748b",
+    }
+
+
+def _text_bg(hub: Any) -> str:
+    """Return the card background colour for tk.Text widgets."""
+    return hub.style.lookup("TFrame", "background") or _C["card"]
+
+
+def _text_fg(hub: Any) -> str:
+    """Return the foreground colour for tk.Text widgets."""
+    return hub.style.lookup("TLabel", "foreground") or _C["text"]
+
 
 def create_admin_tab(hub: Any) -> None:
     """Create the Administration tab widgets for the given hub instance.
@@ -437,7 +455,9 @@ def create_chat_tab(hub: Any) -> None:
 
     # Create chat display
     hub.chat_display = tk.Text(
-        chat_frame, wrap=tk.WORD, height=20, bg="black", fg="cyan", font=("Consolas", 10), insertbackground="cyan"
+        chat_frame, wrap=tk.WORD, height=20,
+        bg=_C["card"], fg=_C["pri_light"],
+        font=("Consolas", 10), insertbackground=_C["pri_light"],
     )
     hub.chat_display.pack(fill="both", expand=True, pady=(0, 10))
 
@@ -565,7 +585,10 @@ def create_hardware_tab(hub: Any) -> None:
     status_frame = ttk.LabelFrame(hardware_scrollable_frame, text="System Status", padding="10")
     status_frame.pack(fill="x", padx=10, pady=5)
 
-    hub.hardware_status_text = tk.Text(status_frame, height=6, wrap=tk.WORD)
+    hub.hardware_status_text = tk.Text(
+        status_frame, height=6, wrap=tk.WORD,
+        bg=_text_bg(hub), fg=_text_fg(hub), insertbackground=_text_fg(hub),
+    )
     hub.hardware_status_text.pack(fill="x", pady=5)
 
     status_button_frame = ttk.Frame(status_frame)
@@ -754,7 +777,10 @@ def create_hardware_tab(hub: Any) -> None:
     temp_frame = ttk.LabelFrame(hardware_scrollable_frame, text="🌡️ Temperature Monitoring", padding="10")
     temp_frame.pack(fill="x", padx=10, pady=5)
 
-    hub.temp_text = tk.Text(temp_frame, height=4, wrap=tk.WORD)
+    hub.temp_text = tk.Text(
+        temp_frame, height=4, wrap=tk.WORD,
+        bg=_text_bg(hub), fg=_text_fg(hub), insertbackground=_text_fg(hub),
+    )
     hub.temp_text.pack(fill="x", pady=5)
 
     temp_controls = ttk.Frame(temp_frame)

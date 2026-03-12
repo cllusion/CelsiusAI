@@ -98,6 +98,18 @@ logger = logging.getLogger("celsius.hub")
 # Config path fallback
 CONFIG_PATH = PROJECT_ROOT / "config" / "config.json"
 
+# UI palette — Gemini purple × Claude amber × ChatGPT dark
+try:
+    from src.hub.theme import PALETTE as _THEME
+except ImportError:
+    _THEME: dict = {
+        "bg": "#0d0d14", "surface": "#13131e", "card": "#1a1a2e",
+        "border": "#252540", "primary": "#7c3aed", "pri_light": "#a78bfa",
+        "pri_dark": "#6d28d9", "secondary": "#0ea5e9", "amber": "#f59e0b",
+        "green": "#10b981", "red": "#ef4444", "text": "#e2e8f0",
+        "text_muted": "#64748b", "text_dim": "#94a3b8",
+    }
+
 # Code approval subsystem flag placeholder
 CodeApprovalSystem = False
 
@@ -168,7 +180,7 @@ class UltimateHub:
         self.root = root
         self.async_loop = async_loop
         self.username = username
-        self.root.title("🛡️ Celsius AI - Ultimate Hub 🛡️")
+        self.root.title("Celsius AI — Ultimate Hub")
         self.root.geometry("1200x800")
         self.root.protocol("WM_DELETE_WINDOW", self.on_closing)
 
@@ -294,18 +306,105 @@ class UltimateHub:
         self.status_bar.pack(side="bottom", fill="x")
 
     def setup_styles(self):
-        """Defines custom styles for various ttk widgets."""
+        """Apply the Celsius AI palette: Gemini purple × Claude amber × ChatGPT dark."""
+        C = _THEME
         try:
-            self.style.configure("Header.TLabel", font=("Helvetica", 16, "bold"), padding=(0, 10, 0, 10))
-            self.style.configure("TNotebook.Tab", font=("Helvetica", 10, "bold"), padding=[5, 2])
-            self.style.configure("Status.TLabel", font=("Helvetica", 9), padding=(5, 5))
-            self.style.configure("Treeview.Heading", font=("Helvetica", 10, "bold"))
-            self.style.configure("TButton", font=("Helvetica", 10), padding=5)
-            self.style.map("Start.TButton", foreground=[("!disabled", "green")])
-            self.style.map("Stop.TButton", foreground=[("!disabled", "red")])
-            self.style.map("Restart.TButton", foreground=[("!disabled", "orange")])
+            # Root background
+            self.root.configure(bg=C["bg"])
+
+            # ── Base widgets ─────────────────────────────────────────────────
+            self.style.configure("TFrame",      background=C["bg"])
+            self.style.configure("TLabel",      background=C["bg"], foreground=C["text"],
+                                 font=("Segoe UI", 10))
+            self.style.configure("TSeparator",  background=C["border"])
+
+            # ── Entry ────────────────────────────────────────────────────────
+            self.style.configure("TEntry",
+                fieldbackground=C["card"], foreground=C["text"],
+                insertcolor=C["text"],
+                bordercolor=C["border"], lightcolor=C["border"], darkcolor=C["border"],
+                font=("Segoe UI", 10))
+            self.style.map("TEntry",
+                bordercolor=[("focus", C["primary"])])
+
+            # ── Buttons ──────────────────────────────────────────────────────
+            self.style.configure("TButton",
+                background=C["card"], foreground=C["text"],
+                font=("Segoe UI", 10), padding=(8, 5),
+                bordercolor=C["border"], relief="flat", focuscolor=C["primary"])
+            self.style.map("TButton",
+                background=[("active", C["border"]), ("pressed", C["primary"])],
+                foreground=[("active", C["text"]), ("pressed", "#ffffff")])
+
+            # Primary (violet) button
+            self.style.configure("Primary.TButton",
+                background=C["primary"], foreground="#ffffff",
+                font=("Segoe UI", 10, "bold"), padding=(10, 6))
+            self.style.map("Primary.TButton",
+                background=[("active", C["pri_light"]), ("pressed", C["pri_dark"])],
+                foreground=[("active", "#ffffff"), ("pressed", "#ffffff")])
+
+            # ── Notebook / Tabs ──────────────────────────────────────────────
+            self.style.configure("TNotebook",
+                background=C["bg"], bordercolor=C["border"], tabmargins=[0, 0, 0, 0])
+            self.style.configure("TNotebook.Tab",
+                background=C["surface"], foreground=C["text_muted"],
+                font=("Segoe UI", 9), padding=[12, 6])
+            self.style.map("TNotebook.Tab",
+                background=[("selected", C["card"]), ("active", C["card"])],
+                foreground=[("selected", C["pri_light"]), ("active", C["text"])])
+
+            # ── LabelFrame ───────────────────────────────────────────────────
+            self.style.configure("TLabelframe",
+                background=C["card"], bordercolor=C["border"], relief="flat")
+            self.style.configure("TLabelframe.Label",
+                background=C["card"], foreground=C["pri_light"],
+                font=("Segoe UI", 9, "bold"))
+
+            # ── Treeview ─────────────────────────────────────────────────────
+            self.style.configure("Treeview",
+                background=C["card"], foreground=C["text"],
+                fieldbackground=C["card"], bordercolor=C["border"],
+                font=("Segoe UI", 9))
+            self.style.configure("Treeview.Heading",
+                background=C["surface"], foreground=C["pri_light"],
+                font=("Segoe UI", 9, "bold"), relief="flat")
+            self.style.map("Treeview",
+                background=[("selected", C["primary"])],
+                foreground=[("selected", "#ffffff")])
+
+            # ── Scrollbar ────────────────────────────────────────────────────
+            self.style.configure("TScrollbar",
+                background=C["border"], troughcolor=C["surface"],
+                arrowcolor=C["text_muted"], bordercolor=C["surface"])
+            self.style.map("TScrollbar",
+                background=[("active", C["primary"]), ("pressed", C["primary"])])
+
+            # ── Checkbutton ──────────────────────────────────────────────────
+            self.style.configure("TCheckbutton",
+                background=C["bg"], foreground=C["text"], font=("Segoe UI", 9))
+            self.style.map("TCheckbutton",
+                background=[("active", C["bg"])],
+                foreground=[("active", C["pri_light"])])
+
+            # ── Scale ────────────────────────────────────────────────────────
+            self.style.configure("TScale",
+                background=C["bg"], troughcolor=C["border"])
+
+            # ── Status bar & header ──────────────────────────────────────────
+            self.style.configure("Status.TLabel",
+                background=C["surface"], foreground=C["text_muted"],
+                font=("Segoe UI", 9), padding=(8, 4))
+            self.style.configure("Header.TLabel",
+                background=C["bg"], foreground=C["text"],
+                font=("Segoe UI", 18, "bold"), padding=(0, 10, 0, 10))
+
+            # ── Service action colour coding ──────────────────────────────────
+            self.style.map("Start.TButton",   foreground=[("!disabled", C["green"])])
+            self.style.map("Stop.TButton",    foreground=[("!disabled", C["red"])])
+            self.style.map("Restart.TButton", foreground=[("!disabled", C["amber"])])
+
         except Exception:
-            # If styling fails, continue without raising
             logging.debug("Failed to apply ttk styles", exc_info=True)
 
     def create_widgets(self):
@@ -320,6 +419,10 @@ class UltimateHub:
         # inside `content_frame` which is a window on the canvas.
         self.main_frame = ttk.Frame(self.root)
         self.main_frame.pack(expand=True, fill="both")
+
+        # Thin accent bar — sits above the scrollable canvas, always visible
+        _accent = tk.Frame(self.main_frame, height=3, bg=_THEME.get("primary", "#7c3aed"))
+        _accent.pack(fill="x")
 
         # Scrollable canvas and vertical scrollbar
         canvas_bg = self.style.lookup("TFrame", "background") or self.root.cget("bg")
@@ -402,8 +505,14 @@ class UltimateHub:
         header_frame.pack(fill="x", pady=(0, 10))
 
         # Header label
-        header_label = ttk.Label(header_frame, text="🛡️ Celsius AI - Ultimate Hub 🛡️", style="Header.TLabel")
+        header_label = ttk.Label(header_frame, text="Celsius AI", style="Header.TLabel")
         header_label.pack(side="left")
+        subtitle_lbl = ttk.Label(
+            header_frame, text="Ultimate Hub",
+            foreground=_THEME.get("text_muted", "#64748b"),
+            font=("Segoe UI", 10),
+        )
+        subtitle_lbl.pack(side="left", padx=(6, 0))
 
         # User info and logout button
         user_frame = ttk.Frame(header_frame)
@@ -5271,7 +5380,7 @@ if __name__ == "__main__":
                     self.authenticated = False
                     self.root.destroy()
 
-        login_root = tk.Tk()
+        login_root = ThemedTk(theme="equilux") if ThemedTk else tk.Tk()
         login_window = LoginWindow(login_root)
         login_root.mainloop()
 
@@ -5288,7 +5397,7 @@ if __name__ == "__main__":
         async_loop.start()
 
         # 4. Create the main Tkinter window
-        root = ThemedTk(theme="arc")
+        root = ThemedTk(theme="equilux") if ThemedTk else tk.Tk()
 
         # 5. Create the application, passing the async loop manager and username
         app = UltimateHub(root, async_loop, username)
