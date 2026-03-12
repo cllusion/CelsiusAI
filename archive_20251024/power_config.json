@@ -1,7 +1,0 @@
-{
-  "power_mode": "balanced",
-  "cpu_throttle_enabled": true,
-  "gpu_throttle_enabled": true,
-  "auto_optimization_enabled": true,
-  "last_updated": "2025-10-23T21:32:33.459997"
-}

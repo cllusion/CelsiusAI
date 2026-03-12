@@ -31,13 +31,22 @@ logs/
 *.log
 
 # Databases (runtime data)
-data/*.db
+*.db
+*.db-shm
+*.db-wal
+data/
+src/data/
 
 # Backups and archives
 backups/
+archive*/
 *.zip
 *.tar.gz
 *.bak
+
+# Generated reports
+learning_reports/
+src/learning/learning_reports/
 
 # IDE
 .vscode/

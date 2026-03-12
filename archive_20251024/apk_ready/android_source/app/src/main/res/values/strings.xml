@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Celsius AI</string>
-    <string name="server_url">http://192.168.1.100:5000</string>
-    <string name="connecting">Connecting to Celsius AI...</string>
-    <string name="connection_error">Cannot connect to server</string>
-    <string name="retry">Retry Connection</string>
-</resources>
