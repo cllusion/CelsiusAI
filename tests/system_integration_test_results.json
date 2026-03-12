@@ -1,15 +1,13 @@
 {
-  "timestamp": "2025-10-28T23:40:24.770583",
+  "timestamp": "2026-03-12T03:33:56.137962",
   "tests": [
     {
       "name": "Process Persistence",
       "status": "PARTIAL",
       "details": {
-        "running": 0,
+        "running": 2,
         "expected": 5,
         "missing": [
-          "enhanced_mobile_dashboard.py",
-          "main.py",
           "celsius_web_learning_launcher.py",
           "celsius_ultimate_guardian.py",
           "celsius_ultimate_hub.py"
@@ -18,13 +16,13 @@
     },
     {
       "name": "Web Dashboard Connectivity",
-      "status": "FAIL",
+      "status": "PASS",
       "url": "http://localhost:5000"
     },
     {
       "name": "Guardian Database Logging",
       "status": "FAIL",
-      "database": "C:\\Users\\micro\\Celsius AI\\tests\\celsius_guardian.db"
+      "database": "C:\\Users\\micro\\Celsius AI\\.claude\\worktrees\\busy-napier\\tests\\celsius_guardian.db"
     },
     {
       "name": "Service Recovery Simulation",
@@ -39,10 +37,10 @@
   ],
   "summary": {
     "total": 5,
-    "pass": 0,
+    "pass": 1,
     "partial": 1,
-    "fail": 3,
+    "fail": 2,
     "skip": 1,
-    "score": "0/4"
+    "score": "1/4"
   }
 }
