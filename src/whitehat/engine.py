@@ -460,6 +460,17 @@ class TechniqueLibrary:
             logger.error(f"Failed to load learning data: {e}")
 
 
+# ---------------------------------------------------------------------------
+# Service-name lookup used by port_scan
+# ---------------------------------------------------------------------------
+_SERVICE_NAMES: Dict[int, str] = {
+    21: "FTP", 22: "SSH", 23: "Telnet", 25: "SMTP", 53: "DNS",
+    80: "HTTP", 443: "HTTPS", 3306: "MySQL", 5432: "PostgreSQL",
+    6379: "Redis", 8080: "HTTP-Alt", 8443: "HTTPS-Alt",
+    8888: "Jupyter/Alt-HTTP", 27017: "MongoDB",
+}
+
+
 class WhiteHatEngine:
     """
     The main asynchronous engine for orchestrating white hat hacking engagements.
@@ -604,6 +615,232 @@ class WhiteHatEngine:
                         }
                     )
         return findings
+
+    # -----------------------------------------------------------------------
+    # New capabilities added below — all existing methods above are unchanged
+    # -----------------------------------------------------------------------
+
+    async def port_scan(self, target: str, ports: Optional[List[int]] = None) -> Dict[str, Any]:
+        """TCP connect scan on the given target using asyncio with 1s timeout per port."""
+        if ports is None:
+            ports = [21, 22, 23, 25, 53, 80, 443, 3306, 5432, 6379, 8080, 8443, 8888, 27017]
+
+        open_ports: List[Dict[str, Any]] = []
+
+        async def probe(port: int):
+            try:
+                _, writer = await asyncio.wait_for(
+                    asyncio.open_connection(target, port), timeout=1.0
+                )
+                writer.close()
+                try:
+                    await writer.wait_closed()
+                except Exception:
+                    pass
+                service = _SERVICE_NAMES.get(port, "unknown")
+                open_ports.append({"port": port, "state": "open", "service": service})
+            except (asyncio.TimeoutError, ConnectionRefusedError, OSError):
+                pass
+
+        await asyncio.gather(*(probe(p) for p in ports))
+        open_ports.sort(key=lambda x: x["port"])
+        return {
+            "target": target,
+            "scanned_ports": len(ports),
+            "open_ports": open_ports,
+            "timestamp": datetime.now().isoformat(),
+        }
+
+    async def grab_banner(self, host: str, port: int) -> str:
+        """Attempt to read a service banner from host:port."""
+        try:
+            reader, writer = await asyncio.wait_for(
+                asyncio.open_connection(host, port), timeout=3.0
+            )
+            writer.write(b"\r\n")
+            await writer.drain()
+            data = await asyncio.wait_for(reader.read(1024), timeout=3.0)
+            writer.close()
+            try:
+                await writer.wait_closed()
+            except Exception:
+                pass
+            return data.decode("utf-8", errors="ignore").strip()
+        except Exception:
+            return ""
+
+    def check_ssl_security(self, hostname: str) -> Dict[str, Any]:
+        """Check SSL protocol version, cipher suite, and certificate validity."""
+        result: Dict[str, Any] = {"hostname": hostname, "issues": []}
+        try:
+            context = ssl.create_default_context()
+            context.check_hostname = False
+            context.verify_mode = ssl.CERT_NONE
+
+            with socket.create_connection((hostname, 443), timeout=10) as sock:
+                with context.wrap_socket(sock, server_hostname=hostname) as ssock:
+                    version = ssock.version()
+                    cipher = ssock.cipher()
+                    cert = ssock.getpeercert()
+
+            result["protocol_version"] = version
+            result["cipher_suite"] = cipher
+
+            # Flag TLS < 1.2
+            if version in ("SSLv2", "SSLv3", "TLSv1", "TLSv1.1"):
+                result["issues"].append({"type": "weak_tls", "detail": f"Protocol {version} is insecure (require TLS 1.2+)"})
+
+            if cipher and cipher[1] in ("RC4", "DES", "3DES", "NULL"):
+                result["issues"].append({"type": "weak_cipher", "detail": f"Weak cipher: {cipher[1]}"})
+
+            if cert:
+                not_after = cert.get("notAfter", "")
+                if not_after:
+                    try:
+                        expiry = datetime.strptime(not_after, "%b %d %H:%M:%S %Y %Z")
+                        days_left = (expiry - datetime.utcnow()).days
+                        result["days_until_expiry"] = days_left
+                        if days_left < 30:
+                            result["issues"].append({"type": "cert_expiring", "detail": f"Cert expires in {days_left} days"})
+                    except Exception:
+                        pass
+
+            result["secure"] = len(result["issues"]) == 0
+        except Exception as e:
+            result["error"] = str(e)
+            result["secure"] = False
+        return result
+
+    async def check_http_security(self, url: str) -> Dict[str, Any]:
+        """GET the URL and evaluate security headers, server disclosure, and admin path exposure."""
+        result: Dict[str, Any] = {"url": url, "issues": []}
+        security_headers = [
+            "Strict-Transport-Security",
+            "X-Content-Type-Options",
+            "X-Frame-Options",
+            "Content-Security-Policy",
+            "Referrer-Policy",
+        ]
+        admin_paths = ["/admin", "/wp-admin", "/.env", "/config.json"]
+
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.get(url, timeout=aiohttp.ClientTimeout(total=10), ssl=False) as resp:
+                    headers = dict(resp.headers)
+                    result["status_code"] = resp.status
+
+            # Missing security headers
+            missing = [h for h in security_headers if h not in headers]
+            if missing:
+                result["issues"].append({"type": "missing_headers", "headers": missing})
+
+            # Server version disclosure
+            server = headers.get("Server", "")
+            if re.search(r"[\d.]{3,}", server):
+                result["issues"].append({"type": "server_version_disclosure", "detail": server})
+
+            result["headers"] = headers
+
+            # Admin path exposure
+            exposed = []
+            base = url.rstrip("/")
+            async with aiohttp.ClientSession() as session:
+                for path in admin_paths:
+                    try:
+                        async with session.get(base + path, timeout=aiohttp.ClientTimeout(total=5), ssl=False, allow_redirects=False) as r:
+                            if r.status == 200:
+                                exposed.append({"path": path, "status": r.status})
+                    except Exception:
+                        pass
+            if exposed:
+                result["issues"].append({"type": "admin_paths_exposed", "paths": exposed})
+
+        except Exception as e:
+            result["error"] = str(e)
+
+        result["secure"] = len(result.get("issues", [])) == 0
+        return result
+
+    async def run_owasp_top10_check(self, url: str) -> Dict[str, Any]:
+        """Basic OWASP Top 10 checks: A01 broken access control, A05 misconfiguration, A06 outdated components, A07 auth failures."""
+        result: Dict[str, Any] = {"url": url, "checks": [], "timestamp": datetime.now().isoformat()}
+
+        async with aiohttp.ClientSession() as session:
+            # A01 - Broken Access Control: /admin and /api/users without auth
+            a01_exposed = []
+            for path in ["/admin", "/api/users"]:
+                try:
+                    async with session.get(url.rstrip("/") + path, timeout=aiohttp.ClientTimeout(total=5), ssl=False, allow_redirects=False) as r:
+                        if r.status == 200:
+                            a01_exposed.append({"path": path, "status": r.status})
+                except Exception:
+                    pass
+            result["checks"].append({
+                "id": "A01",
+                "name": "Broken Access Control",
+                "status": "fail" if a01_exposed else "pass",
+                "detail": a01_exposed or "No unauthenticated admin endpoints found",
+            })
+
+            # A05 - Security Misconfiguration: server header, debug info
+            try:
+                async with session.get(url, timeout=aiohttp.ClientTimeout(total=10), ssl=False) as resp:
+                    headers = dict(resp.headers)
+                    body_snippet = (await resp.text(errors="ignore"))[:2000]
+
+                a05_issues = []
+                if re.search(r"[\d.]{3,}", headers.get("Server", "")):
+                    a05_issues.append(f"Server version disclosed: {headers['Server']}")
+                if re.search(r"(?i)(debug mode|DEBUG=True|werkzeug debugger)", body_snippet):
+                    a05_issues.append("Debug mode indicator found in response")
+
+                result["checks"].append({
+                    "id": "A05",
+                    "name": "Security Misconfiguration",
+                    "status": "fail" if a05_issues else "pass",
+                    "detail": a05_issues or "No obvious misconfiguration",
+                })
+
+                # A06 - Outdated Components: check Server header version
+                server_header = headers.get("Server", "")
+                a06_issues = []
+                version_match = re.search(r"([\d]+)\.([\d]+)", server_header)
+                if version_match:
+                    a06_issues.append(f"Server header reveals version: {server_header} (verify it is current)")
+                result["checks"].append({
+                    "id": "A06",
+                    "name": "Vulnerable and Outdated Components",
+                    "status": "warn" if a06_issues else "pass",
+                    "detail": a06_issues or "No obvious outdated component signals",
+                })
+
+            except Exception as e:
+                for check_id, name in [("A05", "Security Misconfiguration"), ("A06", "Vulnerable and Outdated Components")]:
+                    result["checks"].append({"id": check_id, "name": name, "status": "error", "detail": str(e)})
+
+            # A07 - Identification and Authentication Failures: /admin returns 200 without auth
+            a07_issues = []
+            try:
+                async with session.get(url.rstrip("/") + "/admin", timeout=aiohttp.ClientTimeout(total=5), ssl=False, allow_redirects=False) as r:
+                    if r.status == 200:
+                        a07_issues.append("/admin accessible without authentication (HTTP 200)")
+            except Exception:
+                pass
+            result["checks"].append({
+                "id": "A07",
+                "name": "Identification and Authentication Failures",
+                "status": "fail" if a07_issues else "pass",
+                "detail": a07_issues or "No unauthenticated admin access detected",
+            })
+
+        fail_count = sum(1 for c in result["checks"] if c["status"] == "fail")
+        result["summary"] = {
+            "total_checks": len(result["checks"]),
+            "failed": fail_count,
+            "passed": sum(1 for c in result["checks"] if c["status"] == "pass"),
+            "risk_level": "high" if fail_count >= 2 else ("medium" if fail_count == 1 else "low"),
+        }
+        return result
 
 
 async def main():
