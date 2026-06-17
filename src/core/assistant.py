@@ -18,13 +18,14 @@ Key Responsibilities:
 - **State Management**: Maintains the overall security context and system status.
 - **Health Data Management**: Provides functionality to import and analyze health and
   fitness data, including from external sources like Google Gemini.
+- **Neural Inference**: Loads a locally trained CelsiusLM model if available and uses
+  it for responses, falling back to rule-based handlers when no model exists yet.
 
 Dependencies:
 -------------
-- `openai`: For optional integration with OpenAI's language models.
-- `transformers`: For using local, privacy-focused language models.
-- `torch`: A dependency for the `transformers` library.
+- `torch`: Required for neural model inference (optional — falls back gracefully).
 - Internal Celsius Components: `CelsiusConfig`, `SelfLearningAI`, `ThreatAnalyzer`, etc.
+- Internal Training Components: `CelsiusInferenceEngine`, `log_conversation`.
 
 Usage:
 ------
@@ -57,6 +58,15 @@ except ImportError:
     AutoTokenizer, AutoModel, torch = None, None, None
     TRANSFORMERS_AVAILABLE = False
     logging.warning("Transformers library not found. Local model features will be disabled.")
+
+# Neural inference engine and conversation logging (from training pipeline)
+try:
+    from src.training.data_collector import log_conversation
+    from src.inference.engine import CelsiusInferenceEngine
+    CELSIUS_TRAINING_AVAILABLE = True
+except ImportError:
+    CELSIUS_TRAINING_AVAILABLE = False
+    logging.warning("Training/inference modules not found. Run 'pip install -r requirements_training.txt' to enable.")
 
 # Import core Celsius components
 from .config import CelsiusConfig
@@ -179,6 +189,9 @@ class CelsiusAI:
             "whitehat_authorized": False,
         }
 
+        # Neural inference engine — loaded in initialize()
+        self.inference_engine: Optional[Any] = None
+
     async def initialize(self):
         """
         Initializes the AI assistant and its subsystems, loading necessary models
@@ -212,6 +225,23 @@ class CelsiusAI:
                     except Exception as e:
                         logger.warning(f"{name} initialization failed: {e}")
 
+            # Load trained CelsiusLM neural model if available
+            if CELSIUS_TRAINING_AVAILABLE:
+                try:
+                    self.inference_engine = CelsiusInferenceEngine()
+                    if self.inference_engine.ready:
+                        logger.info("✅ Trained CelsiusLM model loaded — using neural inference.")
+                    else:
+                        logger.info(
+                            "ℹ️  No trained model found. "
+                            "Run 'python train.py' to train CelsiusLM on your data."
+                        )
+                except Exception as e:
+                    logger.warning(f"Inference engine failed to load: {e}")
+                    self.inference_engine = None
+            else:
+                logger.info("Training modules not installed. Using rule-based handlers only.")
+
             logger.info("✅ Celsius AI core initialized successfully.")
 
         except Exception as e:
@@ -222,6 +252,11 @@ class CelsiusAI:
         """
         Processes a user query by classifying its intent, routing it to the
         appropriate handler, and returning a human-like response.
+
+        First attempts neural inference via the trained CelsiusLM model if one
+        has been loaded. Falls back to keyword-based routing handlers if the
+        model is not yet trained. Every conversation is logged to JSONL so
+        future training runs get smarter from real usage.
 
         Args:
             query (str): The user's input query.
@@ -235,6 +270,22 @@ class CelsiusAI:
             conversation_context = self.conversational_ai.process_conversation(query, "general")
             self._add_to_history(query, "user")
 
+            # --- Neural inference path ---
+            # If a trained CelsiusLM model is loaded, use it instead of keyword routing.
+            if self.inference_engine and self.inference_engine.ready:
+                try:
+                    raw_response = self.inference_engine.generate(query)
+                    enhanced_response = self.conversational_ai.enhance_response(raw_response, conversation_context)
+                    self._add_to_history(enhanced_response, "assistant")
+                    self._log_conversation(query, enhanced_response)
+                    await self.self_learning.learn_from_conversation(
+                        {"user_message": query, "ai_response": enhanced_response, "timestamp": datetime.now().isoformat()}
+                    )
+                    return enhanced_response
+                except Exception as e:
+                    logger.warning(f"Neural inference failed, falling back to rule-based handlers: {e}")
+
+            # --- Rule-based routing path (fallback / pre-training) ---
             # Classify the query to determine user intent
             query_type = await self._classify_query(query)
             logger.debug(f"Classified query as type: {query_type}")
@@ -259,6 +310,9 @@ class CelsiusAI:
             enhanced_response = self.conversational_ai.enhance_response(response, conversation_context)
             self._add_to_history(enhanced_response, "assistant")
 
+            # Log conversation for training data flywheel
+            self._log_conversation(query, enhanced_response)
+
             # Learn from the completed interaction
             await self.self_learning.learn_from_conversation(
                 {"user_message": query, "ai_response": enhanced_response, "timestamp": datetime.now().isoformat()}
@@ -269,6 +323,14 @@ class CelsiusAI:
         except Exception as e:
             logger.error(f"Error processing query: {e}", exc_info=True)
             return f"I'm sorry, but I encountered an unexpected error while processing your request: {e}"
+
+    def _log_conversation(self, query: str, response: str) -> None:
+        """Append this exchange to the training JSONL if logging is available."""
+        if CELSIUS_TRAINING_AVAILABLE:
+            try:
+                log_conversation(query, response, source="live")
+            except Exception as e:
+                logger.debug(f"Conversation logging skipped: {e}")
 
     def _add_to_history(self, text: str, role: str):
         """
@@ -342,7 +404,7 @@ class CelsiusAI:
 
             results = await self.threat_analyzer.perform_scan(scan_type)
 
-            response = f"🔍 Security Scan Complete ({scan_type})\\n\\n"
+            response = f"\U0001f50d Security Scan Complete ({scan_type})\\n\\n"
             response += f"Threats Detected: {len(results.get('threats', []))}\\n"
             response += f"Vulnerabilities: {len(results.get('vulnerabilities', []))}\\n"
             response += f"Risk Level: {results.get('risk_level', 'Unknown')}\\n\\n"
@@ -362,12 +424,12 @@ class CelsiusAI:
         try:
             analysis = await self.threat_analyzer.analyze_current_threats()
 
-            response = f"🛡️ Threat Analysis Report\\n\\n"
+            response = f"\U0001f6e1️ Threat Analysis Report\\n\\n"
             response += f"Current Threat Level: {analysis.get('level', 'Unknown')}\\n"
             response += f"Active Monitoring: {'✅' if analysis.get('monitoring') else '❌'}\\n\\n"
 
             if analysis.get("recommendations"):
-                response += "💡 Recommendations:\\n"
+                response += "\U0001f4a1 Recommendations:\\n"
                 for rec in analysis["recommendations"][:3]:
                     response += f"  • {rec}\\n"
 
@@ -381,10 +443,10 @@ class CelsiusAI:
         try:
             devices = await self.device_manager.get_device_status()
 
-            response = "📱 Device Status Report\\n\\n"
+            response = "\U0001f4f1 Device Status Report\\n\\n"
 
             for device in devices:
-                status_icon = "🟢" if device.get("secure") else "🟡"
+                status_icon = "\U0001f7e2" if device.get("secure") else "\U0001f7e1"
                 response += f"{status_icon} {device.get('name', 'Unknown')}: {device.get('status', 'Unknown')}\\n"
 
             return response
@@ -397,7 +459,7 @@ class CelsiusAI:
         try:
             intel = await self.intel_processor.query_intelligence(query)
 
-            response = "🔍 Threat Intelligence\\n\\n"
+            response = "\U0001f50d Threat Intelligence\\n\\n"
             response += f"Query: {query}\\n"
             response += f"Results: {len(intel.get('results', []))} items found\\n\\n"
 
@@ -420,7 +482,7 @@ class CelsiusAI:
             if any(word in query_lower for word in ["authorize", "authorization", "request"]):
                 auth_status = self.whitehat_engine.get_authorization_status()
                 if auth_status["authorized"]:
-                    response = f"🔐 White Hat Authorization Status\\n\\n"
+                    response = f"\U0001f510 White Hat Authorization Status\\n\\n"
                     response += f"Status: ✅ AUTHORIZED\\n"
                     response += f"Authorization ID: {auth_status['authorization_id']}\\n"
                     response += f"Level: {auth_status['level']}\\n"
@@ -428,7 +490,7 @@ class CelsiusAI:
                     response += f"Authorized Techniques: {auth_status['authorized_techniques']}\\n"
                     return response
                 else:
-                    response = f"🔐 White Hat Authorization Required\\n\\n"
+                    response = f"\U0001f510 White Hat Authorization Required\\n\\n"
                     response += f"Status: ❌ NOT AUTHORIZED\\n"
                     response += f"Reason: {auth_status.get('message', 'No active authorization')}\\n\\n"
                     response += f"To request authorization:\\n"
@@ -448,15 +510,12 @@ class CelsiusAI:
             # Check if authorized for other operations
             auth_status = self.whitehat_engine.get_authorization_status()
             if not auth_status["authorized"]:
-                return f"🔐 Authorization required for penetration testing operations.\\nUse 'request pentest authorization' to begin."
+                return f"\U0001f510 Authorization required for penetration testing operations.\\nUse 'request pentest authorization' to begin."
 
             # Handle technique execution
             if "run" in query_lower or "execute" in query_lower:
-                # Extract target and technique from query
-                # This is a simplified parser - in production, use more sophisticated NLP
                 words = query_lower.split()
 
-                # Look for target (IP, domain, etc.)
                 target = None
                 for word in words:
                     if "." in word and not word.startswith("."):
@@ -466,7 +525,6 @@ class CelsiusAI:
                 if not target:
                     return "❌ Please specify a target (IP address or domain) for the penetration test."
 
-                # Look for technique
                 available_techniques = list(self.whitehat_engine.technique_library.techniques.keys())
                 technique = None
                 for tech in available_techniques:
@@ -478,18 +536,16 @@ class CelsiusAI:
                     techniques_list = "\\n".join([f"  • {tech}" for tech in available_techniques[:10]])
                     return f"❌ Please specify a technique. Available techniques:\\n{techniques_list}"
 
-                # Execute the technique
                 result = await self.whitehat_engine.execute_technique(technique, target)
 
                 if "error" in result:
                     return f"❌ Technique execution failed: {result['error']}"
 
-                response = f"🎯 Penetration Test Result\\n\\n"
+                response = f"\U0001f3af Penetration Test Result\\n\\n"
                 response += f"Technique: {technique}\\n"
                 response += f"Target: {target}\\n"
                 response += f"Timestamp: {result.get('timestamp', 'Unknown')}\\n\\n"
 
-                # Summarize results
                 if result.get("open_ports"):
                     response += f"Open Ports: {len(result['open_ports'])}\\n"
                 if result.get("vulnerabilities"):
@@ -516,34 +572,30 @@ class CelsiusAI:
                 if "error" in engagement:
                     return f"❌ Engagement failed: {engagement['error']}"
 
-                response = f"🎯 Penetration Testing Engagement Report\\n\\n"
+                response = f"\U0001f3af Penetration Testing Engagement Report\\n\\n"
                 response += f"Target: {engagement['target']}\\n"
                 response += f"Engagement ID: {engagement['id']}\\n"
                 response += f"Phases Completed: {len(engagement['phases'])}\\n"
                 response += f"Findings: {len(engagement['findings'])}\\n\\n"
 
-                # Summarize high-severity findings
                 high_severity = [f for f in engagement["findings"] if f.get("severity") == "high"]
                 if high_severity:
-                    response += f"🚨 High Severity Issues: {len(high_severity)}\\n"
+                    response += f"\U0001f6a8 High Severity Issues: {len(high_severity)}\\n"
                     for finding in high_severity[:3]:
                         response += f"  • {finding['title']}\\n"
 
                 return response
 
-            # Show available capabilities
             auth_status = self.whitehat_engine.get_authorization_status()
             techniques = self.whitehat_engine.get_available_techniques()
 
-            response = f"🔐 White Hat Hacking Capabilities\\n\\n"
+            response = f"\U0001f510 White Hat Hacking Capabilities\\n\\n"
             response += f"Authorization Level: {auth_status['level']}\\n"
             response += f"Available Technique Categories: {len(techniques)}\\n\\n"
-
             response += f"Commands:\\n"
             response += f"  • 'run [technique] on [target]' - Execute specific technique\\n"
             response += f"  • 'full engagement [target]' - Complete penetration test\\n"
             response += f"  • 'authorize' - Check authorization status\\n\\n"
-
             response += f"Example: 'run port scan on example.com'\\n"
 
             return response
@@ -559,7 +611,7 @@ class CelsiusAI:
             # Get learning statistics
             if any(word in query_lower for word in ["status", "stats", "statistics"]):
                 stats = self.self_learning.get_learning_stats()
-                return f"""🧠 **Learning Status Report**
+                return f"""\U0001f9e0 **Learning Status Report**
                 
 **Knowledge Base:**
 • Total Entries: {stats.get('total_entries', 0)}
@@ -577,7 +629,6 @@ Use 'learn about [topic]' to teach me something new!"""
             elif "enable" in query_lower or "disable" in query_lower:
                 action = "enable" if "enable" in query_lower else "disable"
 
-                # Extract domain from query (simplified)
                 domains = [
                     "cybersecurity",
                     "programming",
@@ -606,17 +657,16 @@ Use 'learn about [topic]' to teach me something new!"""
             elif any(word in query_lower for word in ["suggest", "recommend", "what should", "topics"]):
                 suggestions = await self.self_learning.suggest_learning_topics()
                 if suggestions:
-                    return f"""💡 **Learning Suggestions:**
+                    return f"""\U0001f4a1 **Learning Suggestions:**
                     
 {chr(10).join([f"• {suggestion}" for suggestion in suggestions])}
 
 I can learn more effectively if you teach me about these topics!"""
                 else:
-                    return "🎓 Your knowledge base looks comprehensive! Feel free to ask me anything or teach me something new."
+                    return "\U0001f393 Your knowledge base looks comprehensive! Feel free to ask me anything or teach me something new."
 
             # Teach the AI something new
             elif any(word in query_lower for word in ["learn", "teach", "remember"]):
-                # Extract the learning content (simplified extraction)
                 if "about" in query_lower:
                     topic_start = query_lower.find("about") + 5
                     learning_content = query[topic_start:].strip()
@@ -627,15 +677,13 @@ I can learn more effectively if you teach me about these topics!"""
                     learning_content = query.strip()
 
                 if learning_content:
-                    # Let the self-learning system process this
                     await self.self_learning.learn_from_external_source(content=learning_content, source="user_input")
-                    return f"🎓 Thank you for teaching me! I've learned about: {learning_content[:100]}..."
+                    return f"\U0001f393 Thank you for teaching me! I've learned about: {learning_content[:100]}..."
                 else:
                     return "❓ What would you like me to learn? Try: 'Learn that [your information]'"
 
             # Search knowledge base
             elif any(word in query_lower for word in ["know", "knowledge", "search", "find"]):
-                # Extract search terms
                 search_terms = (
                     query_lower.replace("what do you know about", "")
                     .replace("search for", "")
@@ -646,7 +694,7 @@ I can learn more effectively if you teach me about these topics!"""
                 if search_terms:
                     knowledge = await self.self_learning.get_knowledge(query=search_terms)
                     if knowledge:
-                        return f"""🔍 **Knowledge Search Results:**
+                        return f"""\U0001f50d **Knowledge Search Results:**
                         
 Found {len(knowledge)} relevant entries about "{search_terms}":
 
@@ -662,7 +710,7 @@ Domain coverage: {', '.join(set(entry.domain for entry in knowledge))}"""
 
             # Default learning help
             else:
-                return """🧠 **Celsius AI Learning System**
+                return """\U0001f9e0 **Celsius AI Learning System**
                 
 I can learn from conversations and expand my knowledge across multiple domains:
 
@@ -686,18 +734,22 @@ I continuously learn from our conversations to provide better assistance!"""
     async def _handle_status_query(self, query: str) -> str:
         """Handle status and overview queries."""
         try:
-            # Get overall system status
             overall_status = await self._get_system_status()
 
-            response = "📊 Celsius AI Status Dashboard\\n\\n"
+            response = "\U0001f4ca Celsius AI Status Dashboard\\n\\n"
             response += f"System Health: {overall_status.get('health', 'Unknown')}\\n"
             response += f"Security Level: {overall_status.get('security_level', 'Unknown')}\\n"
             response += f"Active Monitoring: {'✅' if overall_status.get('monitoring') else '❌'}\\n"
             response += f"Last Update: {overall_status.get('last_update', 'Unknown')}\\n\\n"
 
-            response += "🔧 Services Status:\\n"
+            # Show neural model status
+            if self.inference_engine:
+                model_status = "✅ Trained model loaded" if self.inference_engine.ready else "⏳ No model yet (run python train.py)"
+                response += f"CelsiusLM: {model_status}\\n\\n"
+
+            response += "\U0001f527 Services Status:\\n"
             for service, status in overall_status.get("services", {}).items():
-                status_icon = "🟢" if status == "running" else "🔴"
+                status_icon = "\U0001f7e2" if status == "running" else "\U0001f534"
                 response += f"  {status_icon} {service}: {status}\\n"
 
             return response
@@ -712,7 +764,7 @@ I continuously learn from our conversations to provide better assistance!"""
 
             # Import Gemini data
             if "import" in query_lower and "gemini" in query_lower:
-                return """📊 **Import Health Data from Gemini**
+                return """\U0001f4ca **Import Health Data from Gemini**
                 
 To import your health data from Gemini:
 
@@ -731,7 +783,7 @@ Just paste your Gemini health conversations or data after 'import gemini health 
 
             # Handle Gemini import command
             elif query_lower.startswith("import gemini health data:"):
-                gemini_data = query[27:].strip()  # Remove command prefix
+                gemini_data = query[27:].strip()
                 if gemini_data:
                     result = await self.health_manager.import_gemini_data(gemini_data)
                     if result["success"]:
@@ -745,32 +797,32 @@ Just paste your Gemini health conversations or data after 'import gemini health 
             elif any(word in query_lower for word in ["health summary", "fitness status", "health overview"]):
                 summary = self.health_manager.get_health_summary()
 
-                response = "🏥 **Health & Fitness Summary**\n\n"
-                response += f"📊 **Data Overview:**\n"
+                response = "\U0001f3e5 **Health & Fitness Summary**\n\n"
+                response += f"\U0001f4ca **Data Overview:**\n"
                 response += f"• Health metrics: {summary['metrics_count']}\n"
                 response += f"• Active fitness goals: {summary['active_goals']}\n"
                 response += f"• Total workouts: {summary['total_workouts']}\n\n"
 
-                response += f"📈 **Last 30 Days:**\n"
+                response += f"\U0001f4c8 **Last 30 Days:**\n"
                 response += f"• Workouts: {summary['last_30_days']['workouts']}\n"
                 response += f"• Total exercise time: {summary['last_30_days']['total_workout_minutes']} minutes\n\n"
 
                 if summary["recent_trends"]:
-                    response += "📊 **Recent Trends:**\n"
+                    response += "\U0001f4ca **Recent Trends:**\n"
                     for metric, trend in summary["recent_trends"].items():
                         response += f"• {metric.title()}: {trend['trend']} ({trend['change_percent']:+.1f}%)\n"
 
                 if summary["goal_progress"]:
-                    response += "\n🎯 **Goal Progress:**\n"
-                    for goal in summary["goal_progress"][:3]:  # Show top 3 goals
-                        progress_icon = "✅" if goal["progress_percentage"] >= 100 else "🎯"
+                    response += "\n\U0001f3af **Goal Progress:**\n"
+                    for goal in summary["goal_progress"][:3]:
+                        progress_icon = "✅" if goal["progress_percentage"] >= 100 else "\U0001f3af"
                         response += f"{progress_icon} {goal['title']}: {goal['progress_percentage']:.1f}% complete\n"
 
                 return response
 
             # Set fitness goals
             elif "set" in query_lower and "goal" in query_lower:
-                return """🎯 **Set Fitness Goals**
+                return """\U0001f3af **Set Fitness Goals**
                 
 I can help you set and track fitness goals! Tell me:
 
@@ -791,25 +843,25 @@ Just describe your goal and I'll track your progress!"""
                 if search_terms:
                     results = self.health_manager.search_health_data(search_terms)
 
-                    response = f"🔍 **Health Data Search: '{search_terms}'**\n\n"
+                    response = f"\U0001f50d **Health Data Search: '{search_terms}'**\n\n"
 
                     if results["metrics"]:
-                        response += f"📊 **Metrics** ({len(results['metrics'])} found):\n"
+                        response += f"\U0001f4ca **Metrics** ({len(results['metrics'])} found):\n"
                         for metric in results["metrics"][:3]:
                             response += f"• {metric['metric_type'].replace('_', ' ').title()}: {metric['value']} {metric['unit']}\n"
 
                     if results["workouts"]:
-                        response += f"\n💪 **Workouts** ({len(results['workouts'])} found):\n"
+                        response += f"\n\U0001f4aa **Workouts** ({len(results['workouts'])} found):\n"
                         for workout in results["workouts"][:3]:
                             response += f"• {workout['workout_type']}: {workout['duration_minutes']} min\n"
 
                     if results["goals"]:
-                        response += f"\n🎯 **Goals** ({len(results['goals'])} found):\n"
+                        response += f"\n\U0001f3af **Goals** ({len(results['goals'])} found):\n"
                         for goal in results["goals"][:3]:
                             response += f"• {goal['title']}: {goal['progress_percentage']:.1f}% complete\n"
 
                     if results["insights"]:
-                        response += f"\n💡 **Insights:**\n"
+                        response += f"\n\U0001f4a1 **Insights:**\n"
                         for insight in results["insights"]:
                             response += f"• {insight}\n"
 
@@ -819,15 +871,15 @@ Just describe your goal and I'll track your progress!"""
 
             # General health help
             else:
-                return """🏥 **Celsius Health & Fitness Assistant**
+                return """\U0001f3e5 **Celsius Health & Fitness Assistant**
                 
 I can help you manage your health and fitness data!
 
 **Key Features:**
-• 📊 **Import from Gemini**: Transfer all your health conversations
-• 🎯 **Goal Tracking**: Set and monitor fitness goals  
-• 📈 **Progress Analysis**: Trends and insights
-• 💪 **Workout Logging**: Track exercise sessions
+• \U0001f4ca **Import from Gemini**: Transfer all your health conversations
+• \U0001f3af **Goal Tracking**: Set and monitor fitness goals  
+• \U0001f4c8 **Progress Analysis**: Trends and insights
+• \U0001f4aa **Workout Logging**: Track exercise sessions
 • ⚖️ **Health Metrics**: Weight, measurements, vital signs
 
 **Quick Commands:**
@@ -836,19 +888,16 @@ I can help you manage your health and fitness data!
 • `set goal: [your goal]` - Create fitness goals
 • `search [keyword]` - Find specific data
 
-Ready to help you achieve your health and fitness goals! 💪"""
+Ready to help you achieve your health and fitness goals! \U0001f4aa"""
 
         except Exception as e:
             logger.error(f"Error in health query: {e}", exc_info=True)
             return f"❌ Health query error: {e}"
 
     async def _handle_general_query(self, query: str) -> str:
-        """Handle general cybersecurity questions."""
+        """Handle general questions when no specific category matches."""
         try:
-            # Use local AI model for privacy-first processing
-            # This is a simplified version - in production, you'd want more sophisticated NLP
-
-            response = "🤖 I'm here to help with cybersecurity questions. "
+            response = "\U0001f916 I'm here to help with cybersecurity questions. "
 
             if any(word in query.lower() for word in ["password", "passwords"]):
                 response += "For password security, I recommend using unique, complex passwords with a password manager. Enable 2FA wherever possible."
@@ -857,7 +906,7 @@ Ready to help you achieve your health and fitness goals! 💪"""
             elif any(word in query.lower() for word in ["update", "patch"]):
                 response += "Keep your systems updated with the latest security patches. Enable automatic updates when possible."
             else:
-                response += "Could you be more specific about your cybersecurity question? I can help with threats, vulnerabilities, best practices, and more."
+                response += "Could you be more specific about your question? I can help with threats, vulnerabilities, best practices, and more."
 
             return response
 
