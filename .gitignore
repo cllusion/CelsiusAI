@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Model artifacts (large files — commit manually if needed)
+models/*.pt
+models/tokenizer.json
+
+# Training logs and checkpoints (generated at runtime)
+training_log.json
+
+# Runtime / session state
+celsius_sessions.json
+celsius_auth.json
+celsius_activity.db
+test_learning.db
+*.log
+
+# Secrets
+.env
+*.pem
+*.key
+
+# OS
+.DS_Store
+Thumbs.db
