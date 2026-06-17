@@ -994,8 +994,8 @@ Ready to help you achieve your health and fitness goals!"""
                     lines = [
                         f"Code Security Analysis: {result['filename']}",
                         f"Language: {result.get('language', 'unknown')}",
-                        f"Lines scanned: {result.get('total_lines', result.get('scanned_lines', '?'))}",
-                        f"Risk level: {result['risk'].upper() if 'risk' in result else result.get('risk_level','?').upper()}",
+                        f"Lines scanned: {result.get('scanned_lines', result.get('total_lines', '?'))}",
+                        f"Risk level: {result.get('risk_level', result.get('risk', '?')).upper()}",
                         f"Issues found: {len(result['findings'])}",
                     ]
                     for finding in result["findings"][:5]:
@@ -1008,9 +1008,9 @@ Ready to help you achieve your health and fitness goals!"""
                     if len(code) > 10:
                         result = self.code_engine.analyze_security(code, filename="inline_code")
                         if not result["findings"]:
-                            return f"Inline Code Scan — Risk: {result['risk'].upper()}\nNo obvious security issues detected in the snippet."
+                            return f"Inline Code Scan — Risk: {result['risk_level'].upper()}\nNo obvious security issues detected in the snippet."
                         lines = [
-                            f"Inline Code Scan — Risk: {result['risk'].upper()}",
+                            f"Inline Code Scan — Risk: {result['risk_level'].upper()}",
                             f"Issues found: {len(result['findings'])}",
                         ]
                         for finding in result["findings"][:8]:
