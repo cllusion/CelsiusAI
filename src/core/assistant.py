@@ -982,8 +982,8 @@ Ready to help you achieve your health and fitness goals!"""
         query_lower = query.lower()
 
         try:
-            # Analyze a file by path
-            if ("analyze" in query_lower or "scan" in query_lower):
+            # Analyze a file by path OR inline code snippet
+            if ("analyze" in query_lower or "scan" in query_lower or "security issue" in query_lower or "vulnerabilit" in query_lower):
                 # Look for a file path (anything with a / or . extension)
                 path_match = re.search(r'([\w./\\-]+\.(?:py|js|ts|java|go|rb|php|cs|cpp|c|h))', query)
                 if path_match:
@@ -994,13 +994,28 @@ Ready to help you achieve your health and fitness goals!"""
                     lines = [
                         f"Code Security Analysis: {result['filename']}",
                         f"Language: {result.get('language', 'unknown')}",
-                        f"Lines scanned: {result['scanned_lines']}",
-                        f"Risk level: {result['risk_level'].upper()}",
-                        f"Issues found: {result['total_issues']}",
+                        f"Lines scanned: {result.get('total_lines', result.get('scanned_lines', '?'))}",
+                        f"Risk level: {result['risk'].upper() if 'risk' in result else result.get('risk_level','?').upper()}",
+                        f"Issues found: {len(result['findings'])}",
                     ]
                     for finding in result["findings"][:5]:
                         lines.append(f"  [{finding['severity'].upper()}] Line {finding['line']}: {finding['type']} — {finding['content'][:80]}")
                     return "\n".join(lines)
+                else:
+                    # No file path — treat the query itself as inline code to analyze
+                    # Strip common prefixes like "analyze this code:" / "check for security issues:"
+                    code = re.sub(r'^.*?(?:code|issues?|vulnerabilit\w*)\s*[:for]*\s*', '', query, flags=re.IGNORECASE).strip()
+                    if len(code) > 10:
+                        result = self.code_engine.analyze_security(code, filename="inline_code")
+                        if not result["findings"]:
+                            return f"Inline Code Scan — Risk: {result['risk'].upper()}\nNo obvious security issues detected in the snippet."
+                        lines = [
+                            f"Inline Code Scan — Risk: {result['risk'].upper()}",
+                            f"Issues found: {len(result['findings'])}",
+                        ]
+                        for finding in result["findings"][:8]:
+                            lines.append(f"  [{finding['severity'].upper()}] Line {finding['line']}: {finding['type']}\n    → {finding['content'][:100]}")
+                        return "\n".join(lines)
 
             # Generate a code snippet
             if any(word in query_lower for word in ["generate", "create", "write"]):
